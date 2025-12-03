@@ -11,20 +11,7 @@ const Hero: React.FC = () => {
           alt="Telhado Profissional Acquatec"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-brand-dark/70"></div>
-        
-        {/* Animated Parallax Clouds/Fog Effect */}
-        <div className="absolute inset-0 z-10 opacity-60 pointer-events-none overflow-hidden">
-           <div
-             className="absolute top-0 left-0 w-[200%] h-full animate-drift"
-             style={{
-               backgroundImage: 'url("https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=60")',
-               backgroundSize: 'cover',
-               backgroundRepeat: 'repeat-x',
-               filter: 'brightness(1.4) contrast(1.3) blur(1px)'
-             }}
-           ></div>
-        </div>
+        <div className="absolute inset-0 bg-brand-dark"></div>
       </div>
 
       {/* Content */}
