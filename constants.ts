@@ -74,65 +74,105 @@ export const SERVICES: Service[] = [
   {
     id: 'calhas',
     title: 'Instalação de Calhas',
-    description: ['Calhas de beiral e platibanda', 'Alumínio, galvanizado e PVC', 'Dimensionamento técnico', 'Telas protetoras inclusas'],
+    description: [
+      'Proteção fundamental contra umidade: Desvia a água da chuva, evitando manchas na pintura e erosão no jardim.',
+      'Materiais de alta durabilidade: Trabalhamos com Alumínio (não enferruja), Galvanizado (resistente) e PVC.',
+      'Dimensionamento técnico: Nossos engenheiros calculam a vazão exata para evitar transbordamentos em tempestades.',
+      'Acabamento estético: Opções de cores que combinam com a fachada do seu imóvel.'
+    ],
     price: 'A partir de R$ 80/m²',
-    image: 'https://picsum.photos/seed/calhas/400/300',
+    image: 'https://images.unsplash.com/photo-1618221805562-b7b84497e596?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Solicitar Orçamento'
   },
   {
     id: 'manutencao',
     title: 'Manutenção de Telhados',
-    description: ['Inspeção técnica completa', 'Limpeza profissional', 'Substituição de telhas', 'Planos preventivos'],
+    description: [
+      'Aumente a vida útil do imóvel: A manutenção preventiva evita trocas prematuras de madeiramento.',
+      'Prevenção de goteiras: Identificamos e trocamos telhas trincadas antes que causem danos ao forro.',
+      'Limpeza técnica: Remoção de musgos e detritos que retêm umidade e pesam sobre a estrutura.',
+      'Ideal para condomínios e residências antigas que precisam de revitalização.'
+    ],
     price: 'A partir de R$ 100/m²',
-    image: 'https://picsum.photos/seed/manutencao/400/300',
+    image: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Agendar Vistoria Grátis'
   },
   {
     id: 'rufos',
     title: 'Rufos e Acabamentos',
-    description: ['Rufos de encosto e capa', 'Proteção contra infiltrações', 'Acabamento perfeito', 'Diversos materiais'],
+    description: [
+      'Vedação perfeita: Essenciais para cobrir a junção entre o telhado e a parede, impedindo infiltrações.',
+      'Tipos variados: Rufos de encosto, capa, pingadeira e internos, moldados no local.',
+      'Proteção de muros: Evita que a água da chuva escorra pela parede, prevenindo manchas pretas.',
+      'Fabricação própria para garantir o encaixe milimétrico na sua obra.'
+    ],
     price: 'Sob consulta',
-    image: 'https://picsum.photos/seed/rufos/400/300',
+    image: 'https://images.unsplash.com/photo-1595846519845-68e298c2edd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Falar com Especialista'
   },
   {
     id: 'metalicos',
     title: 'Telhados Metálicos',
-    description: ['Residencial e industrial', 'Alta durabilidade', 'Isolamento térmico', 'Instalação rápida'],
+    description: [
+      'Solução moderna e leve: Ideal para grandes vãos em indústrias, comércios e casas contemporâneas.',
+      'Alta durabilidade: Telhas galvalume ou termoacústicas (sanduíche) que duram décadas.',
+      'Conforto térmico: Opções com EPS ou PU que reduzem o calor interno e o barulho da chuva.',
+      'Instalação rápida que reduz o tempo total da obra.'
+    ],
     price: 'R$ 150 a R$ 250/m²',
-    image: 'https://picsum.photos/seed/metalico/400/300',
+    image: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Ver Projetos'
   },
   {
     id: 'captacao',
     title: 'Captação de Água',
-    description: ['Sistemas completos', 'Economia de até 50%', 'Sustentabilidade', 'Consultoria técnica'],
+    description: [
+      'Sustentabilidade e Economia: Reduza sua conta de água em até 50% utilizando água da chuva.',
+      'Usos diversos: Ideal para irrigação de jardins, lavagem de calçadas e descarga de vasos sanitários.',
+      'Sistema completo: Inclui filtros separadores de folhas, cisternas e bombas de recalque.',
+      'Projeto personalizado conforme a área de telhado disponível.'
+    ],
     price: 'A partir de R$ 2.000',
-    image: 'https://picsum.photos/seed/agua/400/300',
+    image: 'https://images.unsplash.com/photo-1544983059-e970a09a5628?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Simular Economia'
   },
   {
     id: 'reformas',
     title: 'Reformas Completas',
-    description: ['Projeto personalizado', 'Demolição e reconstrução', 'Equipe especializada', 'Garantia estendida'],
+    description: [
+      'Transformação total: Substituição de estruturas de madeira comprometidas por cupins ou umidade.',
+      'Modernização: Troca de telhas de barro antigas por modelos modernos ou metálicos.',
+      'Correção de inclinação: Resolve problemas de retorno de água em chuvas com vento.',
+      'Gerenciamento completo: Da demolição à limpeza final, sem dor de cabeça.'
+    ],
     price: 'Sob orçamento',
-    image: 'https://picsum.photos/seed/reforma/400/300',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Enviar Fotos'
   },
   {
     id: 'solar',
     title: 'Iluminação Solar',
-    description: ['Telhas translúcidas', 'Redução energia 40%', 'Solução sustentável', 'Instalação certificada'],
+    description: [
+      'Luz natural gratuita: Instalação de telhas translúcidas em pontos estratégicos.',
+      'Economia de energia: Reduz a necessidade de lâmpadas acesas durante o dia em até 40%.',
+      'Bem-estar: Ambientes naturalmente iluminados são mais saudáveis e produtivos.',
+      'Materiais com proteção UV que iluminam sem aquecer excessivamente o ambiente.'
+    ],
     price: 'Sob consulta',
-    image: 'https://picsum.photos/seed/solar/400/300',
+    image: 'https://images.unsplash.com/photo-1592833159057-65a269755598?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Conhecer Solução'
   },
   {
     id: 'eolicos',
     title: 'Exaustores Eólicos',
-    description: ['Renovação de ar natural', 'Reduz temperatura', 'Zero energia elétrica', 'Ambientes industriais'],
+    description: [
+      'Ventilação sem custo: Utiliza a força do vento para retirar ar quente e odores do ambiente.',
+      'Conforto térmico industrial: Reduz a sensação térmica em galpões e fábricas.',
+      'Zero consumo: Não utiliza energia elétrica e possui manutenção baixíssima.',
+      'Silencioso e eficiente, com rolamentos blindados para maior durabilidade.'
+    ],
     price: 'A partir de R$ 800/un',
-    image: 'https://picsum.photos/seed/eolico/400/300',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Solicitar Visita'
   }
 ];

@@ -12,10 +12,23 @@ const Hero: React.FC = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-brand-dark/70"></div>
+        
+        {/* Animated Parallax Clouds/Fog Effect */}
+        <div className="absolute inset-0 z-10 opacity-30 pointer-events-none overflow-hidden">
+           <div 
+             className="absolute top-0 left-0 w-[200%] h-full animate-drift"
+             style={{
+               backgroundImage: 'url("https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=40")',
+               backgroundSize: 'cover',
+               backgroundRepeat: 'repeat-x',
+               filter: 'grayscale(100%) blur(2px) contrast(1.2)'
+             }}
+           ></div>
+        </div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+      <div className="relative z-20 container mx-auto px-4 text-center text-white">
         <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight drop-shadow-lg">
           Calhas e Telhados <br className="hidden md:block"/>
           <span className="text-brand-orange">Profissionais</span> em Curitiba
@@ -57,7 +70,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Trust Bar Bottom */}
-      <div className="absolute bottom-0 w-full bg-brand-blue/90 backdrop-blur text-white py-4 border-t border-white/10 hidden md:block">
+      <div className="absolute bottom-0 w-full bg-brand-blue/90 backdrop-blur text-white py-4 border-t border-white/10 hidden md:block z-30">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm font-medium tracking-wide opacity-90">
             <span>📍 Atendemos 30+ Cidades</span>
             <span>📞 24h Emergências</span>

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { TOP_NEIGHBORHOODS } from '../constants';
 import ContactForm from '../components/ContactForm';
 import VideoSection from '../components/VideoSection';
+import EcoFriendlySection from '../components/EcoFriendlySection';
 import { CheckCircle, Phone, ArrowRight, MapPin } from 'lucide-react';
 
 const NeighborhoodPage: React.FC = () => {
@@ -91,6 +92,8 @@ const NeighborhoodPage: React.FC = () => {
       </section>
 
       <VideoSection />
+      
+      <EcoFriendlySection />
 
       <ContactForm />
     </div>

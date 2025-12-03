@@ -4,6 +4,7 @@ import ServicesSection from '../components/ServicesSection';
 import VideoSection from '../components/VideoSection';
 import ComparisonTable from '../components/ComparisonTable';
 import AboutSection from '../components/AboutSection';
+import EcoFriendlySection from '../components/EcoFriendlySection';
 import DengueAlert from '../components/DengueAlert';
 import ContactForm from '../components/ContactForm';
 import FAQSection from '../components/FAQSection';
@@ -91,6 +92,7 @@ const HomePage: React.FC = () => {
       </section>
 
       <AboutSection />
+      <EcoFriendlySection />
       <DengueAlert />
       
       {/* Testimonials */}

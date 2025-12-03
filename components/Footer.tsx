@@ -1,78 +1,117 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-brand-dark text-gray-300 pt-16 pb-8">
+    <footer className="bg-[#1a2530] text-gray-400 pt-16 border-t border-brand-orange/20">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
-          {/* Company Info */}
-          <div>
-            <div className="mb-4">
-                 <span className="text-2xl font-heading font-extrabold text-white">ACQUATEC</span>
+          {/* Brand & Description */}
+          <div className="space-y-6">
+            <div className="flex flex-col">
+                 <span className="text-3xl font-heading font-extrabold text-white tracking-tight">ACQUATEC</span>
+                 <span className="text-xs font-bold text-brand-orange uppercase tracking-[0.2em]">Calhas e Telhados</span>
             </div>
-            <p className="text-sm leading-relaxed mb-6">
-                Especialistas em calhas e telhados com mais de 25 anos de tradição em Curitiba. Soluções definitivas com garantia e tecnologia.
+            <p className="text-sm leading-relaxed text-gray-400">
+                Líder em soluções de cobertura em Curitiba e Região. Comprometidos com a excelência técnica, durabilidade e atendimento humanizado há mais de 25 anos.
             </p>
-            <div className="flex gap-4">
-                <a href="https://facebook.com" className="bg-white/10 p-2 rounded hover:bg-brand-orange transition-colors"><Facebook className="w-5 h-5" /></a>
-                <a href="https://instagram.com" className="bg-white/10 p-2 rounded hover:bg-brand-orange transition-colors"><Instagram className="w-5 h-5" /></a>
+            <div className="flex items-center gap-2 text-sm text-green-500 font-medium">
+                <ShieldCheck className="w-4 h-4" /> Garantia de 5 Anos Certificada
+            </div>
+            <div className="flex gap-4 pt-2">
+                <a href="https://facebook.com" className="bg-gray-800 p-2.5 rounded-full hover:bg-brand-blue hover:text-white transition-all duration-300"><Facebook className="w-5 h-5" /></a>
+                <a href="https://instagram.com" className="bg-gray-800 p-2.5 rounded-full hover:bg-pink-600 hover:text-white transition-all duration-300"><Instagram className="w-5 h-5" /></a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6">Links Rápidos</h3>
+            <h3 className="text-white font-bold text-lg mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-10 after:h-1 after:bg-brand-orange after:rounded-full">
+              Navegação
+            </h3>
             <ul className="space-y-3 text-sm">
-                <li><Link to="/" className="hover:text-brand-orange transition-colors">Home</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Serviços</Link></li>
-                <li><Link to="/#orcamento" className="hover:text-brand-orange transition-colors">Solicitar Orçamento</Link></li>
-                <li><Link to="/#sobre" className="hover:text-brand-orange transition-colors">Sobre Nós</Link></li>
-                <li><Link to="/cidades/curitiba" className="hover:text-brand-orange transition-colors">Atendimento em Curitiba</Link></li>
+                <li><Link to="/" className="hover:text-white hover:translate-x-1 transition-all inline-flex items-center gap-2"><ArrowRight className="w-3 h-3 text-brand-orange" /> Home</Link></li>
+                <li><Link to="/#servicos" className="hover:text-white hover:translate-x-1 transition-all inline-flex items-center gap-2"><ArrowRight className="w-3 h-3 text-brand-orange" /> Nossos Serviços</Link></li>
+                <li><Link to="/#orcamento" className="hover:text-white hover:translate-x-1 transition-all inline-flex items-center gap-2"><ArrowRight className="w-3 h-3 text-brand-orange" /> Solicitar Orçamento</Link></li>
+                <li><Link to="/#sobre" className="hover:text-white hover:translate-x-1 transition-all inline-flex items-center gap-2"><ArrowRight className="w-3 h-3 text-brand-orange" /> Sobre a Acquatec</Link></li>
+                <li><Link to="/cidades/curitiba" className="hover:text-white hover:translate-x-1 transition-all inline-flex items-center gap-2"><ArrowRight className="w-3 h-3 text-brand-orange" /> Área de Atendimento</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6">Serviços</h3>
+            <h3 className="text-white font-bold text-lg mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-10 after:h-1 after:bg-brand-orange after:rounded-full">
+              Serviços Principais
+            </h3>
             <ul className="space-y-3 text-sm">
-                <li><Link to="/#servicos" className="hover:text-brand-orange">Instalação de Calhas</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange">Manutenção de Telhados</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange">Rufos e Pingadeiras</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange">Limpeza de Calhas</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange">Telhados Metálicos</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange">Exaustores Eólicos</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Instalação de Calhas</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Manutenção de Telhados</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Rufos e Pingadeiras</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Telhados Metálicos</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Captação de Água</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Exaustores Eólicos</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6">Contato</h3>
+            <h3 className="text-white font-bold text-lg mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-10 after:h-1 after:bg-brand-orange after:rounded-full">
+              Fale Conosco
+            </h3>
             <ul className="space-y-4 text-sm">
-                <li className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-brand-orange shrink-0" />
-                    <span>Sede: Bairro Fanny<br/>Curitiba - PR</span>
+                <li className="flex items-start gap-3 group">
+                    <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
+                        <MapPin className="w-4 h-4 text-white" />
+                    </div>
+                    <span>Sede: Bairro Fanny<br/>Curitiba - PR, 80000-000</span>
                 </li>
-                <li className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-brand-orange shrink-0" />
-                    <span>(41) 3053-5740</span>
+                <li className="flex items-center gap-3 group">
+                    <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
+                        <Phone className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="font-bold text-white">(41) 3053-5740</span>
                 </li>
-                <li className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-brand-orange shrink-0" />
+                <li className="flex items-center gap-3 group">
+                    <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
+                        <Mail className="w-4 h-4 text-white" />
+                    </div>
                     <span>contato@acquatec.com.br</span>
                 </li>
-                <li className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-brand-orange shrink-0" />
-                    <span>Seg-Sex: 8h às 18h<br/>Plantão 24h para emergências</span>
+                <li className="flex items-start gap-3 group">
+                    <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
+                        <Clock className="w-4 h-4 text-white" />
+                    </div>
+                    <span>Seg-Sex: 8h às 18h<br/><span className="text-brand-orange font-semibold">Plantão 24h</span></span>
                 </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-500">
-            <p>&copy; {new Date().getFullYear()} Acquatec Calhas e Telhados. Todos os direitos reservados.</p>
+        {/* Bottom Bar & Credits */}
+        <div className="border-t border-gray-800 pt-8 pb-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; {new Date().getFullYear()} Acquatec Calhas e Telhados. Todos os direitos reservados.</p>
+                <div className="flex gap-4">
+                    <Link to="/politica" className="hover:text-white transition-colors">Política de Privacidade</Link>
+                    <Link to="/termos" className="hover:text-white transition-colors">Termos de Uso</Link>
+                </div>
+            </div>
+            
+            {/* Developer Credit */}
+            <div className="mt-8 pt-4 border-t border-gray-800 flex justify-center">
+                <a 
+                  href="https://www.supremasite.com.br/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-white transition-all duration-300"
+                >
+                    Desenvolvido com 
+                    <span className="inline-block animate-heart-beat" role="img" aria-label="coração">❤️</span> 
+                    pela <span className="text-brand-orange group-hover:text-brand-blue transition-colors">Suprema Sites Express</span>.
+                </a>
+            </div>
         </div>
       </div>
     </footer>
