@@ -3,6 +3,15 @@ import { SERVICES } from '../constants';
 import { Check } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
+  const getServiceImage = (serviceId: string, originalImage: string) => {
+    if (serviceId === 'eolicos') {
+      return 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
+    }
+    if (serviceId === 'solar') {
+      return 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
+    }
+    return originalImage;
+  };
 
   return (
     <section id="servicos" className="py-20 bg-gray-50">
@@ -19,7 +28,7 @@ const ServicesSection: React.FC = () => {
             <div key={service.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col h-full">
               <div className="h-48 overflow-hidden relative shrink-0">
                 <img
-                  src={service.image}
+                  src={getServiceImage(service.id, service.image)}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
