@@ -1,18 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { CITIES } from '../constants';
 import ContactForm from '../components/ContactForm';
 import VideoSection from '../components/VideoSection';
 import EcoFriendlySection from '../components/EcoFriendlySection';
+import SEOAccordion from '../components/SEOAccordion';
 import { CheckCircle, Phone, ArrowRight } from 'lucide-react';
 
 const CityPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const city = CITIES.find(c => c.slug === slug);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (!city) {
     return <div className="pt-32 text-center text-2xl">Cidade não encontrada. <Link to="/" className="text-brand-blue underline">Voltar para Home</Link></div>;
   }
+
+  const seoAccordionItems = [
+    {
+      title: `Por que contratar serviços de calhas e telhados em ${city.name}?`,
+      content: `${city.name} possui características climáticas que exigem atenção especial com sistemas de drenagem. As chuvas intensas típicas da região podem causar entupimentos, transbordamentos e infiltrações se as calhas não estiverem corretamente instaladas e mantidas. A Acquatec oferece soluções profissionais com garantia de 5 anos, utilizando materiais de primeira linha e equipe técnica certificada.`
+    },
+    {
+      title: `Quanto tempo leva para instalar calhas em ${city.name}?`,
+      content: `O prazo de instalação varia conforme o tamanho do imóvel. Uma residência padrão de 120m² leva de 1 a 2 dias úteis. Projetos comerciais e industriais podem demandar mais tempo. Nossa equipe realiza vistoria prévia gratuita em ${city.name} e fornece cronograma detalhado no orçamento. Para emergências, oferecemos atendimento prioritário 24h.`
+    },
+    {
+      title: `Quais materiais são recomendados para calhas em ${city.name}?`,
+      content: `Para ${city.name}, recomendamos calhas de alumínio ou galvanizadas. O alumínio é mais leve, não enferruja e oferece acabamento estético superior, ideal para áreas visíveis. Calhas galvanizadas são mais resistentes a impactos e mais econômicas, perfeitas para áreas industriais. Ambas possuem durabilidade similar (15-20 anos) quando instaladas corretamente.`
+    },
+    {
+      title: `A Acquatec atende emergências em ${city.name}?`,
+      content: `Sim! Oferecemos plantão 24h para emergências em ${city.name}, incluindo fins de semana e feriados. Goteiras graves, calhas arrancadas por vendavais e vazamentos urgentes recebem atendimento prioritário. Nossa equipe chega ao local em média em 45 minutos para avaliar e solucionar o problema. Entre em contato pelo WhatsApp (41) 99133-7070 ou telefone (41) 3053-5740.`
+    },
+    {
+      title: `Qual a frequência ideal de manutenção de calhas em ${city.name}?`,
+      content: `Recomendamos limpeza de calhas a cada 3-4 meses em ${city.name}, especialmente antes e depois das estações chuvosas. Imóveis próximos a árvores exigem manutenção mensal para evitar entupimentos por folhas. Oferecemos planos de manutenção preventiva com descontos para condomínios e empresas na região.`
+    }
+  ];
 
   return (
     <div className="pt-20">
@@ -75,8 +103,17 @@ const CityPage: React.FC = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-brand-dark mb-8 text-center">
+            Perguntas Frequentes sobre Calhas e Telhados em {city.name}
+          </h2>
+          <SEOAccordion items={seoAccordionItems} />
+        </div>
+      </section>
+
       <VideoSection />
-      
+
       <EcoFriendlySection />
 
       <ContactForm />

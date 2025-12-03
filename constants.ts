@@ -81,7 +81,7 @@ export const SERVICES: Service[] = [
       'Acabamento estético: Opções de cores que combinam com a fachada do seu imóvel.'
     ],
     price: 'A partir de R$ 80/m²',
-    image: 'https://images.unsplash.com/photo-1618221805562-b7b84497e596?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/calhas-acquatec-400x401.jpg',
     cta: 'Solicitar Orçamento'
   },
   {
@@ -94,7 +94,7 @@ export const SERVICES: Service[] = [
       'Ideal para condomínios e residências antigas que precisam de revitalização.'
     ],
     price: 'A partir de R$ 100/m²',
-    image: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-1-2000x900.jpeg',
     cta: 'Agendar Vistoria Grátis'
   },
   {
@@ -107,7 +107,7 @@ export const SERVICES: Service[] = [
       'Fabricação própria para garantir o encaixe milimétrico na sua obra.'
     ],
     price: 'Sob consulta',
-    image: 'https://images.unsplash.com/photo-1595846519845-68e298c2edd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/aplicacao_de_manta_em_calha.webp',
     cta: 'Falar com Especialista'
   },
   {
@@ -120,7 +120,7 @@ export const SERVICES: Service[] = [
       'Instalação rápida que reduz o tempo total da obra.'
     ],
     price: 'R$ 150 a R$ 250/m²',
-    image: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/limpeza-personalizada-em-telhados-retrteis-400x395.jpg',
     cta: 'Ver Projetos'
   },
   {

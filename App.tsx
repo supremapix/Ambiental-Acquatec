@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
+import WeatherAlert from './components/WeatherAlert';
 import HomePage from './pages/HomePage';
 import CityPage from './pages/CityPage';
 import NeighborhoodPage from './pages/NeighborhoodPage';
@@ -29,6 +30,7 @@ const App: React.FC = () => {
     <Router>
       <ScrollToHashElement />
       <div className="font-sans antialiased text-gray-800 bg-white min-h-screen flex flex-col">
+        <WeatherAlert />
         <Header />
         <main className="flex-grow">
           <Routes>

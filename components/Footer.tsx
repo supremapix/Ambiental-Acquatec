@@ -10,10 +10,13 @@ const Footer: React.FC = () => {
           
           {/* Brand & Description */}
           <div className="space-y-6">
-            <div className="flex flex-col">
-                 <span className="text-3xl font-heading font-extrabold text-white tracking-tight">ACQUATEC</span>
-                 <span className="text-xs font-bold text-brand-orange uppercase tracking-[0.2em]">Calhas e Telhados</span>
-            </div>
+            <Link to="/" className="inline-block">
+              <img
+                src="/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png"
+                alt="Acquatec Calhas e Telhados"
+                className="h-12 w-auto brightness-200"
+              />
+            </Link>
             <p className="text-sm leading-relaxed text-gray-400">
                 Líder em soluções de cobertura em Curitiba e Região. Comprometidos com a excelência técnica, durabilidade e atendimento humanizado há mais de 25 anos.
             </p>
@@ -21,8 +24,8 @@ const Footer: React.FC = () => {
                 <ShieldCheck className="w-4 h-4" /> Garantia de 5 Anos Certificada
             </div>
             <div className="flex gap-4 pt-2">
-                <a href="https://facebook.com" className="bg-gray-800 p-2.5 rounded-full hover:bg-brand-blue hover:text-white transition-all duration-300"><Facebook className="w-5 h-5" /></a>
-                <a href="https://instagram.com" className="bg-gray-800 p-2.5 rounded-full hover:bg-pink-600 hover:text-white transition-all duration-300"><Instagram className="w-5 h-5" /></a>
+                <a href="https://www.facebook.com/acquateccalhas/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2.5 rounded-full hover:bg-brand-blue hover:text-white transition-all duration-300"><Facebook className="w-5 h-5" /></a>
+                <a href="https://www.instagram.com/acquatec.calhas/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2.5 rounded-full hover:bg-pink-600 hover:text-white transition-all duration-300"><Instagram className="w-5 h-5" /></a>
             </div>
           </div>
 
@@ -68,16 +71,20 @@ const Footer: React.FC = () => {
                     <span>Sede: Bairro Fanny<br/>Curitiba - PR, 80000-000</span>
                 </li>
                 <li className="flex items-center gap-3 group">
-                    <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
-                        <Phone className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="font-bold text-white">(41) 3053-5740</span>
+                    <a href="tel:+554130535740" className="flex items-center gap-3 hover:text-brand-orange transition-colors">
+                      <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
+                          <Phone className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="font-bold text-white">(41) 3053-5740</span>
+                    </a>
                 </li>
                 <li className="flex items-center gap-3 group">
-                    <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
-                        <Mail className="w-4 h-4 text-white" />
-                    </div>
-                    <span>contato@acquatec.com.br</span>
+                    <a href="mailto:contato@acquatec.com.br" className="flex items-center gap-3 hover:text-brand-orange transition-colors">
+                      <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
+                          <Mail className="w-4 h-4 text-white" />
+                      </div>
+                      <span>contato@acquatec.com.br</span>
+                    </a>
                 </li>
                 <li className="flex items-start gap-3 group">
                     <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">

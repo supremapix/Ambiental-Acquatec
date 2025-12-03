@@ -1,17 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { TOP_NEIGHBORHOODS } from '../constants';
 import ContactForm from '../components/ContactForm';
 import VideoSection from '../components/VideoSection';
 import EcoFriendlySection from '../components/EcoFriendlySection';
+import SEOAccordion from '../components/SEOAccordion';
 import { CheckCircle, Phone, ArrowRight, MapPin } from 'lucide-react';
 
 const NeighborhoodPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  
-  // Try to find in top neighborhoods, or fallback to formatted slug
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const neighborhoodData = TOP_NEIGHBORHOODS.find(n => n.slug === slug);
   const neighborhoodName = neighborhoodData ? neighborhoodData.name : slug?.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+  const seoAccordionItems = [
+    {
+      title: `Atendimento de calhas e telhados no ${neighborhoodName}`,
+      content: `A Acquatec atende moradores e empresas do bairro ${neighborhoodName} com equipe especializada e atendimento rápido. Conhecemos as particularidades arquitetônicas da região e oferecemos soluções personalizadas para cada tipo de imóvel, desde casas residenciais até condomínios e estabelecimentos comerciais.`
+    },
+    {
+      title: `Serviços mais procurados no ${neighborhoodName}`,
+      content: `No ${neighborhoodName}, os serviços mais solicitados incluem: limpeza e desentupimento de calhas, troca de telhas quebradas, instalação de rufos pingadeira, manutenção preventiva de telhados e reparo de goteiras. Oferecemos orçamento gratuito com visita técnica no bairro.`
+    },
+    {
+      title: `Quanto custa manutenção de calhas no ${neighborhoodName}?`,
+      content: `O valor varia conforme o tipo e extensão do serviço. Limpeza simples de calhas parte de R$ 150, enquanto instalações completas dependem da metragem. Realizamos vistoria gratuita no ${neighborhoodName} e fornecemos orçamento detalhado sem compromisso. Parcelamos em até 12x e oferecemos descontos para contratos de manutenção mensal.`
+    },
+    {
+      title: `Tempo de resposta para emergências no ${neighborhoodName}`,
+      content: `Para emergências no ${neighborhoodName}, nossa equipe chega em média em 45 minutos. Temos plantão 24h para atender goteiras graves, calhas arrancadas e outros problemas urgentes. Entre em contato pelo WhatsApp (41) 99133-7070 ou ligue (41) 3053-5740 para atendimento imediato.`
+    }
+  ];
 
   return (
     <div className="pt-20">
@@ -91,8 +114,17 @@ const NeighborhoodPage: React.FC = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-brand-dark mb-8 text-center">
+            Dúvidas sobre Calhas e Telhados no {neighborhoodName}
+          </h2>
+          <SEOAccordion items={seoAccordionItems} />
+        </div>
+      </section>
+
       <VideoSection />
-      
+
       <EcoFriendlySection />
 
       <ContactForm />
