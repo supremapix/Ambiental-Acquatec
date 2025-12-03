@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
@@ -7,6 +7,7 @@ import WeatherAlert from './components/WeatherAlert';
 import HomePage from './pages/HomePage';
 import CityPage from './pages/CityPage';
 import NeighborhoodPage from './pages/NeighborhoodPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 const ScrollToHashElement = () => {
   const { hash } = useLocation();
@@ -37,6 +38,7 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/cidades/:slug" element={<CityPage />} />
             <Route path="/bairros/:slug" element={<NeighborhoodPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
         <Footer />
