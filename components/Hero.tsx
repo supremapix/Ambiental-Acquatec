@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
           alt="Telhado Profissional Acquatec"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-brand-blue/75"></div>
+        <div className="absolute inset-0 bg-brand-dark/70"></div>
         
         {/* Animated Parallax Clouds/Fog Effect */}
         <div className="absolute inset-0 z-10 opacity-60 pointer-events-none overflow-hidden">

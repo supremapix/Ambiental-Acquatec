@@ -5,10 +5,10 @@ import { Check } from 'lucide-react';
 const ServicesSection: React.FC = () => {
   const getServiceImage = (serviceId: string, originalImage: string) => {
     if (serviceId === 'eolicos') {
-      return 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
+      return '/Exaustores Eólicos.jpg';
     }
     if (serviceId === 'solar') {
-      return 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
+      return '/telhas-translucidas-iluminacao-solar.png';
     }
     return originalImage;
   };
