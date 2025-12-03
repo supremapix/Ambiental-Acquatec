@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import ServicesSection from '../components/ServicesSection';
 import VideoSection from '../components/VideoSection';
+import GallerySection from '../components/GallerySection';
 import ComparisonTable from '../components/ComparisonTable';
 import AboutSection from '../components/AboutSection';
 import EcoFriendlySection from '../components/EcoFriendlySection';
@@ -73,6 +74,7 @@ const HomePage: React.FC = () => {
       
       <Hero />
       <ServicesSection />
+      <GallerySection />
       <VideoSection />
       <ComparisonTable />
       

@@ -42,12 +42,12 @@ const AboutSection: React.FC = () => {
           {/* Image Grid */}
           <div className="lg:w-1/2 grid grid-cols-2 gap-4">
             <img
-              src="/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-1-2000x900.jpeg"
+              src="/acquatec-telhados-condominios-reformas-preco-barato-manutencao-517x357.jpg"
               alt="Telhados Acquatec"
               className="rounded-lg shadow-lg w-full h-64 object-cover transform translate-y-8"
             />
             <img
-              src="/calhas-acquatec-400x401.jpg"
+              src="/calhas-preco-400x402.jpg"
               alt="Calhas Acquatec"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />

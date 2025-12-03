@@ -6,9 +6,9 @@ const Hero: React.FC = () => {
     <section className="relative h-screen min-h-[600px] flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1632759368593-e40623a9d700?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-          alt="Telhado Profissional" 
+        <img
+          src="/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-4-1889x850.jpeg"
+          alt="Telhado Profissional Acquatec"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-brand-dark/70"></div>

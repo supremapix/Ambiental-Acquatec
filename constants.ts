@@ -81,7 +81,7 @@ export const SERVICES: Service[] = [
       'Acabamento estético: Opções de cores que combinam com a fachada do seu imóvel.'
     ],
     price: 'A partir de R$ 80/m²',
-    image: '/calhas-acquatec-400x401.jpg',
+    image: '/calhas-preco-400x402.jpg',
     cta: 'Solicitar Orçamento'
   },
   {
@@ -94,7 +94,7 @@ export const SERVICES: Service[] = [
       'Ideal para condomínios e residências antigas que precisam de revitalização.'
     ],
     price: 'A partir de R$ 100/m²',
-    image: '/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-1-2000x900.jpeg',
+    image: '/acquatec-telhados-condominios-reformas-preco-barato-manutencao-517x357.jpg',
     cta: 'Agendar Vistoria Grátis'
   },
   {
@@ -120,7 +120,7 @@ export const SERVICES: Service[] = [
       'Instalação rápida que reduz o tempo total da obra.'
     ],
     price: 'R$ 150 a R$ 250/m²',
-    image: '/limpeza-personalizada-em-telhados-retrteis-400x395.jpg',
+    image: '/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-4-1889x850.jpeg',
     cta: 'Ver Projetos'
   },
   {
@@ -133,7 +133,7 @@ export const SERVICES: Service[] = [
       'Projeto personalizado conforme a área de telhado disponível.'
     ],
     price: 'A partir de R$ 2.000',
-    image: 'https://images.unsplash.com/photo-1544983059-e970a09a5628?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/acquatec-telhados-calhas-400x401.jpg',
     cta: 'Simular Economia'
   },
   {
@@ -146,7 +146,7 @@ export const SERVICES: Service[] = [
       'Gerenciamento completo: Da demolição à limpeza final, sem dor de cabeça.'
     ],
     price: 'Sob orçamento',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/limpeza-personalizada-em-telhados-retrteis-400x395.jpg',
     cta: 'Enviar Fotos'
   },
   {
@@ -159,7 +159,7 @@ export const SERVICES: Service[] = [
       'Materiais com proteção UV que iluminam sem aquecer excessivamente o ambiente.'
     ],
     price: 'Sob consulta',
-    image: 'https://images.unsplash.com/photo-1592833159057-65a269755598?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-1-2000x900.jpeg',
     cta: 'Conhecer Solução'
   },
   {
@@ -172,7 +172,7 @@ export const SERVICES: Service[] = [
       'Silencioso e eficiente, com rolamentos blindados para maior durabilidade.'
     ],
     price: 'A partir de R$ 800/un',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/calhas-acquatec-400x401.jpg',
     cta: 'Solicitar Visita'
   }
 ];
