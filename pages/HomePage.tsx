@@ -11,67 +11,58 @@ import ContactForm from '../components/ContactForm';
 import FAQSection from '../components/FAQSection';
 import CompactCoverage from '../components/CompactCoverage';
 import TopNeighborhoods from '../components/TopNeighborhoods';
-import { TESTIMONIALS } from '../constants';
+import { TESTIMONIALS, SERVICES } from '../constants';
 import { Star } from 'lucide-react';
+import { createLocalBusinessSchema, createOfferCatalogSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
 
 const HomePage: React.FC = () => {
-  const schemaData = {
+  const localBusinessSchema = createLocalBusinessSchema();
+
+  const offerCatalogSchema = createOfferCatalogSchema(
+    SERVICES.map(service => ({
+      name: service.title,
+      description: service.description[0]
+    }))
+  );
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.acquateccalhas.com.br/' }
+  ]);
+
+  const reviewsSchema = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "RoofingContractor",
-        "@id": "https://acquateccalhas.com.br/#organization",
-        "name": "Acquatec Calhas e Telhados",
-        "url": "https://acquateccalhas.com.br",
-        "logo": "https://acquateccalhas.com.br/logo.png",
-        "image": "https://images.unsplash.com/photo-1632759368593-e40623a9d700",
-        "description": "Instalação e manutenção de calhas, rufos e telhados em Curitiba e Região Metropolitana. Garantia de 5 anos e atendimento 24h.",
-        "telephone": "+554130535740",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Bairro Fanny",
-          "addressLocality": "Curitiba",
-          "addressRegion": "PR",
-          "postalCode": "80000-000",
-          "addressCountry": "BR"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -25.4284,
-          "longitude": -49.2733
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "08:00",
-          "closes": "18:00"
-        },
-        "priceRange": "$$"
+    "@type": "RoofingContractor",
+    "name": "Acquatec Calhas e Telhados",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": TESTIMONIALS.length.toString(),
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": TESTIMONIALS.map((testimonial) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": testimonial.name
       },
-      {
-        "@type": "Service",
-        "name": "Instalação de Calhas",
-        "provider": {
-          "@id": "https://acquateccalhas.com.br/#organization"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Curitiba"
-        }
+      "datePublished": "2024-11-01",
+      "reviewBody": testimonial.text,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": testimonial.stars.toString(),
+        "bestRating": "5"
       }
-    ]
+    }))
   };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }} />
+
       <Hero />
       <ServicesSection />
       <GallerySection />

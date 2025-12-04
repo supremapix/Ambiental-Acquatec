@@ -6,6 +6,8 @@ import VideoSection from '../components/VideoSection';
 import EcoFriendlySection from '../components/EcoFriendlySection';
 import SEOAccordion from '../components/SEOAccordion';
 import { CheckCircle, Phone, ArrowRight } from 'lucide-react';
+import { createServiceSchema, createFAQSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
+import SEOHead from '../components/SEOHead';
 
 const CityPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -42,8 +44,29 @@ const CityPage: React.FC = () => {
     }
   ];
 
+  const serviceSchema = createServiceSchema(
+    `Instalação e Manutenção de Calhas e Telhados`,
+    `Serviços profissionais de calhas, telhados e rufos em ${city.name} com garantia de 5 anos`,
+    city.name
+  );
+
+  const faqSchema = createFAQSchema(seoAccordionItems);
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.acquateccalhas.com.br/' },
+    { name: 'Cidades', url: 'https://www.acquateccalhas.com.br/' },
+    { name: city.name, url: `https://www.acquateccalhas.com.br/cidades/${slug}` }
+  ]);
+
   return (
     <div className="pt-20">
+      <SEOHead
+        title={`Calhas e Telhados em ${city.name} - Acquatec | Orçamento Grátis`}
+        description={`Instalação e manutenção de calhas e telhados em ${city.name}. 25 anos de experiência, garantia de 5 anos. WhatsApp: (41) 99133-7070`}
+        canonical={`https://www.acquateccalhas.com.br/cidades/${slug}`}
+        keywords={`calhas ${city.name}, telhados ${city.name}, instalação de calhas ${city.name}, manutenção de calhas ${city.name}`}
+        schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
+      />
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-3">
         <div className="container mx-auto px-4 text-sm text-gray-500">

@@ -6,6 +6,8 @@ import VideoSection from '../components/VideoSection';
 import EcoFriendlySection from '../components/EcoFriendlySection';
 import SEOAccordion from '../components/SEOAccordion';
 import { CheckCircle, Phone, ArrowRight, MapPin } from 'lucide-react';
+import { createServiceSchema, createFAQSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
+import SEOHead from '../components/SEOHead';
 
 const NeighborhoodPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -36,8 +38,29 @@ const NeighborhoodPage: React.FC = () => {
     }
   ];
 
+  const serviceSchema = createServiceSchema(
+    `Instalação e Manutenção de Calhas e Telhados no ${neighborhoodName}`,
+    `Serviços profissionais de calhas e telhados no bairro ${neighborhoodName}, Curitiba. Atendimento rápido e garantia de 5 anos.`,
+    'Curitiba'
+  );
+
+  const faqSchema = createFAQSchema(seoAccordionItems);
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.acquateccalhas.com.br/' },
+    { name: 'Bairros', url: 'https://www.acquateccalhas.com.br/' },
+    { name: neighborhoodName || '', url: `https://www.acquateccalhas.com.br/bairros/${slug}` }
+  ]);
+
   return (
     <div className="pt-20">
+      <SEOHead
+        title={`Calhas e Telhados no ${neighborhoodName} - Curitiba | Acquatec`}
+        description={`Instalação e manutenção de calhas no ${neighborhoodName}, Curitiba. Atendimento rápido, 25 anos de experiência. WhatsApp: (41) 99133-7070`}
+        canonical={`https://www.acquateccalhas.com.br/bairros/${slug}`}
+        keywords={`calhas ${neighborhoodName}, telhados ${neighborhoodName}, instalação calhas ${neighborhoodName} curitiba`}
+        schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
+      />
       {/* Breadcrumb */}
       <div className="bg-gray-100 py-3">
         <div className="container mx-auto px-4 text-sm text-gray-500">
