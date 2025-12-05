@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SERVICES } from '../constants';
-import { Check } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
   const getServiceImage = (serviceId: string, originalImage: string) => {
@@ -51,13 +52,19 @@ const ServicesSection: React.FC = () => {
                   <span className="text-sm font-semibold text-brand-blue bg-blue-50 py-1 px-3 rounded-full w-fit">
                     {service.price}
                   </span>
-                  
+
                   <div className="flex gap-2">
-                    <a 
-                      href="#orcamento"
-                      className="flex-grow text-center bg-brand-orange text-white font-bold py-3 rounded hover:bg-orange-600 transition-colors"
+                    <Link
+                      to={`/servicos/${service.id}`}
+                      className="flex items-center justify-center gap-2 flex-1 text-center bg-brand-blue text-white font-bold py-3 rounded hover:bg-blue-800 transition-colors"
                     >
-                      {service.cta}
+                      Saiba Mais <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <a
+                      href="#orcamento"
+                      className="flex-1 text-center bg-brand-orange text-white font-bold py-3 rounded hover:bg-orange-600 transition-colors"
+                    >
+                      Orçamento
                     </a>
                   </div>
                 </div>

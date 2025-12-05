@@ -49,12 +49,13 @@ const Footer: React.FC = () => {
               Serviços Principais
             </h3>
             <ul className="space-y-3 text-sm">
-                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Instalação de Calhas</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Manutenção de Telhados</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Rufos e Pingadeiras</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Telhados Metálicos</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Captação de Água</Link></li>
-                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Exaustores Eólicos</Link></li>
+                <li><Link to="/servicos/calhas" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Instalação de Calhas</Link></li>
+                <li><Link to="/servicos/manutencao" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Manutenção de Telhados</Link></li>
+                <li><Link to="/servicos/rufos" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Rufos e Acabamentos</Link></li>
+                <li><Link to="/servicos/metalicos" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Telhados Metálicos</Link></li>
+                <li><Link to="/servicos/captacao" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Captação de Água</Link></li>
+                <li><Link to="/servicos/reformas" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Reformas Completas</Link></li>
+                <li><Link to="/servicos/eolicos" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Exaustores Eólicos</Link></li>
             </ul>
           </div>
 

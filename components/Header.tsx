@@ -48,10 +48,15 @@ const Header: React.FC = () => {
               </button>
               <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top border-t-4 border-brand-orange">
                 <div className="py-2">
-                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700">Instalação de Calhas</Link>
-                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700">Manutenção de Telhados</Link>
-                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700">Rufos e Acabamentos</Link>
-                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700">Reformas Completas</Link>
+                  <Link to="/servicos/calhas" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Instalação de Calhas</Link>
+                  <Link to="/servicos/manutencao" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Manutenção de Telhados</Link>
+                  <Link to="/servicos/rufos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Rufos e Acabamentos</Link>
+                  <Link to="/servicos/metalicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Telhados Metálicos</Link>
+                  <Link to="/servicos/captacao" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Captação de Água</Link>
+                  <Link to="/servicos/reformas" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Reformas Completas</Link>
+                  <Link to="/servicos/eolicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Exaustores Eólicos</Link>
+                  <div className="border-t my-2"></div>
+                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-brand-orange hover:text-white text-brand-blue font-semibold">Ver Todos</Link>
                 </div>
               </div>
             </div>
@@ -102,7 +107,13 @@ const Header: React.FC = () => {
              </button>
              {activeDropdown === 'services' && (
                <div className="pl-4 flex flex-col gap-3 bg-gray-50 py-3 rounded">
-                  <Link to="/#servicos" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Todos os Serviços</Link>
+                  <Link to="/servicos/calhas" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Instalação de Calhas</Link>
+                  <Link to="/servicos/manutencao" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Manutenção de Telhados</Link>
+                  <Link to="/servicos/rufos" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Rufos e Acabamentos</Link>
+                  <Link to="/servicos/metalicos" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Telhados Metálicos</Link>
+                  <Link to="/servicos/captacao" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Captação de Água</Link>
+                  <Link to="/servicos/reformas" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Reformas Completas</Link>
+                  <Link to="/servicos/eolicos" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Exaustores Eólicos</Link>
                </div>
              )}
 

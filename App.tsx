@@ -7,6 +7,7 @@ import WeatherAlert from './components/WeatherAlert';
 import HomePage from './pages/HomePage';
 import CityPage from './pages/CityPage';
 import NeighborhoodPage from './pages/NeighborhoodPage';
+import ServicePage from './pages/ServicePage';
 import NotFoundPage from './pages/NotFoundPage';
 
 const ScrollToHashElement = () => {
@@ -38,6 +39,7 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/cidades/:slug" element={<CityPage />} />
             <Route path="/bairros/:slug" element={<NeighborhoodPage />} />
+            <Route path="/servicos/:slug" element={<ServicePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
