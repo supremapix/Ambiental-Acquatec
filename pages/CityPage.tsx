@@ -5,13 +5,19 @@ import ContactForm from '../components/ContactForm';
 import VideoSection from '../components/VideoSection';
 import EcoFriendlySection from '../components/EcoFriendlySection';
 import SEOAccordion from '../components/SEOAccordion';
+import EnhancedSEO from '../components/EnhancedSEO';
 import { CheckCircle, Phone, ArrowRight } from 'lucide-react';
 import { createServiceSchema, createFAQSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
-import SEOHead from '../components/SEOHead';
 
-const CityPage: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const city = CITIES.find(c => c.slug === slug);
+interface CityPageProps {
+  citySlug?: string;
+  cityName?: string;
+}
+
+const CityPage: React.FC<CityPageProps> = ({ citySlug, cityName: propName }) => {
+  const { slug: routeSlug } = useParams<{ slug: string }>();
+  const slug = citySlug || routeSlug;
+  const city = CITIES.find(c => c.slug === slug) || (propName && slug ? { name: propName, slug } : null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -50,7 +56,10 @@ const CityPage: React.FC = () => {
     city.name
   );
 
-  const faqSchema = createFAQSchema(seoAccordionItems);
+  const faqSchema = createFAQSchema(seoAccordionItems.map(item => ({
+    question: item.title,
+    answer: item.content
+  })));
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: 'Home', url: 'https://www.acquateccalhas.com.br/' },
@@ -60,21 +69,19 @@ const CityPage: React.FC = () => {
 
   return (
     <div className="pt-20">
-      <SEOHead
+      <EnhancedSEO
         title={`Calhas e Telhados em ${city.name} - Acquatec | Orçamento Grátis`}
         description={`Instalação e manutenção de calhas e telhados em ${city.name}. 25 anos de experiência, garantia de 5 anos. WhatsApp: (41) 99133-7070`}
         canonical={`https://www.acquateccalhas.com.br/cidades/${slug}`}
         keywords={`calhas ${city.name}, telhados ${city.name}, instalação de calhas ${city.name}, manutenção de calhas ${city.name}`}
         schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
       />
-      {/* Breadcrumb */}
       <div className="bg-gray-100 py-3">
         <div className="container mx-auto px-4 text-sm text-gray-500">
             <Link to="/" className="hover:underline">Home</Link> &gt; Cidades &gt; <span className="font-bold text-brand-blue">{city.name}</span>
         </div>
       </div>
 
-      {/* City Hero */}
       <section className="bg-brand-blue text-white py-16">
         <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4">
@@ -90,7 +97,6 @@ const CityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Main Content */}
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-2xl font-bold text-brand-dark mb-6">Serviços Profissionais em {city.name}</h2>

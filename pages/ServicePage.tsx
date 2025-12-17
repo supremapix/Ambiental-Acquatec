@@ -4,12 +4,17 @@ import { SERVICES } from '../constants';
 import ContactForm from '../components/ContactForm';
 import VideoSection from '../components/VideoSection';
 import GallerySection from '../components/GallerySection';
+import EnhancedSEO from '../components/EnhancedSEO';
 import { CheckCircle, Phone, Clock, Shield, Award } from 'lucide-react';
 import { createServiceSchema, createFAQSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
-import SEOHead from '../components/SEOHead';
 
-const ServicePage: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
+interface ServicePageProps {
+  serviceId?: string;
+}
+
+const ServicePage: React.FC<ServicePageProps> = ({ serviceId }) => {
+  const { slug: routeSlug } = useParams<{ slug: string }>();
+  const slug = serviceId || routeSlug;
   const service = SERVICES.find(s => s.id === slug);
 
   useEffect(() => {
@@ -63,7 +68,7 @@ const ServicePage: React.FC = () => {
 
   return (
     <div className="pt-20">
-      <SEOHead
+      <EnhancedSEO
         title={`${service.title} em Curitiba - Acquatec | Orçamento Grátis`}
         description={`${service.description[0]} Garantia de 5 anos. 25 anos de experiência. WhatsApp: (41) 99133-7070`}
         canonical={`https://www.acquateccalhas.com.br/servicos/${slug}`}
@@ -115,7 +120,7 @@ const ServicePage: React.FC = () => {
                   {service.cta}
                 </a>
                 <a
-                  href="https://wa.me/5541991337070?text=Olá! Gostaria de um orçamento para: {service.title}"
+                  href={`https://wa.me/5541991337070?text=Olá! Gostaria de um orçamento para: ${service.title}`}
                   className="bg-brand-green hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-center transition-colors shadow-lg"
                 >
                   WhatsApp
@@ -211,7 +216,7 @@ const ServicePage: React.FC = () => {
                 <div className="text-gray-200">Anos de Experiência</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-brand-orange mb-2">4.9★</div>
+                <div className="text-4xl font-bold text-brand-orange mb-2">4.9</div>
                 <div className="text-gray-200">Avaliação Média</div>
               </div>
               <div>

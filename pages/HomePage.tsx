@@ -11,23 +11,18 @@ import ContactForm from '../components/ContactForm';
 import FAQSection from '../components/FAQSection';
 import CompactCoverage from '../components/CompactCoverage';
 import TopNeighborhoods from '../components/TopNeighborhoods';
+import EnhancedSEO from '../components/EnhancedSEO';
 import { TESTIMONIALS, SERVICES } from '../constants';
 import { Star } from 'lucide-react';
-import { createLocalBusinessSchema, createOfferCatalogSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
+import { createOfferCatalogSchema } from '../utils/seo-schemas';
 
 const HomePage: React.FC = () => {
-  const localBusinessSchema = createLocalBusinessSchema();
-
   const offerCatalogSchema = createOfferCatalogSchema(
     SERVICES.map(service => ({
       name: service.title,
       description: service.description[0]
     }))
   );
-
-  const breadcrumbSchema = createBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.acquateccalhas.com.br/' }
-  ]);
 
   const reviewsSchema = {
     "@context": "https://schema.org",
@@ -56,12 +51,38 @@ const HomePage: React.FC = () => {
     }))
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qual o tipo de calha ideal para minha casa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de vários fatores: tipo de telhado, inclinação, volume de chuvas na região e estética desejada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Com que frequência devo fazer manutenção nas calhas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recomendamos limpeza a cada 3-4 meses, especialmente antes e depois das estações chuvosas."
+        }
+      }
+    ]
+  };
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }} />
+      <EnhancedSEO
+        title="Acquatec Calhas e Telhados - Instalação e Manutenção em Curitiba | 25 Anos de Experiência"
+        description="Especialistas em calhas e telhados há 25 anos em Curitiba. Instalação, manutenção, limpeza e conserto. Garantia de 5 anos. Atendimento 24h. WhatsApp: (41) 99133-7070"
+        canonical="https://www.acquateccalhas.com.br/"
+        keywords="calhas curitiba, instalação de calhas, manutenção de calhas, telhados curitiba, rufos e pingadeiras, calhas pluviais, limpeza de calhas, reforma de telhado curitiba"
+        schemas={[offerCatalogSchema, reviewsSchema, faqSchema]}
+      />
 
       <Hero />
       <ServicesSection />
@@ -69,7 +90,6 @@ const HomePage: React.FC = () => {
       <VideoSection />
       <ComparisonTable />
       
-      {/* Social Feeds */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
             <h2 className="text-3xl font-heading font-bold text-center text-brand-blue mb-8">Acompanhe Nossos Trabalhos</h2>
@@ -88,7 +108,6 @@ const HomePage: React.FC = () => {
       <EcoFriendlySection />
       <DengueAlert />
       
-      {/* Testimonials */}
       <section className="py-20 bg-brand-blue text-white">
         <div className="container mx-auto px-4">
             <h2 className="text-3xl font-heading font-bold text-center mb-12">O Que Nossos Clientes Dizem</h2>
@@ -113,7 +132,6 @@ const HomePage: React.FC = () => {
 
       <TopNeighborhoods />
 
-      {/* Compact Coverage near Footer */}
       <CompactCoverage />
     </>
   );

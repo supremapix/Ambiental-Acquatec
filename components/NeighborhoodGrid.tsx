@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { NEIGHBORHOODS } from '../constants';
+import { ALL_NEIGHBORHOODS } from '../constants';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const NeighborhoodGrid: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Show only first 18 initially
-  const visibleNeighborhoods = isExpanded ? NEIGHBORHOODS : NEIGHBORHOODS.slice(0, 18);
+  const visibleNeighborhoods = isExpanded ? ALL_NEIGHBORHOODS : ALL_NEIGHBORHOODS.slice(0, 18);
 
   return (
     <section className="py-12 bg-white">
@@ -17,13 +16,13 @@ const NeighborhoodGrid: React.FC = () => {
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {visibleNeighborhoods.map((neighborhood, index) => (
+          {visibleNeighborhoods.map((neighborhood) => (
             <Link 
-              key={index}
-              to="/cidades/curitiba" // All link to Curitiba main page as per typical structure, or could be dynamic
+              key={neighborhood.slug}
+              to={`/bairros/${neighborhood.slug}`}
               className="text-sm text-gray-600 hover:text-brand-blue hover:underline text-center p-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
             >
-              {neighborhood}
+              {neighborhood.name}
             </Link>
           ))}
         </div>
@@ -36,7 +35,7 @@ const NeighborhoodGrid: React.FC = () => {
             {isExpanded ? (
               <>Ver Menos <ChevronUp className="w-4 h-4" /></>
             ) : (
-              <>Ver Todos os Bairros ({NEIGHBORHOODS.length}) <ChevronDown className="w-4 h-4" /></>
+              <>Ver Todos os Bairros ({ALL_NEIGHBORHOODS.length}) <ChevronDown className="w-4 h-4" /></>
             )}
           </button>
         </div>

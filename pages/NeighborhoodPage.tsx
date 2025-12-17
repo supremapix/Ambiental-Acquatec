@@ -1,23 +1,29 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { TOP_NEIGHBORHOODS } from '../constants';
+import { ALL_NEIGHBORHOODS } from '../constants';
 import ContactForm from '../components/ContactForm';
 import VideoSection from '../components/VideoSection';
 import EcoFriendlySection from '../components/EcoFriendlySection';
 import SEOAccordion from '../components/SEOAccordion';
-import { CheckCircle, Phone, ArrowRight, MapPin } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import { CheckCircle, Phone, MapPin } from 'lucide-react';
 import { createServiceSchema, createFAQSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
-import SEOHead from '../components/SEOHead';
 
-const NeighborhoodPage: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
+interface NeighborhoodPageProps {
+  neighborhoodSlug?: string;
+  neighborhoodName?: string;
+}
+
+const NeighborhoodPage: React.FC<NeighborhoodPageProps> = ({ neighborhoodSlug, neighborhoodName: propName }) => {
+  const { slug: routeSlug } = useParams<{ slug: string }>();
+  const slug = neighborhoodSlug || routeSlug;
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const neighborhoodData = TOP_NEIGHBORHOODS.find(n => n.slug === slug);
-  const neighborhoodName = neighborhoodData ? neighborhoodData.name : slug?.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  const neighborhoodData = ALL_NEIGHBORHOODS.find(n => n.slug === slug);
+  const neighborhoodName = propName || (neighborhoodData ? neighborhoodData.name : slug?.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '));
 
   const seoAccordionItems = [
     {
@@ -44,7 +50,10 @@ const NeighborhoodPage: React.FC = () => {
     'Curitiba'
   );
 
-  const faqSchema = createFAQSchema(seoAccordionItems);
+  const faqSchema = createFAQSchema(seoAccordionItems.map(item => ({
+    question: item.title,
+    answer: item.content
+  })));
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: 'Home', url: 'https://www.acquateccalhas.com.br/' },
@@ -54,21 +63,19 @@ const NeighborhoodPage: React.FC = () => {
 
   return (
     <div className="pt-20">
-      <SEOHead
+      <EnhancedSEO
         title={`Calhas e Telhados no ${neighborhoodName} - Curitiba | Acquatec`}
         description={`Instalação e manutenção de calhas no ${neighborhoodName}, Curitiba. Atendimento rápido, 25 anos de experiência. WhatsApp: (41) 99133-7070`}
         canonical={`https://www.acquateccalhas.com.br/bairros/${slug}`}
         keywords={`calhas ${neighborhoodName}, telhados ${neighborhoodName}, instalação calhas ${neighborhoodName} curitiba`}
         schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
       />
-      {/* Breadcrumb */}
       <div className="bg-gray-100 py-3">
         <div className="container mx-auto px-4 text-sm text-gray-500">
             <Link to="/" className="hover:underline">Home</Link> &gt; Bairros &gt; <span className="font-bold text-brand-blue">{neighborhoodName}</span>
         </div>
       </div>
 
-      {/* Hero */}
       <section className="bg-brand-dark text-white py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-brand-blue/20"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -89,7 +96,6 @@ const NeighborhoodPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Main Content */}
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
             <div className="flex items-center gap-4 mb-8">
