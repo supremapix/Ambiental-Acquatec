@@ -37,24 +37,106 @@ export const CITIES: City[] = [
   { name: 'Tunas do Paraná', slug: 'tunas-do-parana' }
 ];
 
-export const NEIGHBORHOODS = [
-  "Vila Parolin", "Vila Torres", "Jardim Schaffer", "Vila Sabará", "Boqueirão de Baixo", 
-  "Boqueirão de Cima", "Tanguá", "Vila Zumbi", "Abranches de Baixo", "Abranches de Cima", 
-  "Vila Nossa Senhora da Luz", "Vila Tecnológica", "Vila Oficinas", "Vila Fanny", "Vila Hauer", 
-  "Batel Soho", "Alto da Rua XV", "CIC Norte", "CIC Central", "CIC Sul", "Vila Guaíra", 
-  "Centro Histórico", "Ecoville", "Carmo Abranches", "Água Verde", "Ahú", "Alto Boqueirão", 
-  "Alto da Glória", "Alto da XV", "Atuba", "Augusta", "Bacacheri", "Bairro Alto", "Barreirinha", 
-  "Batel", "Bigorrilho", "Boa Vista", "Bom Retiro", "Boqueirão", "Butiatuvinha", "Cabral", 
-  "Cachoeira", "Cajuru", "Campina do Siqueira", "Campo Comprido", "Campo de Santana", 
-  "Capão da Imbuia", "Capão Raso", "Cascatinha", "Caximba", "Centro", "Centro Cívico", 
-  "Cidade Industrial de Curitiba", "Cristo Rei", "Fanny", "Fazendinha", "Ganchinho", 
-  "Guabirotuba", "Guaíra", "Hauer", "Hugo Lange", "Jardim Botânico", "Jardim das Américas", 
-  "Jardim Social", "Juvevê", "Lamenha Pequena", "Lindóia", "Mercês", "Mossunguê", 
-  "Novo Mundo", "Orleans", "Parolin", "Pilarzinho", "Pinheirinho", "Portão", "Prado Velho", 
-  "Rebouças", "Riviera", "Santa Cândida", "Santa Felicidade", "Santa Quitéria", "Santo Inácio", 
-  "São Braz", "São Francisco", "São João", "São Lourenço", "São Miguel", "Vila Pantanal", 
-  "Seminário", "Sítio Cercado", "Taboão", "Tarumã", "Tatuquara", "Tingui", "Uberaba", 
-  "Umbará", "Vila Izabel", "Vista Alegre", "Xaxim"
+export const ALL_NEIGHBORHOODS: Neighborhood[] = [
+  { name: 'Vila Parolin', slug: 'vila-parolin' },
+  { name: 'Vila Torres', slug: 'vila-torres' },
+  { name: 'Jardim Schaffer', slug: 'jardim-schaffer' },
+  { name: 'Vila Sabará', slug: 'vila-sabara' },
+  { name: 'Boqueirão de Baixo', slug: 'boqueirao-de-baixo' },
+  { name: 'Boqueirão de Cima', slug: 'boqueirao-de-cima' },
+  { name: 'Tanguá', slug: 'tangua' },
+  { name: 'Vila Zumbi', slug: 'vila-zumbi' },
+  { name: 'Abranches de Baixo', slug: 'abranches-de-baixo' },
+  { name: 'Abranches de Cima', slug: 'abranches-de-cima' },
+  { name: 'Vila Nossa Senhora da Luz', slug: 'vila-nossa-senhora-da-luz' },
+  { name: 'Vila Tecnológica', slug: 'vila-tecnologica' },
+  { name: 'Vila Oficinas', slug: 'vila-oficinas' },
+  { name: 'Vila Fanny', slug: 'vila-fanny' },
+  { name: 'Vila Hauer', slug: 'vila-hauer' },
+  { name: 'Batel Soho', slug: 'batel-soho' },
+  { name: 'Alto da Rua XV', slug: 'alto-da-rua-xv' },
+  { name: 'CIC Norte', slug: 'cic-norte' },
+  { name: 'CIC Central', slug: 'cic-central' },
+  { name: 'CIC Sul', slug: 'cic-sul' },
+  { name: 'Vila Guaíra', slug: 'vila-guaira' },
+  { name: 'Centro Histórico', slug: 'centro-historico' },
+  { name: 'Ecoville', slug: 'ecoville' },
+  { name: 'Carmo Abranches', slug: 'carmo-abranches' },
+  { name: 'Água Verde', slug: 'agua-verde' },
+  { name: 'Ahú', slug: 'ahu' },
+  { name: 'Alto Boqueirão', slug: 'alto-boqueirao' },
+  { name: 'Alto da Glória', slug: 'alto-da-gloria' },
+  { name: 'Alto da XV', slug: 'alto-da-xv' },
+  { name: 'Atuba', slug: 'atuba' },
+  { name: 'Augusta', slug: 'augusta' },
+  { name: 'Bacacheri', slug: 'bacacheri' },
+  { name: 'Bairro Alto', slug: 'bairro-alto' },
+  { name: 'Barreirinha', slug: 'barreirinha' },
+  { name: 'Batel', slug: 'batel' },
+  { name: 'Bigorrilho', slug: 'bigorrilho' },
+  { name: 'Boa Vista', slug: 'boa-vista' },
+  { name: 'Bom Retiro', slug: 'bom-retiro' },
+  { name: 'Boqueirão', slug: 'boqueirao' },
+  { name: 'Butiatuvinha', slug: 'butiatuvinha' },
+  { name: 'Cabral', slug: 'cabral' },
+  { name: 'Cachoeira', slug: 'cachoeira' },
+  { name: 'Cajuru', slug: 'cajuru' },
+  { name: 'Campina do Siqueira', slug: 'campina-do-siqueira' },
+  { name: 'Campo Comprido', slug: 'campo-comprido' },
+  { name: 'Campo de Santana', slug: 'campo-de-santana' },
+  { name: 'Capão da Imbuia', slug: 'capao-da-imbuia' },
+  { name: 'Capão Raso', slug: 'capao-raso' },
+  { name: 'Cascatinha', slug: 'cascatinha' },
+  { name: 'Caximba', slug: 'caximba' },
+  { name: 'Centro', slug: 'centro' },
+  { name: 'Centro Cívico', slug: 'centro-civico' },
+  { name: 'Cidade Industrial de Curitiba', slug: 'cic' },
+  { name: 'Cristo Rei', slug: 'cristo-rei' },
+  { name: 'Fanny', slug: 'fanny' },
+  { name: 'Fazendinha', slug: 'fazendinha' },
+  { name: 'Ganchinho', slug: 'ganchinho' },
+  { name: 'Guabirotuba', slug: 'guabirotuba' },
+  { name: 'Guaíra', slug: 'guaira' },
+  { name: 'Hauer', slug: 'hauer' },
+  { name: 'Hugo Lange', slug: 'hugo-lange' },
+  { name: 'Jardim Botânico', slug: 'jardim-botanico' },
+  { name: 'Jardim das Américas', slug: 'jardim-das-americas' },
+  { name: 'Jardim Social', slug: 'jardim-social' },
+  { name: 'Juvevê', slug: 'juveve' },
+  { name: 'Lamenha Pequena', slug: 'lamenha-pequena' },
+  { name: 'Lindóia', slug: 'lindoia' },
+  { name: 'Mercês', slug: 'merces' },
+  { name: 'Mossunguê', slug: 'mossungue' },
+  { name: 'Novo Mundo', slug: 'novo-mundo' },
+  { name: 'Orleans', slug: 'orleans' },
+  { name: 'Parolin', slug: 'parolin' },
+  { name: 'Pilarzinho', slug: 'pilarzinho' },
+  { name: 'Pinheirinho', slug: 'pinheirinho' },
+  { name: 'Portão', slug: 'portao' },
+  { name: 'Prado Velho', slug: 'prado-velho' },
+  { name: 'Rebouças', slug: 'reboucas' },
+  { name: 'Riviera', slug: 'riviera' },
+  { name: 'Santa Cândida', slug: 'santa-candida' },
+  { name: 'Santa Felicidade', slug: 'santa-felicidade' },
+  { name: 'Santa Quitéria', slug: 'santa-quiteria' },
+  { name: 'Santo Inácio', slug: 'santo-inacio' },
+  { name: 'São Braz', slug: 'sao-braz' },
+  { name: 'São Francisco', slug: 'sao-francisco' },
+  { name: 'São João', slug: 'sao-joao' },
+  { name: 'São Lourenço', slug: 'sao-lourenco' },
+  { name: 'São Miguel', slug: 'sao-miguel' },
+  { name: 'Vila Pantanal', slug: 'vila-pantanal' },
+  { name: 'Seminário', slug: 'seminario' },
+  { name: 'Sítio Cercado', slug: 'sitio-cercado' },
+  { name: 'Taboão', slug: 'taboao' },
+  { name: 'Tarumã', slug: 'taruma' },
+  { name: 'Tatuquara', slug: 'tatuquara' },
+  { name: 'Tingui', slug: 'tingui' },
+  { name: 'Uberaba', slug: 'uberaba' },
+  { name: 'Umbará', slug: 'umbara' },
+  { name: 'Vila Izabel', slug: 'vila-izabel' },
+  { name: 'Vista Alegre', slug: 'vista-alegre' },
+  { name: 'Xaxim', slug: 'xaxim' }
 ];
 
 export const TOP_NEIGHBORHOODS: Neighborhood[] = [
@@ -81,7 +163,7 @@ export const SERVICES: Service[] = [
       'Acabamento estético: Opções de cores que combinam com a fachada do seu imóvel.'
     ],
     price: 'A partir de R$ 80/m²',
-    image: 'https://images.unsplash.com/photo-1618221805562-b7b84497e596?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/calhas-preco-400x402.jpg',
     cta: 'Solicitar Orçamento'
   },
   {
@@ -94,7 +176,7 @@ export const SERVICES: Service[] = [
       'Ideal para condomínios e residências antigas que precisam de revitalização.'
     ],
     price: 'A partir de R$ 100/m²',
-    image: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/acquatec-telhados-condominios-reformas-preco-barato-manutencao-517x357.jpg',
     cta: 'Agendar Vistoria Grátis'
   },
   {
@@ -107,7 +189,7 @@ export const SERVICES: Service[] = [
       'Fabricação própria para garantir o encaixe milimétrico na sua obra.'
     ],
     price: 'Sob consulta',
-    image: 'https://images.unsplash.com/photo-1595846519845-68e298c2edd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/aplicacao_de_manta_em_calha.webp',
     cta: 'Falar com Especialista'
   },
   {
@@ -120,7 +202,7 @@ export const SERVICES: Service[] = [
       'Instalação rápida que reduz o tempo total da obra.'
     ],
     price: 'R$ 150 a R$ 250/m²',
-    image: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-4-1889x850.jpeg',
     cta: 'Ver Projetos'
   },
   {
@@ -133,7 +215,7 @@ export const SERVICES: Service[] = [
       'Projeto personalizado conforme a área de telhado disponível.'
     ],
     price: 'A partir de R$ 2.000',
-    image: 'https://images.unsplash.com/photo-1544983059-e970a09a5628?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/acquatec-telhados-calhas-400x401.jpg',
     cta: 'Simular Economia'
   },
   {
@@ -146,7 +228,7 @@ export const SERVICES: Service[] = [
       'Gerenciamento completo: Da demolição à limpeza final, sem dor de cabeça.'
     ],
     price: 'Sob orçamento',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/limpeza-personalizada-em-telhados-retrteis-400x395.jpg',
     cta: 'Enviar Fotos'
   },
   {
@@ -159,7 +241,7 @@ export const SERVICES: Service[] = [
       'Materiais com proteção UV que iluminam sem aquecer excessivamente o ambiente.'
     ],
     price: 'Sob consulta',
-    image: 'https://images.unsplash.com/photo-1592833159057-65a269755598?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-1-2000x900.jpeg',
     cta: 'Conhecer Solução'
   },
   {
@@ -172,7 +254,7 @@ export const SERVICES: Service[] = [
       'Silencioso e eficiente, com rolamentos blindados para maior durabilidade.'
     ],
     price: 'A partir de R$ 800/un',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    image: '/calhas-acquatec-400x401.jpg',
     cta: 'Solicitar Visita'
   }
 ];

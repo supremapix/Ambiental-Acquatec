@@ -30,15 +30,11 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-brand-blue p-2 rounded-lg group-hover:bg-brand-orange transition-colors duration-300">
-               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-               </svg>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl md:text-2xl font-heading font-extrabold text-brand-blue leading-none tracking-tight">ACQUATEC</span>
-              <span className="text-xs font-medium text-gray-500 uppercase tracking-widest">Calhas e Telhados</span>
-            </div>
+            <img
+              src="/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png"
+              alt="Acquatec Calhas e Telhados"
+              className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -52,10 +48,15 @@ const Header: React.FC = () => {
               </button>
               <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top border-t-4 border-brand-orange">
                 <div className="py-2">
-                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700">Instalação de Calhas</Link>
-                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700">Manutenção de Telhados</Link>
-                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700">Rufos e Acabamentos</Link>
-                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700">Reformas Completas</Link>
+                  <Link to="/servicos/calhas" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Instalação de Calhas</Link>
+                  <Link to="/servicos/manutencao" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Manutenção de Telhados</Link>
+                  <Link to="/servicos/rufos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Rufos e Acabamentos</Link>
+                  <Link to="/servicos/metalicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Telhados Metálicos</Link>
+                  <Link to="/servicos/captacao" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Captação de Água</Link>
+                  <Link to="/servicos/reformas" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Reformas Completas</Link>
+                  <Link to="/servicos/eolicos" className="block px-4 py-2 hover:bg-gray-50 text-gray-700 hover:text-brand-blue">Exaustores Eólicos</Link>
+                  <div className="border-t my-2"></div>
+                  <Link to="/#servicos" className="block px-4 py-2 hover:bg-brand-orange hover:text-white text-brand-blue font-semibold">Ver Todos</Link>
                 </div>
               </div>
             </div>
@@ -80,12 +81,12 @@ const Header: React.FC = () => {
 
           {/* Desktop Contacts */}
           <div className="hidden lg:flex flex-col items-end">
-             <div className="flex items-center gap-2 text-brand-blue font-bold text-lg">
+             <a href="tel:+554130535740" className="flex items-center gap-2 text-brand-blue font-bold text-lg hover:text-brand-orange transition-colors">
                 <Phone className="w-5 h-5" /> (41) 3053-5740
-             </div>
-             <div className="flex items-center gap-2 text-brand-green font-medium text-sm">
+             </a>
+             <a href="https://wa.me/5541991337070" className="flex items-center gap-2 text-brand-green font-medium text-sm hover:text-green-700 transition-colors">
                 <MessageCircle className="w-4 h-4" /> (41) 99133-7070
-             </div>
+             </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -106,7 +107,13 @@ const Header: React.FC = () => {
              </button>
              {activeDropdown === 'services' && (
                <div className="pl-4 flex flex-col gap-3 bg-gray-50 py-3 rounded">
-                  <Link to="/#servicos" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Todos os Serviços</Link>
+                  <Link to="/servicos/calhas" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Instalação de Calhas</Link>
+                  <Link to="/servicos/manutencao" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Manutenção de Telhados</Link>
+                  <Link to="/servicos/rufos" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Rufos e Acabamentos</Link>
+                  <Link to="/servicos/metalicos" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Telhados Metálicos</Link>
+                  <Link to="/servicos/captacao" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Captação de Água</Link>
+                  <Link to="/servicos/reformas" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Reformas Completas</Link>
+                  <Link to="/servicos/eolicos" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600">Exaustores Eólicos</Link>
                </div>
              )}
 

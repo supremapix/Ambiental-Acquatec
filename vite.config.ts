@@ -6,8 +6,12 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       server: {
-        port: 3000,
+        port: 5000,
         host: '0.0.0.0',
+        allowedHosts: true,
+        hmr: {
+          clientPort: 443,
+        },
       },
       plugins: [react()],
       define: {
@@ -18,6 +22,13 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      ssr: {
+        noExternal: ['react-helmet-async'],
+      },
+      ssgOptions: {
+        dirStyle: 'nested',
+        formatting: 'minify',
       }
     };
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CITIES, NEIGHBORHOODS } from '../constants';
+import { CITIES, ALL_NEIGHBORHOODS } from '../constants';
 import { MapPin } from 'lucide-react';
 
 const CompactCoverage: React.FC = () => {
@@ -13,7 +13,6 @@ const CompactCoverage: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           
-          {/* Cities Column */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
             <div className="bg-brand-blue text-white py-3 px-4 font-bold text-center">
               Cidades da Região Metropolitana
@@ -34,21 +33,20 @@ const CompactCoverage: React.FC = () => {
             </div>
           </div>
 
-          {/* Neighborhoods Column */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
              <div className="bg-brand-dark text-white py-3 px-4 font-bold text-center">
               Bairros de Curitiba
             </div>
             <div className="h-64 overflow-y-auto p-4 custom-scrollbar">
                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                 {NEIGHBORHOODS.map((neighborhood, index) => (
+                 {ALL_NEIGHBORHOODS.map((neighborhood) => (
                     <Link
-                        key={index}
-                        to="/cidades/curitiba"
+                        key={neighborhood.slug}
+                        to={`/bairros/${neighborhood.slug}`}
                         className="text-xs text-gray-500 hover:text-brand-blue hover:underline block p-1 truncate"
-                        title={neighborhood}
+                        title={neighborhood.name}
                     >
-                        • {neighborhood}
+                        {neighborhood.name}
                     </Link>
                  ))}
                </div>

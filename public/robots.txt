@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.acquateccalhas.com.br/sitemap.xml
+
+Disallow: /admin/
+Disallow: /?s=
+Disallow: /*?
