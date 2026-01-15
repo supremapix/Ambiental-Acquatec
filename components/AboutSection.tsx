@@ -9,9 +9,9 @@ const AboutSection: React.FC = () => {
           
           {/* Text Content */}
           <div className="lg:w-1/2">
-            <span className="text-brand-orange font-bold uppercase tracking-wider text-sm mb-2 block">Sobre a Acquatec</span>
+            <span className="text-brand-orange font-bold uppercase tracking-wider text-sm mb-2 block">Nossa História</span>
             <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-brand-blue mb-6">
-              Especialistas em Calhas e Telhados em Curitiba há 25 Anos
+              3 Gerações Protegendo Patrimônios em Curitiba
             </h2>
             
             <div className="prose text-gray-600 space-y-4">
@@ -41,14 +41,14 @@ const AboutSection: React.FC = () => {
 
           {/* Image Grid */}
           <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-            <img
-              src="/acquatec-telhados-condominios-reformas-preco-barato-manutencao-517x357.jpg"
-              alt="Telhados Acquatec"
+            <img 
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              alt="Equipe trabalhando" 
               className="rounded-lg shadow-lg w-full h-64 object-cover transform translate-y-8"
             />
-            <img
-              src="/calhas-preco-400x402.jpg"
-              alt="Calhas Acquatec"
+            <img 
+              src="https://images.unsplash.com/photo-1621255593881-81d392095f68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              alt="Telhado pronto" 
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
           </div>

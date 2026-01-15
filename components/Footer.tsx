@@ -10,13 +10,10 @@ const Footer: React.FC = () => {
           
           {/* Brand & Description */}
           <div className="space-y-6">
-            <Link to="/" className="inline-block">
-              <img
-                src="/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png"
-                alt="Acquatec Calhas e Telhados"
-                className="h-12 w-auto brightness-200"
-              />
-            </Link>
+            <div className="flex flex-col">
+                 <span className="text-3xl font-heading font-extrabold text-white tracking-tight">ACQUATEC</span>
+                 <span className="text-xs font-bold text-brand-orange uppercase tracking-[0.2em]">Calhas e Telhados</span>
+            </div>
             <p className="text-sm leading-relaxed text-gray-400">
                 Líder em soluções de cobertura em Curitiba e Região. Comprometidos com a excelência técnica, durabilidade e atendimento humanizado há mais de 25 anos.
             </p>
@@ -24,8 +21,8 @@ const Footer: React.FC = () => {
                 <ShieldCheck className="w-4 h-4" /> Garantia de 5 Anos Certificada
             </div>
             <div className="flex gap-4 pt-2">
-                <a href="https://www.facebook.com/acquateccalhas/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2.5 rounded-full hover:bg-brand-blue hover:text-white transition-all duration-300"><Facebook className="w-5 h-5" /></a>
-                <a href="https://www.instagram.com/acquatec.calhas/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2.5 rounded-full hover:bg-pink-600 hover:text-white transition-all duration-300"><Instagram className="w-5 h-5" /></a>
+                <a href="https://facebook.com" className="bg-gray-800 p-2.5 rounded-full hover:bg-brand-blue hover:text-white transition-all duration-300"><Facebook className="w-5 h-5" /></a>
+                <a href="https://instagram.com" className="bg-gray-800 p-2.5 rounded-full hover:bg-pink-600 hover:text-white transition-all duration-300"><Instagram className="w-5 h-5" /></a>
             </div>
           </div>
 
@@ -49,13 +46,12 @@ const Footer: React.FC = () => {
               Serviços Principais
             </h3>
             <ul className="space-y-3 text-sm">
-                <li><Link to="/servicos/calhas" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Instalação de Calhas</Link></li>
-                <li><Link to="/servicos/manutencao" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Manutenção de Telhados</Link></li>
-                <li><Link to="/servicos/rufos" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Rufos e Acabamentos</Link></li>
-                <li><Link to="/servicos/metalicos" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Telhados Metálicos</Link></li>
-                <li><Link to="/servicos/captacao" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Captação de Água</Link></li>
-                <li><Link to="/servicos/reformas" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Reformas Completas</Link></li>
-                <li><Link to="/servicos/eolicos" className="hover:text-brand-orange transition-colors hover:translate-x-1 inline-block">Exaustores Eólicos</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Instalação de Calhas</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Manutenção de Telhados</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Rufos e Pingadeiras</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Telhados Metálicos</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Captação de Água</Link></li>
+                <li><Link to="/#servicos" className="hover:text-brand-orange transition-colors">Exaustores Eólicos</Link></li>
             </ul>
           </div>
 
@@ -72,20 +68,16 @@ const Footer: React.FC = () => {
                     <span>Sede: Bairro Fanny<br/>Curitiba - PR, 80000-000</span>
                 </li>
                 <li className="flex items-center gap-3 group">
-                    <a href="tel:+554130535740" className="flex items-center gap-3 hover:text-brand-orange transition-colors">
-                      <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
-                          <Phone className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="font-bold text-white">(41) 3053-5740</span>
-                    </a>
+                    <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
+                        <Phone className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="font-bold text-white">(41) 3053-5740</span>
                 </li>
                 <li className="flex items-center gap-3 group">
-                    <a href="mailto:contato@acquatec.com.br" className="flex items-center gap-3 hover:text-brand-orange transition-colors">
-                      <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
-                          <Mail className="w-4 h-4 text-white" />
-                      </div>
-                      <span>contato@acquatec.com.br</span>
-                    </a>
+                    <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
+                        <Mail className="w-4 h-4 text-white" />
+                    </div>
+                    <span>contato@acquatec.com.br</span>
                 </li>
                 <li className="flex items-start gap-3 group">
                     <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">

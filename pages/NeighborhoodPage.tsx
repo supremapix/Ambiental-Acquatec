@@ -1,81 +1,28 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ALL_NEIGHBORHOODS } from '../constants';
+import { TOP_NEIGHBORHOODS } from '../constants';
 import ContactForm from '../components/ContactForm';
 import VideoSection from '../components/VideoSection';
 import EcoFriendlySection from '../components/EcoFriendlySection';
-import SEOAccordion from '../components/SEOAccordion';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { CheckCircle, Phone, MapPin } from 'lucide-react';
-import { createServiceSchema, createFAQSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
+import { CheckCircle, Phone, ArrowRight, MapPin } from 'lucide-react';
 
-interface NeighborhoodPageProps {
-  neighborhoodSlug?: string;
-  neighborhoodName?: string;
-}
-
-const NeighborhoodPage: React.FC<NeighborhoodPageProps> = ({ neighborhoodSlug, neighborhoodName: propName }) => {
-  const { slug: routeSlug } = useParams<{ slug: string }>();
-  const slug = neighborhoodSlug || routeSlug;
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const neighborhoodData = ALL_NEIGHBORHOODS.find(n => n.slug === slug);
-  const neighborhoodName = propName || (neighborhoodData ? neighborhoodData.name : slug?.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '));
-
-  const seoAccordionItems = [
-    {
-      title: `Atendimento de calhas e telhados no ${neighborhoodName}`,
-      content: `A Acquatec atende moradores e empresas do bairro ${neighborhoodName} com equipe especializada e atendimento rápido. Conhecemos as particularidades arquitetônicas da região e oferecemos soluções personalizadas para cada tipo de imóvel, desde casas residenciais até condomínios e estabelecimentos comerciais.`
-    },
-    {
-      title: `Serviços mais procurados no ${neighborhoodName}`,
-      content: `No ${neighborhoodName}, os serviços mais solicitados incluem: limpeza e desentupimento de calhas, troca de telhas quebradas, instalação de rufos pingadeira, manutenção preventiva de telhados e reparo de goteiras. Oferecemos orçamento gratuito com visita técnica no bairro.`
-    },
-    {
-      title: `Quanto custa manutenção de calhas no ${neighborhoodName}?`,
-      content: `O valor varia conforme o tipo e extensão do serviço. Limpeza simples de calhas parte de R$ 150, enquanto instalações completas dependem da metragem. Realizamos vistoria gratuita no ${neighborhoodName} e fornecemos orçamento detalhado sem compromisso. Parcelamos em até 12x e oferecemos descontos para contratos de manutenção mensal.`
-    },
-    {
-      title: `Tempo de resposta para emergências no ${neighborhoodName}`,
-      content: `Para emergências no ${neighborhoodName}, nossa equipe chega em média em 45 minutos. Temos plantão 24h para atender goteiras graves, calhas arrancadas e outros problemas urgentes. Entre em contato pelo WhatsApp (41) 99133-7070 ou ligue (41) 3053-5740 para atendimento imediato.`
-    }
-  ];
-
-  const serviceSchema = createServiceSchema(
-    `Instalação e Manutenção de Calhas e Telhados no ${neighborhoodName}`,
-    `Serviços profissionais de calhas e telhados no bairro ${neighborhoodName}, Curitiba. Atendimento rápido e garantia de 5 anos.`,
-    'Curitiba'
-  );
-
-  const faqSchema = createFAQSchema(seoAccordionItems.map(item => ({
-    question: item.title,
-    answer: item.content
-  })));
-
-  const breadcrumbSchema = createBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.acquateccalhas.com.br/' },
-    { name: 'Bairros', url: 'https://www.acquateccalhas.com.br/' },
-    { name: neighborhoodName || '', url: `https://www.acquateccalhas.com.br/bairros/${slug}` }
-  ]);
+const NeighborhoodPage: React.FC = () => {
+  const { slug } = useParams<{ slug: string }>();
+  
+  // Try to find in top neighborhoods, or fallback to formatted slug
+  const neighborhoodData = TOP_NEIGHBORHOODS.find(n => n.slug === slug);
+  const neighborhoodName = neighborhoodData ? neighborhoodData.name : slug?.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
   return (
     <div className="pt-20">
-      <EnhancedSEO
-        title={`Calhas e Telhados no ${neighborhoodName} - Curitiba | Acquatec`}
-        description={`Instalação e manutenção de calhas no ${neighborhoodName}, Curitiba. Atendimento rápido, 25 anos de experiência. WhatsApp: (41) 99133-7070`}
-        canonical={`https://www.acquateccalhas.com.br/bairros/${slug}`}
-        keywords={`calhas ${neighborhoodName}, telhados ${neighborhoodName}, instalação calhas ${neighborhoodName} curitiba`}
-        schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
-      />
+      {/* Breadcrumb */}
       <div className="bg-gray-100 py-3">
         <div className="container mx-auto px-4 text-sm text-gray-500">
             <Link to="/" className="hover:underline">Home</Link> &gt; Bairros &gt; <span className="font-bold text-brand-blue">{neighborhoodName}</span>
         </div>
       </div>
 
+      {/* Hero */}
       <section className="bg-brand-dark text-white py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-brand-blue/20"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -96,6 +43,7 @@ const NeighborhoodPage: React.FC<NeighborhoodPageProps> = ({ neighborhoodSlug, n
         </div>
       </section>
 
+      {/* Main Content */}
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
             <div className="flex items-center gap-4 mb-8">
@@ -143,17 +91,8 @@ const NeighborhoodPage: React.FC<NeighborhoodPageProps> = ({ neighborhoodSlug, n
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-brand-dark mb-8 text-center">
-            Dúvidas sobre Calhas e Telhados no {neighborhoodName}
-          </h2>
-          <SEOAccordion items={seoAccordionItems} />
-        </div>
-      </section>
-
       <VideoSection />
-
+      
       <EcoFriendlySection />
 
       <ContactForm />
