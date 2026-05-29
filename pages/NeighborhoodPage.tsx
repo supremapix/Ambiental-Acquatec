@@ -40,7 +40,7 @@ const NeighborhoodPage: React.FC<NeighborhoodPageProps> = ({ neighborhoodSlug, n
     },
     {
       title: `Tempo de resposta para emergências no ${neighborhoodName}`,
-      content: `Para emergências no ${neighborhoodName}, nossa equipe chega em média em 45 minutos. Temos plantão 24h para atender goteiras graves, calhas arrancadas e outros problemas urgentes. Entre em contato pelo WhatsApp (41) 99163-5740 ou ligue (41) 99163-5740 para atendimento imediato.`
+      content: `Para emergências no ${neighborhoodName}, nossa equipe chega em média em 45 minutos. Temos plantão 24h para atender goteiras graves, calhas arrancadas e outros problemas urgentes. Entre em contato pelo WhatsApp ou ligue (41) 99163-5740 para atendimento imediato.`
     }
   ];
 

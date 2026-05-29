@@ -42,7 +42,7 @@ const CityPage: React.FC<CityPageProps> = ({ citySlug, cityName: propName }) => 
     },
     {
       title: `A Acquatec atende emergências em ${city.name}?`,
-      content: `Sim! Oferecemos plantão 24h para emergências em ${city.name}, incluindo fins de semana e feriados. Goteiras graves, calhas arrancadas por vendavais e vazamentos urgentes recebem atendimento prioritário. Nossa equipe chega ao local em média em 45 minutos para avaliar e solucionar o problema. Entre em contato pelo WhatsApp (41) 99163-5740 ou telefone (41) 99163-5740.`
+      content: `Sim! Oferecemos plantão 24h para emergências em ${city.name}, incluindo fins de semana e feriados. Goteiras graves, calhas arrancadas por vendavais e vazamentos urgentes recebem atendimento prioritário. Nossa equipe chega ao local em média em 45 minutos para avaliar e solucionar o problema. Entre em contato pelo WhatsApp ou telefone (41) 99163-5740.`
     },
     {
       title: `Qual a frequência ideal de manutenção de calhas em ${city.name}?`,
