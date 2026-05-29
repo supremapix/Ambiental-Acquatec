@@ -4,6 +4,7 @@ import ServicesSection from '../components/ServicesSection';
 import VideoSection from '../components/VideoSection';
 import GallerySection from '../components/GallerySection';
 import ComparisonTable from '../components/ComparisonTable';
+import LandlineSection from '../components/LandlineSection';
 import AboutSection from '../components/AboutSection';
 import EcoFriendlySection from '../components/EcoFriendlySection';
 import DengueAlert from '../components/DengueAlert';
@@ -88,6 +89,7 @@ const HomePage: React.FC = () => {
       <ServicesSection />
       <GallerySection />
       <VideoSection />
+      <LandlineSection />
       <ComparisonTable />
       
       <section className="py-12 bg-gray-50">

@@ -81,10 +81,11 @@ const Header: React.FC = () => {
 
           {/* Desktop Contacts */}
           <div className="hidden lg:flex flex-col items-end">
-             <a href="tel:+5541991635740" className="flex items-center gap-2 text-brand-blue font-bold text-lg hover:text-brand-orange transition-colors">
-                <Phone className="w-5 h-5" /> (41) 99163-5740
+             <a href="tel:+554130535740" className="flex items-center gap-2 text-brand-blue font-bold text-lg hover:text-brand-orange transition-colors" aria-label="Ligar para o telefone fixo (41) 3053-5740">
+                <Phone className="w-5 h-5" /> (41) 3053-5740
+                <span className="ml-1 text-[10px] font-bold uppercase tracking-wide bg-brand-blue/10 text-brand-blue px-1.5 py-0.5 rounded">Fixo</span>
              </a>
-             <a href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*" className="flex items-center gap-2 text-brand-green font-medium text-sm hover:text-green-700 transition-colors">
+             <a href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*" className="flex items-center gap-2 text-brand-green font-medium text-sm hover:text-green-700 transition-colors" aria-label="Conversar no WhatsApp (41) 99163-5740">
                 <MessageCircle className="w-4 h-4" /> (41) 99163-5740
              </a>
           </div>
@@ -134,11 +135,11 @@ const Header: React.FC = () => {
              <Link to="/#sobre" className="text-lg font-medium border-b pb-2" onClick={() => setIsMobileMenuOpen(false)}>Sobre Nós</Link>
              
              <div className="mt-4 flex flex-col gap-3">
-                <a href="tel:+5541991635740" className="flex justify-center items-center gap-2 bg-brand-blue text-white py-3 rounded-lg font-bold">
-                  <Phone className="w-5 h-5" /> Ligar Agora
+                <a href="tel:+554130535740" className="flex justify-center items-center gap-2 bg-brand-blue text-white py-3 rounded-lg font-bold">
+                  <Phone className="w-5 h-5" /> Ligar no Fixo (41) 3053-5740
                 </a>
                 <a href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*" className="flex justify-center items-center gap-2 bg-brand-green text-white py-3 rounded-lg font-bold">
-                  <MessageCircle className="w-5 h-5" /> WhatsApp
+                  <MessageCircle className="w-5 h-5" /> WhatsApp (41) 99163-5740
                 </a>
              </div>
           </div>

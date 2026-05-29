@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Mail, Clock, ArrowRight, ShieldCheck, MessageCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -72,11 +72,25 @@ const Footer: React.FC = () => {
                     <span>Sede: Bairro Fanny<br/>Curitiba - PR, 80000-000</span>
                 </li>
                 <li className="flex items-center gap-3 group">
-                    <a href="tel:+5541991635740" className="flex items-center gap-3 hover:text-brand-orange transition-colors">
+                    <a href="tel:+554130535740" className="flex items-center gap-3 hover:text-brand-orange transition-colors" aria-label="Ligar para o telefone fixo (41) 3053-5740">
                       <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
                           <Phone className="w-4 h-4 text-white" />
                       </div>
-                      <span className="font-bold text-white">(41) 99163-5740</span>
+                      <span className="flex flex-col leading-tight">
+                          <span className="font-bold text-white">(41) 3053-5740</span>
+                          <span className="text-[11px] uppercase tracking-wide text-brand-orange font-semibold">Telefone Fixo</span>
+                      </span>
+                    </a>
+                </li>
+                <li className="flex items-center gap-3 group">
+                    <a href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-brand-green transition-colors" aria-label="Conversar no WhatsApp (41) 99163-5740">
+                      <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-green transition-colors">
+                          <MessageCircle className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="flex flex-col leading-tight">
+                          <span className="font-bold text-white">(41) 99163-5740</span>
+                          <span className="text-[11px] uppercase tracking-wide text-green-500 font-semibold">WhatsApp</span>
+                      </span>
                     </a>
                 </li>
                 <li className="flex items-center gap-3 group">
