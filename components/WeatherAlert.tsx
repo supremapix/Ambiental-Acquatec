@@ -18,7 +18,7 @@ const WeatherAlert: React.FC = () => {
           </div>
         </div>
         <a
-          href="https://wa.me/5541991337070?text=Gostaria%20de%20agendar%20uma%20inspe%C3%A7%C3%A3o%20preventiva"
+          href="https://wa.me/5541991635740?text=Gostaria%20de%20agendar%20uma%20inspe%C3%A7%C3%A3o%20preventiva"
           className="bg-white text-blue-800 px-4 py-2 rounded-lg font-bold text-sm hover:bg-gray-100 transition-colors whitespace-nowrap"
         >
           Agendar Inspeção

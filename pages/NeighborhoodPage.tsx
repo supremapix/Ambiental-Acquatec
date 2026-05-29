@@ -40,7 +40,7 @@ const NeighborhoodPage: React.FC<NeighborhoodPageProps> = ({ neighborhoodSlug, n
     },
     {
       title: `Tempo de resposta para emergências no ${neighborhoodName}`,
-      content: `Para emergências no ${neighborhoodName}, nossa equipe chega em média em 45 minutos. Temos plantão 24h para atender goteiras graves, calhas arrancadas e outros problemas urgentes. Entre em contato pelo WhatsApp (41) 99133-7070 ou ligue (41) 3053-5740 para atendimento imediato.`
+      content: `Para emergências no ${neighborhoodName}, nossa equipe chega em média em 45 minutos. Temos plantão 24h para atender goteiras graves, calhas arrancadas e outros problemas urgentes. Entre em contato pelo WhatsApp (41) 99163-5740 ou ligue (41) 99163-5740 para atendimento imediato.`
     }
   ];
 
@@ -65,7 +65,7 @@ const NeighborhoodPage: React.FC<NeighborhoodPageProps> = ({ neighborhoodSlug, n
     <div className="pt-20">
       <EnhancedSEO
         title={`Calhas e Telhados no ${neighborhoodName} - Curitiba | Acquatec`}
-        description={`Instalação e manutenção de calhas no ${neighborhoodName}, Curitiba. Atendimento rápido, 25 anos de experiência. WhatsApp: (41) 99133-7070`}
+        description={`Instalação e manutenção de calhas no ${neighborhoodName}, Curitiba. Atendimento rápido, 25 anos de experiência. WhatsApp: (41) 99163-5740`}
         canonical={`https://www.acquateccalhas.com.br/bairros/${slug}`}
         keywords={`calhas ${neighborhoodName}, telhados ${neighborhoodName}, instalação calhas ${neighborhoodName} curitiba`}
         schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
@@ -89,7 +89,7 @@ const NeighborhoodPage: React.FC<NeighborhoodPageProps> = ({ neighborhoodSlug, n
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Equipe técnica pronta para atender residências e comércios na região do {neighborhoodName} em Curitiba.</p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#orcamento" className="bg-brand-orange hover:bg-orange-600 px-8 py-3 rounded-lg font-bold transition-colors shadow-lg">Orçamento Grátis</a>
-                <a href="https://wa.me/5541991337070" className="bg-brand-green hover:bg-green-700 px-8 py-3 rounded-lg font-bold transition-colors shadow-lg flex items-center justify-center gap-2">
+                <a href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*" className="bg-brand-green hover:bg-green-700 px-8 py-3 rounded-lg font-bold transition-colors shadow-lg flex items-center justify-center gap-2">
                     WhatsApp Agora
                 </a>
             </div>
@@ -136,8 +136,8 @@ const NeighborhoodPage: React.FC<NeighborhoodPageProps> = ({ neighborhoodSlug, n
                     <h3 className="text-xl font-bold text-brand-blue mb-2">Emergência no {neighborhoodName}?</h3>
                     <p className="text-gray-600">Atendimento prioritário para vazamentos graves na sua região.</p>
                 </div>
-                <a href="tel:+554130535740" className="flex items-center gap-2 bg-brand-blue text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-colors whitespace-nowrap shadow-md">
-                    <Phone className="w-5 h-5" /> Ligue (41) 3053-5740
+                <a href="tel:+5541991635740" className="flex items-center gap-2 bg-brand-blue text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-colors whitespace-nowrap shadow-md">
+                    <Phone className="w-5 h-5" /> Ligue (41) 99163-5740
                 </a>
             </div>
         </div>

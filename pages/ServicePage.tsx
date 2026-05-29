@@ -70,7 +70,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ serviceId }) => {
     <div className="pt-20">
       <EnhancedSEO
         title={`${service.title} em Curitiba - Acquatec | Orçamento Grátis`}
-        description={`${service.description[0]} Garantia de 5 anos. 25 anos de experiência. WhatsApp: (41) 99133-7070`}
+        description={`${service.description[0]} Garantia de 5 anos. 25 anos de experiência. WhatsApp: (41) 99163-5740`}
         canonical={`https://www.acquateccalhas.com.br/servicos/${slug}`}
         keywords={`${service.title.toLowerCase()}, ${service.title.toLowerCase()} curitiba, calhas e telhados curitiba`}
         schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
@@ -120,7 +120,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ serviceId }) => {
                   {service.cta}
                 </a>
                 <a
-                  href={`https://wa.me/5541991337070?text=Olá! Gostaria de um orçamento para: ${service.title}`}
+                  href={`https://wa.me/5541991635740?text=Olá! Gostaria de um orçamento para: ${service.title}`}
                   className="bg-brand-green hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-center transition-colors shadow-lg"
                 >
                   WhatsApp
@@ -183,14 +183,14 @@ const ServicePage: React.FC<ServicePageProps> = ({ serviceId }) => {
                     <Phone className="w-5 h-5 text-brand-orange" />
                     <div>
                       <div className="text-sm text-gray-400">Telefone</div>
-                      <a href="tel:+554130535740" className="font-bold hover:text-brand-orange">(41) 3053-5740</a>
+                      <a href="tel:+5541991635740" className="font-bold hover:text-brand-orange">(41) 99163-5740</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-brand-green" />
                     <div>
                       <div className="text-sm text-gray-400">WhatsApp</div>
-                      <a href="https://wa.me/5541991337070" className="font-bold hover:text-brand-green">(41) 99133-7070</a>
+                      <a href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*" className="font-bold hover:text-brand-green">(41) 99163-5740</a>
                     </div>
                   </div>
                 </div>

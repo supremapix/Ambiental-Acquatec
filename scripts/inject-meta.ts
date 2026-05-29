@@ -55,7 +55,7 @@ function getMetaForPage(pagePath: string): MetaData | null {
   if (pagePath === '/index.html' || pagePath === '/') {
     return {
       title: 'Acquatec Calhas e Telhados - Instalacao e Manutencao em Curitiba | 25 Anos',
-      description: 'Especialistas em calhas e telhados ha 25 anos em Curitiba. Instalacao, manutencao, limpeza e conserto. Garantia de 5 anos. WhatsApp: (41) 99133-7070',
+      description: 'Especialistas em calhas e telhados ha 25 anos em Curitiba. Instalacao, manutencao, limpeza e conserto. Garantia de 5 anos. WhatsApp: (41) 99163-5740',
       canonical: siteUrl,
       keywords: 'calhas curitiba, instalacao de calhas, manutencao de calhas, telhados curitiba, rufos e pingadeiras',
       ogImage: defaultImage
@@ -69,7 +69,7 @@ function getMetaForPage(pagePath: string): MetaData | null {
     const name = neighborhood?.name || slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     return {
       title: `Calhas e Telhados no ${name} - Curitiba | Acquatec`,
-      description: `Instalacao e manutencao de calhas no ${name}, Curitiba. Atendimento rapido, 25 anos de experiencia. WhatsApp: (41) 99133-7070`,
+      description: `Instalacao e manutencao de calhas no ${name}, Curitiba. Atendimento rapido, 25 anos de experiencia. WhatsApp: (41) 99163-5740`,
       canonical: `${siteUrl}/bairros/${slug}`,
       keywords: `calhas ${name}, telhados ${name}, instalacao calhas ${name} curitiba`,
       ogImage: defaultImage
@@ -83,7 +83,7 @@ function getMetaForPage(pagePath: string): MetaData | null {
     const name = city?.name || slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     return {
       title: `Calhas e Telhados em ${name} - Acquatec | Orcamento Gratis`,
-      description: `Instalacao e manutencao de calhas e telhados em ${name}. 25 anos de experiencia, garantia de 5 anos. WhatsApp: (41) 99133-7070`,
+      description: `Instalacao e manutencao de calhas e telhados em ${name}. 25 anos de experiencia, garantia de 5 anos. WhatsApp: (41) 99163-5740`,
       canonical: `${siteUrl}/cidades/${slug}`,
       keywords: `calhas ${name}, telhados ${name}, instalacao de calhas ${name}, manutencao de calhas ${name}`,
       ogImage: defaultImage
@@ -97,7 +97,7 @@ function getMetaForPage(pagePath: string): MetaData | null {
     const name = service?.title || slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     return {
       title: `${name} em Curitiba - Acquatec | Orcamento Gratis`,
-      description: `${service?.description[0] || `Servico profissional de ${name} em Curitiba`} Garantia de 5 anos. WhatsApp: (41) 99133-7070`,
+      description: `${service?.description[0] || `Servico profissional de ${name} em Curitiba`} Garantia de 5 anos. WhatsApp: (41) 99163-5740`,
       canonical: `${siteUrl}/servicos/${slug}`,
       keywords: `${name.toLowerCase()}, ${name.toLowerCase()} curitiba, calhas e telhados curitiba`,
       ogImage: service?.image || defaultImage
