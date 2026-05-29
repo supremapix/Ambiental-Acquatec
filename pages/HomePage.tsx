@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import ServicesSection from '../components/ServicesSection';
 import VideoSection from '../components/VideoSection';
+import LandlineSection from '../components/LandlineSection';
 import GallerySection from '../components/GallerySection';
 import ComparisonTable from '../components/ComparisonTable';
 import AboutSection from '../components/AboutSection';
@@ -88,6 +89,7 @@ const HomePage: React.FC = () => {
       <ServicesSection />
       <GallerySection />
       <VideoSection />
+      <LandlineSection />
       <ComparisonTable />
       
       <section className="py-12 bg-gray-50">
