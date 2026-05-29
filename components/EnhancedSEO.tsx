@@ -41,7 +41,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     logo: `${siteUrl}/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png`,
     image: `${siteUrl}/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png`,
     description: 'Especialistas em calhas e telhados há 25 anos em Curitiba e Região Metropolitana.',
-    telephone: '+55 41 3053-5740',
+    telephone: '+5541991635740',
     email: 'contato@acquateccalhas.com.br',
     address: {
       '@type': 'PostalAddress',

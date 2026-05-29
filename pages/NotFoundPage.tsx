@@ -46,7 +46,7 @@ const NotFoundPage: React.FC = () => {
           </Link>
 
           <a
-            href="https://wa.me/5541991337070?text=Olá! Vim através do site e gostaria de mais informações"
+            href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-green hover:bg-green-700 text-white font-bold rounded-lg text-lg transition-all shadow-xl transform hover:-translate-y-1"

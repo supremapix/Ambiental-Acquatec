@@ -42,7 +42,7 @@ const CityPage: React.FC<CityPageProps> = ({ citySlug, cityName: propName }) => 
     },
     {
       title: `A Acquatec atende emergências em ${city.name}?`,
-      content: `Sim! Oferecemos plantão 24h para emergências em ${city.name}, incluindo fins de semana e feriados. Goteiras graves, calhas arrancadas por vendavais e vazamentos urgentes recebem atendimento prioritário. Nossa equipe chega ao local em média em 45 minutos para avaliar e solucionar o problema. Entre em contato pelo WhatsApp (41) 99133-7070 ou telefone (41) 3053-5740.`
+      content: `Sim! Oferecemos plantão 24h para emergências em ${city.name}, incluindo fins de semana e feriados. Goteiras graves, calhas arrancadas por vendavais e vazamentos urgentes recebem atendimento prioritário. Nossa equipe chega ao local em média em 45 minutos para avaliar e solucionar o problema. Entre em contato pelo WhatsApp ou telefone (41) 99163-5740.`
     },
     {
       title: `Qual a frequência ideal de manutenção de calhas em ${city.name}?`,
@@ -71,7 +71,7 @@ const CityPage: React.FC<CityPageProps> = ({ citySlug, cityName: propName }) => 
     <div className="pt-20">
       <EnhancedSEO
         title={`Calhas e Telhados em ${city.name} - Acquatec | Orçamento Grátis`}
-        description={`Instalação e manutenção de calhas e telhados em ${city.name}. 25 anos de experiência, garantia de 5 anos. WhatsApp: (41) 99133-7070`}
+        description={`Instalação e manutenção de calhas e telhados em ${city.name}. 25 anos de experiência, garantia de 5 anos. WhatsApp: (41) 99163-5740`}
         canonical={`https://www.acquateccalhas.com.br/cidades/${slug}`}
         keywords={`calhas ${city.name}, telhados ${city.name}, instalação de calhas ${city.name}, manutenção de calhas ${city.name}`}
         schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
@@ -91,7 +91,7 @@ const CityPage: React.FC<CityPageProps> = ({ citySlug, cityName: propName }) => 
             <div className="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#orcamento" className="bg-brand-orange hover:bg-orange-600 px-8 py-3 rounded-lg font-bold transition-colors">Solicitar Orçamento Grátis</a>
                 <div className="flex items-center justify-center gap-2 font-bold text-lg">
-                    <Phone className="w-5 h-5" /> (41) 3053-5740
+                    <Phone className="w-5 h-5" /> (41) 99163-5740
                 </div>
             </div>
         </div>

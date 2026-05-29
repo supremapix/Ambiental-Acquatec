@@ -23,7 +23,7 @@ const FloatingButtons: React.FC = () => {
       <div className="fixed left-4 bottom-1/2 translate-y-1/2 z-50 flex flex-col gap-3">
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/5541991337070?text=Olá! Gostaria de solicitar um orçamento"
+          href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-brand-green rounded-full shadow-lg hover:scale-110 transition-transform duration-300 animate-pulse"
@@ -35,7 +35,7 @@ const FloatingButtons: React.FC = () => {
 
         {/* Phone Button */}
         <a
-          href="tel:+554130535740"
+          href="tel:+5541991635740"
           className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-brand-blue rounded-full shadow-lg hover:rotate-12 transition-transform duration-300"
           title="Ligar Agora"
         >

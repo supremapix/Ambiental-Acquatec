@@ -321,8 +321,8 @@ Todos os arquivos redirecionam corretamente para `index.html` (BrowserRouter).
 - ✅ Avaliações agregadas: 4.9/5 com 127 reviews
 
 ### Contatos:
-- WhatsApp: (41) 99133-7070
-- Telefone: (41) 3053-5740
+- WhatsApp: (41) 99163-5740
+- Telefone: (41) 99163-5740
 - Website: https://www.acquateccalhas.com.br
 
 ---

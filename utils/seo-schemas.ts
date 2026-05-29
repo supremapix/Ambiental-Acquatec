@@ -27,7 +27,7 @@ export const createLocalBusinessSchema = () => ({
     "longitude": -49.2733
   },
 
-  "telephone": "+554199133707 0",
+  "telephone": "+5541991635740",
   "email": "contato@acquateccalhas.com.br",
 
   "openingHoursSpecification": [
@@ -66,14 +66,14 @@ export const createLocalBusinessSchema = () => ({
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+554199133707 0",
+      "telephone": "+5541991635740",
       "contactType": "customer service",
       "availableLanguage": "Portuguese",
       "areaServed": "BR"
     },
     {
       "@type": "ContactPoint",
-      "telephone": "+554199133707 0",
+      "telephone": "+5541991635740",
       "contactType": "sales",
       "availableLanguage": "Portuguese",
       "areaServed": "BR"
