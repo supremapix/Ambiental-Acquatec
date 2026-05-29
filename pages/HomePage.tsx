@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
     <>
       <EnhancedSEO
         title="Acquatec Calhas e Telhados - Instalação e Manutenção em Curitiba | 25 Anos de Experiência"
-        description="Especialistas em calhas e telhados há 25 anos em Curitiba. Instalação, manutenção, limpeza e conserto. Garantia de 5 anos. Atendimento 24h. WhatsApp: (41) 99133-7070"
+        description="Especialistas em calhas e telhados há 25 anos em Curitiba. Instalação, manutenção, limpeza e conserto. Garantia de 5 anos. Atendimento 24h. WhatsApp: (41) 99163-5740"
         canonical="https://www.acquateccalhas.com.br/"
         keywords="calhas curitiba, instalação de calhas, manutenção de calhas, telhados curitiba, rufos e pingadeiras, calhas pluviais, limpeza de calhas, reforma de telhado curitiba"
         schemas={[offerCatalogSchema, reviewsSchema, faqSchema]}

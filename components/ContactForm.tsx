@@ -52,10 +52,10 @@ Tipo: ${formData.type}
 Urgência: ${formData.urgency}
 Descrição: ${formData.description}`;
         
-        const url = `https://wa.me/5541991337070?text=${encodeURIComponent(message)}`;
+        const url = `https://wa.me/5541991635740?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
     } else {
-        window.location.href = "tel:+554130535740";
+        window.location.href = "tel:+5541991635740";
     }
   };
 

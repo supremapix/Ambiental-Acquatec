@@ -72,11 +72,11 @@ const Footer: React.FC = () => {
                     <span>Sede: Bairro Fanny<br/>Curitiba - PR, 80000-000</span>
                 </li>
                 <li className="flex items-center gap-3 group">
-                    <a href="tel:+554130535740" className="flex items-center gap-3 hover:text-brand-orange transition-colors">
+                    <a href="tel:+5541991635740" className="flex items-center gap-3 hover:text-brand-orange transition-colors">
                       <div className="bg-gray-800 p-2 rounded group-hover:bg-brand-orange transition-colors">
                           <Phone className="w-4 h-4 text-white" />
                       </div>
-                      <span className="font-bold text-white">(41) 3053-5740</span>
+                      <span className="font-bold text-white">(41) 99163-5740</span>
                     </a>
                 </li>
                 <li className="flex items-center gap-3 group">
