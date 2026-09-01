@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import ServicesSection from '../components/ServicesSection';
 import VideoSection from '../components/VideoSection';
-import LandlineSection from '../components/LandlineSection';
+import DirectLineSection from '../components/DirectLineSection';
 import GallerySection from '../components/GallerySection';
 import ComparisonTable from '../components/ComparisonTable';
 import AboutSection from '../components/AboutSection';
@@ -13,83 +13,64 @@ import FAQSection from '../components/FAQSection';
 import CompactCoverage from '../components/CompactCoverage';
 import TopNeighborhoods from '../components/TopNeighborhoods';
 import EnhancedSEO from '../components/EnhancedSEO';
-import { TESTIMONIALS, SERVICES } from '../constants';
+import { TESTIMONIALS, CITIES, TOP_NEIGHBORHOODS, FAQS } from '../constants';
 import { Star } from 'lucide-react';
-import { createOfferCatalogSchema } from '../utils/seo-schemas';
+import { SITE_URL } from '../site-config.js';
+import { getHomeSeo } from '../seo-meta.js';
+import {
+  buildGraph,
+  createWebPageSchema,
+  createFAQSchema,
+  createItemListSchema,
+  createVideoSchema,
+  createAggregateRating,
+  createReviewNodes
+} from '../utils/seo-schemas';
 
 const HomePage: React.FC = () => {
-  const offerCatalogSchema = createOfferCatalogSchema(
-    SERVICES.map(service => ({
-      name: service.title,
-      description: service.description[0]
-    }))
-  );
+  const seo = getHomeSeo();
 
-  const reviewsSchema = {
-    "@context": "https://schema.org",
-    "@type": "RoofingContractor",
-    "name": "Acquatec Calhas e Telhados",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": TESTIMONIALS.length.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": TESTIMONIALS.map((testimonial) => ({
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": testimonial.name
-      },
-      "datePublished": "2024-11-01",
-      "reviewBody": testimonial.text,
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": testimonial.stars.toString(),
-        "bestRating": "5"
-      }
-    }))
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Qual o tipo de calha ideal para minha casa?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Depende de vários fatores: tipo de telhado, inclinação, volume de chuvas na região e estética desejada."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Com que frequência devo fazer manutenção nas calhas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Recomendamos limpeza a cada 3-4 meses, especialmente antes e depois das estações chuvosas."
-        }
-      }
-    ]
-  };
+  const graph = buildGraph([
+    createWebPageSchema({
+      canonical: seo.canonical,
+      title: seo.title,
+      description: seo.description,
+      image: seo.ogImage,
+      hasFaq: true
+    }),
+    createFAQSchema(seo.canonical, FAQS),
+    createItemListSchema(
+      `${SITE_URL}/#cidades-atendidas`,
+      'Cidades atendidas pela Acquatec',
+      CITIES.map(city => ({ name: city.name, url: `${SITE_URL}/cidades/${city.slug}` }))
+    ),
+    createItemListSchema(
+      `${SITE_URL}/#bairros-atendidos`,
+      'Bairros de Curitiba atendidos pela Acquatec',
+      TOP_NEIGHBORHOODS.map(n => ({ name: n.name, url: `${SITE_URL}/bairros/${n.slug}` }))
+    ),
+    createVideoSchema()
+  ], {
+    aggregateRating: createAggregateRating(),
+    review: createReviewNodes()
+  });
 
   return (
     <>
       <EnhancedSEO
-        title="Acquatec Calhas e Telhados - Instalação e Manutenção em Curitiba | 25 Anos de Experiência"
-        description="Especialistas em calhas e telhados há 25 anos em Curitiba. Instalação, manutenção, limpeza e conserto. Garantia de 5 anos. Atendimento 24h. WhatsApp: (41) 99163-5740"
-        canonical="https://www.acquateccalhas.com.br/"
-        keywords="calhas curitiba, instalação de calhas, manutenção de calhas, telhados curitiba, rufos e pingadeiras, calhas pluviais, limpeza de calhas, reforma de telhado curitiba"
-        schemas={[offerCatalogSchema, reviewsSchema, faqSchema]}
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        graph={graph}
       />
 
       <Hero />
       <ServicesSection />
       <GallerySection />
       <VideoSection />
-      <LandlineSection />
+      <DirectLineSection />
       <ComparisonTable />
       
       <section className="py-12 bg-gray-50">

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-react-ssg build && node scripts/inject-meta.mjs",
+    "build": "vite-react-ssg build && node scripts/postbuild.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

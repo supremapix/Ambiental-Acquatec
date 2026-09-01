@@ -1,9 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, MessageCircle } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import { SITE_URL, CONTACT } from '../site-config.js';
 
 const NotFoundPage: React.FC = () => {
   return (
+    <>
+      <EnhancedSEO
+        title="Página não encontrada (404) | Acquatec Calhas e Telhados"
+        description="A página que você procura não existe ou foi movida. Volte ao início ou fale com a Acquatec sobre calhas e telhados em Curitiba."
+        canonical={`${SITE_URL}/404`}
+        noindex
+      />
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-brand-dark to-gray-900 px-4">
       <div className="max-w-2xl w-full text-center">
         <div className="mb-8">
@@ -46,7 +55,7 @@ const NotFoundPage: React.FC = () => {
           </Link>
 
           <a
-            href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*"
+            href={CONTACT.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-green hover:bg-green-700 text-white font-bold rounded-lg text-lg transition-all shadow-xl transform hover:-translate-y-1"
@@ -67,6 +76,7 @@ const NotFoundPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

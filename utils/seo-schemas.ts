@@ -1,167 +1,339 @@
-export const createLocalBusinessSchema = () => ({
-  "@context": "https://schema.org",
-  "@type": "RoofingContractor",
-  "@id": "https://www.acquateccalhas.com.br/#organization",
-  "name": "Acquatec Calhas e Telhados",
-  "alternateName": "Acquatec - Instalação de Calhas e Telhados",
-  "url": "https://www.acquateccalhas.com.br",
-  "logo": "https://www.acquateccalhas.com.br/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png",
-  "image": [
-    "https://www.acquateccalhas.com.br/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-1-2000x900.jpeg",
-    "https://www.acquateccalhas.com.br/acquatec-calhas-e-telhados-em-curitiba-reformas-condominios-517x357.jpg"
-  ],
-  "description": "Empresa especializada em instalação, manutenção e limpeza de calhas e telhados em Curitiba e Região Metropolitana com 25 anos de experiência no mercado.",
+/**
+ * Schema.org (JSON-LD) do site Acquatec.
+ *
+ * Tudo é montado como um único @graph por página, com @id estáveis, para que
+ * o Google entenda que Organização, Site, Página, Serviço, FAQ e Breadcrumb
+ * são a mesma entidade em todo o site (sem blocos duplicados).
+ */
+import { SITE_URL, BUSINESS, CONTACT } from '../site-config.js';
+import { CITIES, SERVICES, TESTIMONIALS } from '../site-data.js';
 
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rua Bairro Fanny",
-    "addressLocality": "Curitiba",
-    "addressRegion": "PR",
-    "postalCode": "80000-000",
-    "addressCountry": "BR"
+export const ORG_ID = `${SITE_URL}/#organization`;
+export const SITE_ID = `${SITE_URL}/#website`;
+const LOGO_ID = `${SITE_URL}/#logo`;
+
+const orgRef = { '@id': ORG_ID };
+
+/* ------------------------------------------------------------ EMPRESA */
+
+export const createOrganizationSchema = (extra: Record<string, any> = {}) => ({
+  '@type': ['RoofingContractor', 'LocalBusiness', 'HomeAndConstructionBusiness'],
+  '@id': ORG_ID,
+  name: BUSINESS.name,
+  alternateName: BUSINESS.alternateName,
+  legalName: BUSINESS.name,
+  slogan: BUSINESS.slogan,
+  description: BUSINESS.description,
+  url: `${SITE_URL}/`,
+  foundingDate: BUSINESS.foundingDate,
+  logo: {
+    '@type': 'ImageObject',
+    '@id': LOGO_ID,
+    url: BUSINESS.logo,
+    contentUrl: BUSINESS.logo,
+    caption: BUSINESS.name
   },
-
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -25.4284,
-    "longitude": -49.2733
+  image: BUSINESS.images,
+  telephone: CONTACT.phoneE164,
+  email: CONTACT.email,
+  address: {
+    '@type': 'PostalAddress',
+    ...BUSINESS.address
   },
-
-  "telephone": "+5541991635740",
-  "email": "contato@acquateccalhas.com.br",
-
-  "openingHoursSpecification": [
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: BUSINESS.geo.latitude,
+    longitude: BUSINESS.geo.longitude
+  },
+  hasMap: `https://www.google.com/maps/search/?api=1&query=${BUSINESS.geo.latitude},${BUSINESS.geo.longitude}`,
+  openingHoursSpecification: BUSINESS.openingHours.map((h: any) => ({
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: h.days,
+    opens: h.opens,
+    closes: h.closes
+  })),
+  priceRange: BUSINESS.priceRange,
+  paymentAccepted: BUSINESS.paymentAccepted,
+  currenciesAccepted: BUSINESS.currenciesAccepted,
+  areaServed: [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "18:00"
+      '@type': 'AdministrativeArea',
+      name: 'Região Metropolitana de Curitiba',
+      containedInPlace: { '@type': 'State', name: 'Paraná' }
     },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "13:00"
-    }
-  ],
-
-  "priceRange": "$$",
-
-  "areaServed": [
-    { "@type": "City", "name": "Curitiba" },
-    { "@type": "City", "name": "Almirante Tamandaré" },
-    { "@type": "City", "name": "Araucária" },
-    { "@type": "City", "name": "Colombo" },
-    { "@type": "City", "name": "Fazenda Rio Grande" },
-    { "@type": "City", "name": "Pinhais" },
-    { "@type": "City", "name": "Piraquara" },
-    { "@type": "City", "name": "São José dos Pinhais" }
-  ],
-
-  "sameAs": [
-    "https://www.facebook.com/acquateccalhas",
-    "https://www.instagram.com/_acquatec_"
-  ],
-
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+5541991635740",
-      "contactType": "customer service",
-      "availableLanguage": "Portuguese",
-      "areaServed": "BR"
-    },
-    {
-      "@type": "ContactPoint",
-      "telephone": "+5541991635740",
-      "contactType": "sales",
-      "availableLanguage": "Portuguese",
-      "areaServed": "BR"
-    }
-  ],
-
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "127",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
-});
-
-export const createServiceSchema = (serviceName: string, description: string, areaServed: string = "Curitiba") => ({
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": serviceName,
-  "provider": {
-    "@type": "RoofingContractor",
-    "name": "Acquatec Calhas e Telhados"
-  },
-  "description": description,
-  "areaServed": {
-    "@type": "City",
-    "name": areaServed
-  }
-});
-
-export const createFAQSchema = (faqs: Array<{question: string; answer: string}>) => ({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
-});
-
-export const createBreadcrumbSchema = (breadcrumbs: Array<{name: string; url: string}>) => ({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": breadcrumbs.map((item, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "name": item.name,
-    "item": item.url
-  }))
-});
-
-export const createReviewSchema = (reviews: Array<{
-  author: string;
-  datePublished: string;
-  reviewBody: string;
-  ratingValue: number;
-}>) => reviews.map(review => ({
-  "@type": "Review",
-  "author": {
-    "@type": "Person",
-    "name": review.author
-  },
-  "datePublished": review.datePublished,
-  "reviewBody": review.reviewBody,
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": review.ratingValue.toString(),
-    "bestRating": "5"
-  }
-}));
-
-export const createOfferCatalogSchema = (services: Array<{name: string; description: string}>) => ({
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Acquatec Calhas e Telhados",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Serviços de Calhas e Telhados",
-    "itemListElement": services.map(service => ({
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": service.name,
-        "description": service.description
-      }
+    ...CITIES.map((city: any) => ({
+      '@type': 'City',
+      name: city.name,
+      address: { '@type': 'PostalAddress', addressRegion: 'PR', addressCountry: 'BR' }
     }))
+  ],
+  knowsAbout: BUSINESS.knowsAbout,
+  sameAs: BUSINESS.sameAs,
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: CONTACT.phoneE164,
+      contactType: 'customer service',
+      areaServed: 'BR',
+      availableLanguage: ['Portuguese'],
+      contactOption: 'TollFree'
+    },
+    {
+      '@type': 'ContactPoint',
+      telephone: CONTACT.phoneE164,
+      contactType: 'emergency',
+      areaServed: 'BR',
+      availableLanguage: ['Portuguese'],
+      hoursAvailable: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59'
+      }
+    }
+  ],
+  potentialAction: {
+    '@type': 'CommunicateAction',
+    name: 'Falar no WhatsApp',
+    target: CONTACT.whatsappUrl
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    '@id': `${SITE_URL}/#catalogo`,
+    name: 'Serviços de calhas e telhados',
+    itemListElement: SERVICES.map((service: any) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        '@id': `${SITE_URL}/servicos/${service.id}#servico`,
+        name: service.title,
+        url: `${SITE_URL}/servicos/${service.id}`
+      },
+      priceCurrency: 'BRL',
+      availability: 'https://schema.org/InStock'
+    }))
+  },
+  ...extra
+});
+
+/* --------------------------------------------------------------- SITE */
+
+export const createWebSiteSchema = () => ({
+  '@type': 'WebSite',
+  '@id': SITE_ID,
+  url: `${SITE_URL}/`,
+  name: BUSINESS.name,
+  description: BUSINESS.description,
+  inLanguage: 'pt-BR',
+  publisher: orgRef,
+  copyrightHolder: orgRef
+});
+
+/* -------------------------------------------------------------- PÁGINA */
+
+interface WebPageInput {
+  canonical: string;
+  title: string;
+  description: string;
+  image?: string;
+  dateModified?: string;
+  hasBreadcrumb?: boolean;
+  hasFaq?: boolean;
+  about?: string;
+}
+
+export const createWebPageSchema = ({
+  canonical,
+  title,
+  description,
+  image,
+  dateModified,
+  hasBreadcrumb,
+  hasFaq,
+  about
+}: WebPageInput) => {
+  const page: any = {
+    '@type': 'WebPage',
+    '@id': `${canonical}#webpage`,
+    url: canonical,
+    name: title,
+    description,
+    inLanguage: 'pt-BR',
+    isPartOf: { '@id': SITE_ID },
+    about: orgRef,
+    provider: orgRef,
+    datePublished: '2024-01-01',
+    dateModified: dateModified || new Date().toISOString().split('T')[0],
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: image && image.startsWith('http') ? image : `${SITE_URL}${image || BUSINESS.defaultImage}`
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2']
+    }
+  };
+  if (about) page.keywords = about;
+  if (hasBreadcrumb) page.breadcrumb = { '@id': `${canonical}#breadcrumb` };
+  if (hasFaq) page.mainEntity = { '@id': `${canonical}#faq` };
+  return page;
+};
+
+/* --------------------------------------------------------- BREADCRUMB */
+
+export const createBreadcrumbSchema = (
+  canonical: string,
+  items: Array<{ name: string; url: string }>
+) => ({
+  '@type': 'BreadcrumbList',
+  '@id': `${canonical}#breadcrumb`,
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url
+  }))
+});
+
+/* ------------------------------------------------------------ SERVIÇO */
+
+interface ServiceInput {
+  canonical: string;
+  name: string;
+  description: string;
+  areaServed?: string;
+  price?: string;
+  image?: string;
+  serviceType?: string;
+}
+
+export const createServiceSchema = ({
+  canonical,
+  name,
+  description,
+  areaServed = 'Curitiba',
+  price,
+  image,
+  serviceType
+}: ServiceInput) => {
+  const schema: any = {
+    '@type': 'Service',
+    '@id': `${canonical}#servico`,
+    name,
+    description,
+    serviceType: serviceType || name,
+    category: 'Calhas e Telhados',
+    url: canonical,
+    provider: orgRef,
+    areaServed: { '@type': 'City', name: areaServed },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: canonical,
+      servicePhone: CONTACT.phoneE164,
+      availableLanguage: 'pt-BR'
+    },
+    termsOfService: 'Garantia de 5 anos sobre mão de obra e instalação.'
+  };
+  if (image) {
+    schema.image = image.startsWith('http') ? image : `${SITE_URL}${image}`;
   }
+  if (price) {
+    schema.offers = {
+      '@type': 'Offer',
+      priceCurrency: 'BRL',
+      description: price,
+      availability: 'https://schema.org/InStock',
+      areaServed: { '@type': 'City', name: areaServed },
+      seller: orgRef,
+      warranty: {
+        '@type': 'WarrantyPromise',
+        durationOfWarranty: { '@type': 'QuantitativeValue', value: 5, unitCode: 'ANN' }
+      }
+    };
+  }
+  return schema;
+};
+
+/* ----------------------------------------------------------------- FAQ */
+
+export const createFAQSchema = (
+  canonical: string,
+  faqs: Array<{ question: string; answer: string }>
+) => ({
+  '@type': 'FAQPage',
+  '@id': `${canonical}#faq`,
+  inLanguage: 'pt-BR',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+  }))
+});
+
+/* ------------------------------------------------------- LISTA / VÍDEO */
+
+export const createItemListSchema = (
+  id: string,
+  name: string,
+  items: Array<{ name: string; url: string }>
+) => ({
+  '@type': 'ItemList',
+  '@id': id,
+  name,
+  numberOfItems: items.length,
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    url: item.url
+  }))
+});
+
+export const createVideoSchema = () => ({
+  '@type': 'VideoObject',
+  '@id': `${SITE_URL}/#video`,
+  name: 'Acquatec Calhas e Telhados - trabalhos em Curitiba',
+  description:
+    'Bastidores dos serviços de instalação de calhas, rufos e manutenção de telhados executados pela Acquatec em Curitiba e Região Metropolitana.',
+  thumbnailUrl: `https://i.ytimg.com/vi/${BUSINESS.videoId}/hqdefault.jpg`,
+  uploadDate: '2024-01-15',
+  embedUrl: `https://www.youtube.com/embed/${BUSINESS.videoId}`,
+  contentUrl: `https://www.youtube.com/watch?v=${BUSINESS.videoId}`,
+  publisher: orgRef
+});
+
+/**
+ * Avaliações exibidas na home. reviewCount reflete exatamente os depoimentos
+ * publicados na página — troque por dados do Google Meu Negócio se quiser
+ * usar o total real de avaliações.
+ */
+export const createAggregateRating = () => ({
+  '@type': 'AggregateRating',
+  ratingValue: (
+    TESTIMONIALS.reduce((total: number, t: any) => total + t.stars, 0) / TESTIMONIALS.length
+  ).toFixed(1),
+  reviewCount: TESTIMONIALS.length,
+  bestRating: '5',
+  worstRating: '1'
+});
+
+export const createReviewNodes = () =>
+  TESTIMONIALS.map((t: any, index: number) => ({
+    '@type': 'Review',
+    '@id': `${SITE_URL}/#avaliacao-${index + 1}`,
+    author: { '@type': 'Person', name: t.name },
+    reviewBody: t.text,
+    reviewRating: { '@type': 'Rating', ratingValue: String(t.stars), bestRating: '5', worstRating: '1' }
+  }));
+
+/* --------------------------------------------------------------- GRAFO */
+
+/**
+ * Monta o @graph final da página (organização + site sempre presentes).
+ * `orgExtra` permite embutir dados extras na empresa — por exemplo
+ * aggregateRating e review na home, onde os depoimentos são exibidos.
+ */
+export const buildGraph = (nodes: any[] = [], orgExtra: Record<string, any> = {}) => ({
+  '@context': 'https://schema.org',
+  '@graph': [createOrganizationSchema(orgExtra), createWebSiteSchema(), ...nodes.filter(Boolean)]
 });

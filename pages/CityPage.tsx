@@ -7,7 +7,15 @@ import EcoFriendlySection from '../components/EcoFriendlySection';
 import SEOAccordion from '../components/SEOAccordion';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { CheckCircle, Phone, ArrowRight } from 'lucide-react';
-import { createServiceSchema, createFAQSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
+import { SITE_URL, CONTACT } from '../site-config.js';
+import { getCitySeo } from '../seo-meta.js';
+import {
+  buildGraph,
+  createWebPageSchema,
+  createServiceSchema,
+  createFAQSchema,
+  createBreadcrumbSchema
+} from '../utils/seo-schemas';
 
 interface CityPageProps {
   citySlug?: string;
@@ -42,7 +50,7 @@ const CityPage: React.FC<CityPageProps> = ({ citySlug, cityName: propName }) => 
     },
     {
       title: `A Acquatec atende emergências em ${city.name}?`,
-      content: `Sim! Oferecemos plantão 24h para emergências em ${city.name}, incluindo fins de semana e feriados. Goteiras graves, calhas arrancadas por vendavais e vazamentos urgentes recebem atendimento prioritário. Nossa equipe chega ao local em média em 45 minutos para avaliar e solucionar o problema. Entre em contato pelo WhatsApp ou telefone (41) 99163-5740.`
+      content: `Sim! Oferecemos plantão 24h para emergências em ${city.name}, incluindo fins de semana e feriados. Goteiras graves, calhas arrancadas por vendavais e vazamentos urgentes recebem atendimento prioritário. Nossa equipe chega ao local em média em 45 minutos para avaliar e solucionar o problema. Entre em contato pelo WhatsApp ou telefone ${CONTACT.phoneDisplay}.`
     },
     {
       title: `Qual a frequência ideal de manutenção de calhas em ${city.name}?`,
@@ -50,31 +58,42 @@ const CityPage: React.FC<CityPageProps> = ({ citySlug, cityName: propName }) => 
     }
   ];
 
-  const serviceSchema = createServiceSchema(
-    `Instalação e Manutenção de Calhas e Telhados`,
-    `Serviços profissionais de calhas, telhados e rufos em ${city.name} com garantia de 5 anos`,
-    city.name
-  );
+  const seo = getCitySeo(city);
 
-  const faqSchema = createFAQSchema(seoAccordionItems.map(item => ({
-    question: item.title,
-    answer: item.content
-  })));
-
-  const breadcrumbSchema = createBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.acquateccalhas.com.br/' },
-    { name: 'Cidades', url: 'https://www.acquateccalhas.com.br/' },
-    { name: city.name, url: `https://www.acquateccalhas.com.br/cidades/${slug}` }
+  const graph = buildGraph([
+    createWebPageSchema({
+      canonical: seo.canonical,
+      title: seo.title,
+      description: seo.description,
+      hasBreadcrumb: true,
+      hasFaq: true
+    }),
+    createBreadcrumbSchema(seo.canonical, [
+      { name: 'Início', url: `${SITE_URL}/` },
+      { name: 'Cidades atendidas', url: `${SITE_URL}/#cidades` },
+      { name: city.name, url: seo.canonical }
+    ]),
+    createServiceSchema({
+      canonical: seo.canonical,
+      name: `Calhas e Telhados em ${city.name}`,
+      description: `Instalação, manutenção e limpeza de calhas, telhados e rufos em ${city.name}, com garantia de 5 anos e atendimento de emergência 24h.`,
+      areaServed: city.name,
+      serviceType: 'Instalação e Manutenção de Calhas e Telhados'
+    }),
+    createFAQSchema(
+      seo.canonical,
+      seoAccordionItems.map(item => ({ question: item.title, answer: item.content }))
+    )
   ]);
 
   return (
     <div className="pt-20">
       <EnhancedSEO
-        title={`Calhas e Telhados em ${city.name} - Acquatec | Orçamento Grátis`}
-        description={`Instalação e manutenção de calhas e telhados em ${city.name}. 25 anos de experiência, garantia de 5 anos. WhatsApp: (41) 99163-5740`}
-        canonical={`https://www.acquateccalhas.com.br/cidades/${slug}`}
-        keywords={`calhas ${city.name}, telhados ${city.name}, instalação de calhas ${city.name}, manutenção de calhas ${city.name}`}
-        schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        keywords={seo.keywords}
+        graph={graph}
       />
       <div className="bg-gray-100 py-3">
         <div className="container mx-auto px-4 text-sm text-gray-500">
@@ -90,9 +109,9 @@ const CityPage: React.FC<CityPageProps> = ({ citySlug, cityName: propName }) => 
             <p className="text-xl text-gray-200 mb-8">Atendimento Rápido e Garantia de 5 Anos na sua região</p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#orcamento" className="bg-brand-orange hover:bg-orange-600 px-8 py-3 rounded-lg font-bold transition-colors">Solicitar Orçamento Grátis</a>
-                <div className="flex items-center justify-center gap-2 font-bold text-lg">
-                    <Phone className="w-5 h-5" /> (41) 99163-5740
-                </div>
+                <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 font-bold text-lg hover:text-brand-orange transition-colors">
+                    <Phone className="w-5 h-5" /> {CONTACT.phoneDisplay}
+                </a>
             </div>
         </div>
       </section>

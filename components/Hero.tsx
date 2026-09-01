@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { CONTACT } from '../site-config.js';
 import { ArrowRight, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -76,7 +77,7 @@ const Hero: React.FC = () => {
                 </a>
 
                 <a
-                  href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*"
+                  href={CONTACT.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-4 bg-brand-green hover:bg-green-700 text-white font-bold rounded-lg text-lg transition-all shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 whitespace-nowrap"

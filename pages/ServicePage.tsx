@@ -6,7 +6,16 @@ import VideoSection from '../components/VideoSection';
 import GallerySection from '../components/GallerySection';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { CheckCircle, Phone, Clock, Shield, Award } from 'lucide-react';
-import { createServiceSchema, createFAQSchema, createBreadcrumbSchema } from '../utils/seo-schemas';
+import { SITE_URL, CONTACT, waLink } from '../site-config.js';
+import { getServiceSeo } from '../seo-meta.js';
+import {
+  buildGraph,
+  createWebPageSchema,
+  createServiceSchema,
+  createFAQSchema,
+  createBreadcrumbSchema,
+  createVideoSchema
+} from '../utils/seo-schemas';
 
 interface ServicePageProps {
   serviceId?: string;
@@ -52,29 +61,43 @@ const ServicePage: React.FC<ServicePageProps> = ({ serviceId }) => {
     }
   ];
 
-  const serviceSchema = createServiceSchema(
-    service.title,
-    service.description[0],
-    'Curitiba'
-  );
+  const seo = getServiceSeo(service);
 
-  const faqSchema = createFAQSchema(serviceFAQs);
-
-  const breadcrumbSchema = createBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.acquateccalhas.com.br/' },
-    { name: 'Serviços', url: 'https://www.acquateccalhas.com.br/' },
-    { name: service.title, url: `https://www.acquateccalhas.com.br/servicos/${slug}` }
+  const graph = buildGraph([
+    createWebPageSchema({
+      canonical: seo.canonical,
+      title: seo.title,
+      description: seo.description,
+      image: seo.ogImage,
+      hasBreadcrumb: true,
+      hasFaq: true
+    }),
+    createBreadcrumbSchema(seo.canonical, [
+      { name: 'Início', url: `${SITE_URL}/` },
+      { name: 'Serviços', url: `${SITE_URL}/#servicos` },
+      { name: service.title, url: seo.canonical }
+    ]),
+    createServiceSchema({
+      canonical: seo.canonical,
+      name: `${service.title} em Curitiba`,
+      description: service.description.join(' '),
+      price: service.price,
+      image: service.image,
+      serviceType: service.title
+    }),
+    createFAQSchema(seo.canonical, serviceFAQs),
+    createVideoSchema()
   ]);
 
   return (
     <div className="pt-20">
       <EnhancedSEO
-        title={`${service.title} em Curitiba - Acquatec | Orçamento Grátis`}
-        description={`${service.description[0]} Garantia de 5 anos. 25 anos de experiência. WhatsApp: (41) 99163-5740`}
-        canonical={`https://www.acquateccalhas.com.br/servicos/${slug}`}
-        keywords={`${service.title.toLowerCase()}, ${service.title.toLowerCase()} curitiba, calhas e telhados curitiba`}
-        schemas={[serviceSchema, faqSchema, breadcrumbSchema]}
-        ogImage={service.image}
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        graph={graph}
       />
 
       <div className="bg-gray-100 py-3">
@@ -120,7 +143,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ serviceId }) => {
                   {service.cta}
                 </a>
                 <a
-                  href={`https://wa.me/5541991635740?text=Olá! Gostaria de um orçamento para: ${service.title}`}
+                  href={waLink(`Olá! Gostaria de um orçamento para: ${service.title}`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-brand-green hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-center transition-colors shadow-lg"
                 >
                   WhatsApp
@@ -183,14 +208,14 @@ const ServicePage: React.FC<ServicePageProps> = ({ serviceId }) => {
                     <Phone className="w-5 h-5 text-brand-orange" />
                     <div>
                       <div className="text-sm text-gray-400">Telefone</div>
-                      <a href="tel:+5541991635740" className="font-bold hover:text-brand-orange">(41) 99163-5740</a>
+                      <a href={CONTACT.phoneHref} className="font-bold hover:text-brand-orange">{CONTACT.phoneDisplay}</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-brand-green" />
                     <div>
                       <div className="text-sm text-gray-400">WhatsApp</div>
-                      <a href="https://wa.me/5541991635740?text=Ol%C3%A1%2C%20achei%20seu%20site%20no%20*Google%20e%20gostaria%20de%20saber%20sobre%3A*" className="font-bold hover:text-brand-green">(41) 99163-5740</a>
+                      <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-bold hover:text-brand-green">{CONTACT.phoneDisplay}</a>
                     </div>
                   </div>
                 </div>

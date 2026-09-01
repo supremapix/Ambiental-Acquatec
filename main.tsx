@@ -52,9 +52,22 @@ export const createRoot = ViteReactSSG(
     if (isClient) {
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(() => console.log('SW registered'))
-            .catch(() => console.log('SW registration failed'))
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {
+              // Busca uma versao nova do worker a cada carregamento da pagina.
+              registration.update()
+              registration.addEventListener('updatefound', () => {
+                const installing = registration.installing
+                if (!installing) return
+                installing.addEventListener('statechange', () => {
+                  if (installing.state === 'installed' && navigator.serviceWorker.controller) {
+                    installing.postMessage('skipWaiting')
+                  }
+                })
+              })
+            })
+            .catch(() => undefined)
         })
       }
     }

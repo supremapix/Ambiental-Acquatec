@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CONTACT, waLink } from '../site-config.js';
 import { Send, Phone } from 'lucide-react';
 import { CITIES } from '../constants';
 
@@ -52,10 +53,10 @@ Tipo: ${formData.type}
 Urgência: ${formData.urgency}
 Descrição: ${formData.description}`;
         
-        const url = `https://wa.me/5541991635740?text=${encodeURIComponent(message)}`;
+        const url = waLink(message);
         window.open(url, '_blank');
     } else {
-        window.location.href = "tel:+5541991635740";
+        window.location.href = CONTACT.phoneHref;
     }
   };
 
