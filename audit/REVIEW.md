@@ -49,7 +49,9 @@ Técnica: NR-35 no Ministério do Trabalho e exemplo público de dimensionamento
 
 ## Verificação
 npm run build; npm run typecheck; npm run lint; npm run test:static; npm test.
-Auditoria estática: 156 páginas, 8.192 referências internas, canonical único, metadados, JSON-LD válido, sitemap, todas as rotas anteriores e hashes de imagens.
+Auditoria estática: 156 páginas, 8.348 referências internas, canonical único, metadados, JSON-LD válido, sitemap, todas as rotas anteriores e hashes de imagens.
 Playwright: 320/390/1440 px e texto 200%, teclado, formulário sem envio externo, seis redes, carregamento das imagens locais, reduced-motion, 404 e amostra de páginas regionais. Capturas locais em audit/*.png (não versionadas).
 Atualizações compatíveis aplicadas; npm audit ainda informa 10 alertas (5 moderados, 5 altos), envolvendo ferramentas de compilação Tailwind e React Router/SSG. Não aplicada migração forçada com quebra de versão. Site publicado como arquivos estáticos; isso não equivale a afirmar ausência de risco.
 Confirmação de commit remoto, deploy e domínio deve ser registrada no relatório final após publicação.
+
+Logo Suprema: cópia binária preservada de https://img.supremamidia.com/suprema-img.png em public/suprema-img.png para entrega no mesmo domínio. SHA-256: 9b14fb2baa235ad0616a435539a975106ee20f1bffdcb60afdbccc47ac06cc28. Nenhuma alteração de pixels.
