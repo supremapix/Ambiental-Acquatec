@@ -1,6 +1,1 @@
-# Arquivos estaticos nunca caem no index.html (evita HTML no lugar de JS/JSON)
-/assets/*        /assets/:splat        200
-/static-loader-data-manifest-*.json  /static-loader-data-manifest-:splat.json  200
-
-# SPA fallback para as demais rotas
-/*               /index.html           200
+/* /404.html 404

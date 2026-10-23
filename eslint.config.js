@@ -1,0 +1,2 @@
+import tseslint from 'typescript-eslint';import hooks from 'eslint-plugin-react-hooks';
+export default [{ignores:['dist/**','node_modules/**','.vite-react-ssg-temp/**','audit/**']},...tseslint.configs.recommended,{files:['**/*.tsx','**/*.ts'],plugins:{'react-hooks':hooks},rules:{'@typescript-eslint/no-explicit-any':'off','@typescript-eslint/no-unused-vars':'off','react-hooks/rules-of-hooks':'error'}},{files:['**/*.js','**/*.mjs'],rules:{'@typescript-eslint/no-unused-vars':'off'}}];

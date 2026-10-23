@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => {
       },
       ssgOptions: {
         dirStyle: 'nested',
-        formatting: 'minify',
+        formatting: 'none',
       }
     };
 });

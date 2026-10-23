@@ -67,11 +67,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="twitter:image" content={fullOgImage} />
       <meta name="twitter:image:alt" content={title} />
 
-      <meta name="geo.region" content="BR-PR" />
-      <meta name="geo.placename" content="Curitiba" />
-      <meta name="geo.position" content={`${BUSINESS.geo.latitude};${BUSINESS.geo.longitude}`} />
-      <meta name="ICBM" content={`${BUSINESS.geo.latitude}, ${BUSINESS.geo.longitude}`} />
-
       <meta name="format-detection" content="telephone=yes" />
       <meta name="apple-mobile-web-app-title" content={BUSINESS.alternateName} />
       <meta name="theme-color" content="#003D82" />

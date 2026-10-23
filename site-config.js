@@ -28,9 +28,8 @@ export const waLink = (message) =>
 export const BUSINESS = {
   name: 'Acquatec Calhas e Telhados',
   alternateName: 'Acquatec',
-  slogan: 'Calhas e telhados com garantia de 5 anos em Curitiba e Região Metropolitana',
-  description:
-    'Empresa especializada em instalação, manutenção e limpeza de calhas, telhados e rufos em Curitiba e Região Metropolitana, com 25 anos de experiência e garantia de 5 anos.',
+  slogan: 'Calhas e telhados em Curitiba: avaliação e soluções para sua cobertura',
+  description: 'Instalação, manutenção e reforma de calhas, telhados e rufos. Consulte atendimento, avaliação e orçamento com a Acquatec.',
   foundingDate: '2000',
   logo: `${SITE_URL}/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png`,
   defaultImage: '/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png',
