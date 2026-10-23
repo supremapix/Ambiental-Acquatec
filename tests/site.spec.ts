@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test';
-for(const width of [320,390,1440]) test('layout '+width,async({page})=>{
+for(const width of [320,360,390,430,1440]) test('layout '+width,async({page})=>{
  await page.setViewportSize({width,height:900});await page.goto('/');
  await expect(page.locator('h1')).toBeVisible();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
@@ -41,5 +41,25 @@ test('local 250px card, contextual contact and centered mobile logos',async({pag
  await page.screenshot({path:'audit/local-card-mobile.png'});
  for(const selector of ['.site-logo','.footer-logo']){const b=await page.locator(selector).boundingBox();expect(Math.abs((b!.x+b!.width/2)-195)).toBeLessThan(2);}
  for(let i=0;i<4;i++)await page.getByRole('button',{name:'Aumentar texto'}).click();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+});
+for(const width of [320,360,390,430]) test('senior mobile navigation '+width,async({page})=>{
+ await page.setViewportSize({width,height:900});await page.goto('/');
+ const menu=page.getByRole('button',{name:'Abrir menu',exact:true});
+ await expect(menu).toBeVisible();await expect(page.locator('#menu-principal')).toBeHidden();
+ await page.screenshot({path:'audit/mobile-after-'+width+'.png'});
+ await menu.focus();await page.keyboard.press('Enter');await expect(page.getByRole('button',{name:'Fechar menu'})).toHaveAttribute('aria-expanded','true');if(width===390)await page.screenshot({path:'audit/mobile-menu-open.png'});
+ await page.locator('.site-nav summary').click();await expect(page.locator('.menu-panel')).toBeVisible();
+ for(const link of await page.locator('.menu-panel a').all()){const box=await link.boundingBox();expect(box!.height).toBeGreaterThanOrEqual(55);}
+ await page.locator('.menu-panel a').first().focus();await page.keyboard.press('Escape');await expect(menu).toBeFocused();await expect(page.locator('#menu-principal')).toBeHidden();
+ await menu.click();await page.locator('.site-nav a[href="/regioes"]').click();await expect(page).toHaveURL(/regioes/);await expect(page.locator('#menu-principal')).toBeHidden();
+ await page.goto('/');await page.locator('.footer-contact-links').scrollIntoViewIfNeeded();
+ for(const a of await page.locator('.footer-contact-links a').all()){const box=await a.boundingBox();expect(box!.height).toBeGreaterThanOrEqual(55);}
+ if(width===390)await page.screenshot({path:'audit/mobile-footer-after.png'});
+ for(let i=0;i<4;i++)await page.getByRole('button',{name:'Aumentar texto'}).click();
+ await page.getByRole('button',{name:'Abrir menu',exact:true}).click();await page.locator('.site-nav summary').click();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+ await page.getByRole('button',{name:'Fechar menu'}).click();await page.locator('.credit').scrollIntoViewIfNeeded();
+ await expect(page.locator('.floating-actions a')).toHaveCount(2);const actions=await page.locator('.floating-actions a').all();const a=await actions[0].boundingBox(),b=await actions[1].boundingBox();expect(a!.x+a!.width).toBeLessThanOrEqual(b!.x);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
 });

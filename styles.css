@@ -237,3 +237,52 @@ body { background:var(--paper); }
  .editorial-about figure { order:2; }
 }
 @media(max-width:480px){.service-directory{grid-template-columns:1fr}.panorama{width:100%}.panorama img{aspect-ratio:20/9}.editorial-heading{padding-bottom:2rem}.section-heading{gap:.5rem}.service-entry{grid-template-columns:1fr}.editorial-heading h1{font-size:2.4rem}}
+
+/* Mobile access review: desktop composition retained. */
+.mobile-menu-toggle { display:none; }
+@media(max-width:800px){
+ html { scroll-padding-block:1rem calc(var(--contact-dock-height,80px) + 1rem); }
+ body { padding-bottom:calc(var(--contact-dock-height,80px) + env(safe-area-inset-bottom,0px)); }
+ a,button,input,select,textarea,summary { scroll-margin-bottom:calc(var(--contact-dock-height,80px) + 1rem); }
+ .site-top { font-size:1rem; line-height:1.5; }
+ .site-top .wrap { gap:.25rem; }
+ .site-top a { display:flex; align-items:center; min-height:44px; font-weight:700; }
+ .site-header .bar { gap:.75rem; padding:.9rem 0; }
+ .site-logo { width:200px; }
+ .mobile-ready .mobile-menu-toggle { display:flex; align-items:center; justify-content:space-between; width:100%; min-height:56px; padding:.8rem 1rem; border:2px solid #003d82; color:#003d82; background:#fff; border-radius:.4rem; font-size:1.125rem; font-weight:700; gap:1rem; }
+ .mobile-ready .site-nav:not(.is-open) { display:none; }
+ .site-nav { grid-template-columns:1fr; gap:.65rem; align-items:stretch; }
+ .site-nav > a,.site-nav summary { font-size:1.125rem; min-height:56px; padding:.85rem 1rem; line-height:1.5; }
+ .site-nav details { width:100%; }
+ .site-nav summary { display:list-item; list-style-position:inside; }
+ .menu-panel { padding:.5rem .65rem; background:#edf3f7; border:1px solid #c5d1db; }
+ .menu-panel a { font-size:1.05rem; min-height:56px; margin:.4rem 0; padding:.75rem; background:#fff; border:1px solid #c5d1db; border-radius:.3rem; }
+ .header-whatsapp { min-height:56px; font-size:1.05rem; }
+ .editorial-hero { padding-top:2rem; }
+ .editorial-heading { gap:1.35rem; }
+ .editorial-heading h1 { font-size:clamp(2rem,6vw,2.6rem); }
+ .hero-summary > p { font-size:1.125rem; }
+ .hero-summary .hero-consultation { font-size:1rem; }
+ .panorama figcaption { font-size:.9rem; }
+ .service-entry figcaption { font-size:1rem; }
+ .service-copy p { font-size:1.05rem; }
+ .site-footer { font-size:1.0625rem; padding-bottom:2rem; }
+ .footer-intro { padding:1.25rem; gap:1.2rem; }
+ .footer-grid { gap:1.5rem; }
+ .footer-grid h2,.footer-tools h2 { font-size:1.35rem; line-height:1.35; }
+ .footer-brand p { line-height:1.7; }
+ .footer-contact-links { display:grid; gap:.75rem; margin-top:1.5rem; }
+ .footer-contact-links br { display:none; }
+ .footer-contact-links a { display:block; width:100%; min-height:56px; border:1px solid #9ab0c2; border-radius:.4rem; padding:.85rem 1rem; background:#1c3547; font-weight:700; }
+ .footer-grid nav li + li { margin-top:.65rem; }
+ .footer-grid nav li a { display:block; width:100%; min-height:56px; padding:.85rem 1rem; border:1px solid #718da3; border-radius:.4rem; background:#1c3547; text-decoration:none; line-height:1.5; }
+ .footer-tools .action-row { display:flex; flex-wrap:wrap; gap:.75rem; }
+ .footer-tools button { min-height:56px; min-width:56px; }
+ .site-footer .share-links { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr)); gap:.75rem; }
+ .site-footer .share-links a,.site-footer .share-links button { display:flex; align-items:center; justify-content:center; min-height:56px; font-size:1rem; }
+ .credit { flex-direction:column; text-align:center; }
+ .floating-actions { bottom:0; right:0; width:100%; max-width:none; flex-direction:row; align-items:stretch; gap:.5rem; padding:.5rem .75rem calc(.5rem + env(safe-area-inset-bottom,0px)); background:#fff; border-top:1px solid #b3c4d1; box-shadow:0 -3px 14px #172d421c; }
+ .floating-actions a { flex:1; min-width:0; min-height:52px; padding:.65rem .4rem; font-size:1rem; box-shadow:none; line-height:1.4; }
+}
+
+@media(max-width:800px){ .site-nav summary span[aria-hidden] { display:none; } }
