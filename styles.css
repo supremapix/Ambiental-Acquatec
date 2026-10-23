@@ -156,3 +156,84 @@ h1,h2,h3 { text-wrap:balance; }
  .site-footer { padding-bottom:12rem; }
 }
 @media(max-width:480px){.hero-new h1 {font-size:2.35rem;} .wrap {width:calc(100% - 2rem);} .hero-frame {padding:.7rem;} .site-logo {width:230px;} .action-row > .btn {width:100%;}}
+
+/* Editorial redesign: new composition, original Acquatec assets and identity. */
+:root { --paper:#f8f6f1; --rust:#a9432d; }
+body { background:var(--paper); }
+.site-top { background:#16242e; }
+.site-header { border-bottom:1px solid #d9ddd9; }
+.site-header .bar { padding:1.1rem 0; }
+.btn { border-radius:.3rem; }
+.eyebrow { color:var(--rust); font-size:.78rem; }
+.editorial-hero { background:var(--paper); padding:4rem 0 0; }
+.editorial-heading { display:grid; grid-template-columns:1.35fr .65fr; gap:4rem; align-items:end; padding-bottom:3rem; }
+.editorial-heading h1 { font-size:clamp(2.6rem,4.8vw,4.8rem); font-weight:800; line-height:1.06; letter-spacing:-.055em; max-width:17ch; }
+.editorial-heading h1 span { color:var(--rust); }
+.hero-summary { max-width:380px; padding-bottom:.35rem; }
+.hero-summary > p { margin-bottom:1.4rem; font-size:1.1rem; line-height:1.65; }
+.hero-summary .btn { width:100%; justify-content:space-between; }
+.editorial-text-link { display:flex; justify-content:space-between; align-items:center; min-height:48px; padding:.75rem 0; font-weight:700; text-decoration:underline; text-underline-offset:5px; gap:1rem; }
+.hero-summary .hero-consultation { font-size:.85rem; margin:.6rem 0 0; color:#53636c; }
+.panorama { margin-bottom:0; }
+.panorama img { display:block; width:100%; height:auto; aspect-ratio:20/9; object-fit:contain; background:#e5e9e6; border-radius:0; }
+.panorama figcaption { background:#172d42; color:white; padding:1rem 1.5rem; display:flex; gap:.6rem 1.5rem; justify-content:space-between; flex-wrap:wrap; font-size:.8rem; }
+.panorama figcaption span:first-child { letter-spacing:.12em; font-weight:700; }
+.editorial-process { background:var(--paper); padding:2.5rem 0 4.5rem; }
+.process-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2rem; }
+.process-columns > div { padding:1rem 0; border-top:1px solid #9da9ab; }
+.process-columns span { color:var(--rust); font-size:.75rem; letter-spacing:.1em; font-weight:700; }
+.process-columns h2 { font-size:1.3rem; line-height:1.3; margin:.8rem 0; font-weight:700; }
+.process-columns p { color:#4b5e6d; }
+.editorial-services { background:#fff; }
+.section-heading { display:grid; grid-template-columns:1.2fr .8fr; gap:3rem; align-items:end; margin-bottom:2.5rem; }
+.section-heading p { max-width:400px; justify-self:end; }
+.service-directory { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; }
+.service-entry { display:grid; grid-template-columns:42% minmax(0,1fr); border:1px solid #d8dedf; background:var(--paper); }
+.service-entry figure { min-width:0; background:#e9edef; }
+.service-entry img { width:100%; height:auto; aspect-ratio:4/3; object-fit:contain; display:block; }
+.service-entry figcaption { font-size:.73rem; line-height:1.5; padding:.8rem; color:#445765; }
+.service-copy { padding:1.4rem; display:flex; flex-direction:column; align-items:flex-start; min-width:0; }
+.service-number { font-size:.7rem; letter-spacing:.1em; color:var(--rust); font-weight:700; }
+.section .service-copy h3 { margin:.8rem 0; font-size:1.35rem; letter-spacing:-.025em; }
+.service-copy p { font-size:.95rem; line-height:1.6; }
+.service-copy a { margin-top:auto; padding:.6rem 0; min-height:48px; font-weight:700; color:#003d82; text-decoration:underline; text-underline-offset:4px; }
+.editorial-about { background:#172d42; color:#edf2f5; }
+.editorial-about-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:4rem; align-items:center; }
+.editorial-about img { width:100%; height:auto; aspect-ratio:4/3; object-fit:contain; background:#dfe6eb; }
+.editorial-about figcaption { font-size:.8rem; margin-top:.8rem; color:#dae3e9; }
+.editorial-about .eyebrow { color:#ffb996; }
+.editorial-about .note { background:#263e52; color:white; border-color:#e88e66; }
+.editorial-about h2 { color:white; }
+.home-editorial > .section:not(.editorial-about):not(.editorial-services):not(.editorial-video):not(.editorial-faq):not(.soft) { background:#fff; }
+.home-editorial #trabalhos { background:var(--paper)!important; border-top:1px solid #d8dedf; }
+.gallery-cards .card { border-radius:0; box-shadow:none; }
+.gallery-cards .card-body { padding:1.25rem; }
+.video-layout,.faq-layout { display:grid; grid-template-columns:.75fr 1.25fr; align-items:start; gap:4rem; }
+.editorial-video { background:#e9eeec; }
+.editorial-faq { background:#fff; }
+.faq summary { padding:.4rem 0; }
+.home-editorial #orcamento { background:#eeeae2; }
+.home-editorial #orcamento .card { border-radius:.5rem; }
+.site-footer { background:#10212c; padding-top:3rem; }
+.footer-intro { background:#f8f6f1; color:#172d42; padding:2.5rem; border:0; margin-bottom:3rem; display:grid; grid-template-columns:1fr auto; gap:.8rem 2rem; align-items:center; }
+.footer-intro .eyebrow { color:var(--rust); grid-column:1/-1; margin:0; }
+.footer-intro h2 { color:#172d42; margin:0; font-size:clamp(1.8rem,3vw,2.7rem); }
+.footer-intro .btn { align-self:end; }
+.footer-logo { border-radius:.35rem; }
+.footer-grid h2 { letter-spacing:-.02em; }
+.footer-tools { display:block; }
+.credit { padding-bottom:1.5rem!important; }
+@media(max-width:1000px){.editorial-heading{gap:2rem;grid-template-columns:1.1fr .9fr}.service-entry{grid-template-columns:1fr}.service-entry figcaption{min-height:3.5rem}.service-copy{padding:1.5rem}.editorial-about-grid{gap:2rem}}
+@media(max-width:800px){
+ .editorial-heading,.editorial-about-grid,.section-heading,.video-layout,.faq-layout { grid-template-columns:1fr; gap:2rem; }
+ .editorial-hero { padding-top:2.7rem; }
+ .editorial-heading h1 { font-size:clamp(2.4rem,7vw,3.7rem); max-width:18ch; }
+ .hero-summary { max-width:none; }
+ .process-columns { grid-template-columns:1fr; gap:.3rem; }
+ .editorial-process { padding:1.5rem 0 2.5rem; }
+ .section-heading p { justify-self:start; }
+ .footer-intro { grid-template-columns:1fr; padding:1.5rem; }
+ .panorama figcaption { padding:1rem; }
+ .editorial-about figure { order:2; }
+}
+@media(max-width:480px){.service-directory{grid-template-columns:1fr}.panorama{width:100%}.panorama img{aspect-ratio:20/9}.editorial-heading{padding-bottom:2rem}.section-heading{gap:.5rem}.service-entry{grid-template-columns:1fr}.editorial-heading h1{font-size:2.4rem}}

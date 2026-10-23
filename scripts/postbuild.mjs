@@ -7,5 +7,5 @@ const llms='# '+BUSINESS.name+'\n\n'+BUSINESS.description+'\n\nTelefone e WhatsA
 for(const dir of ['dist','public']){fs.writeFileSync(path.join(dir,'sitemap.xml'),xml);fs.writeFileSync(path.join(dir,'robots.txt'),robots);fs.writeFileSync(path.join(dir,'llms.txt'),llms);fs.writeFileSync(path.join(dir,'llms-full.txt'),llms+'\n## Páginas\n'+pages.map(p=>'- ['+p.title+']('+p.canonical+')').join('\n'));}
 fs.copyFileSync('dist/404/index.html','dist/404.html');
 let sw=fs.readFileSync('public/sw.js','utf8').replace("const VERSION = '__SW_VERSION__';","const VERSION = '"+Date.now()+"';");fs.writeFileSync('dist/sw.js',sw);
-fs.writeFileSync('dist/release.json',JSON.stringify({builtAt:new Date().toISOString(),pages:pages.length,release:'acquatec-visual-local-cards-2026-10'}));
+fs.writeFileSync('dist/release.json',JSON.stringify({builtAt:new Date().toISOString(),pages:pages.length,release:'acquatec-editorial-layout-2026-10'}));
 console.log('Validated '+pages.length+' routes; sitemap, robots, llms and real 404 generated.');
