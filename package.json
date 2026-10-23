@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-react-ssg build && node scripts/postbuild.mjs",
+    "build": "node scripts/generate-local-cards.mjs && vite-react-ssg build && node scripts/postbuild.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "playwright test",
-    "test:static": "node scripts/verify-static.mjs"
+    "test:static": "node scripts/verify-static.mjs",
+    "cards": "node scripts/generate-local-cards.mjs",
+    "test:cards": "node scripts/verify-local-cards.mjs"
   },
   "dependencies": {
     "lucide-react": "0.344.0",

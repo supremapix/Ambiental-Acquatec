@@ -1,11 +1,12 @@
+import {localPresentation} from './local-presentation.js';
 import {SITE_URL,BUSINESS,CONTACT} from './site-config.js';
 import {CITIES,ALL_NEIGHBORHOODS,SERVICES} from './site-data.js';
 export const clamp=(text,max=158)=>text.length>max?text.slice(0,max-1)+'…':text;
 const entry=(path,title,description,type='website',ogImage=BUSINESS.defaultImage)=>({path,title,h1:title.split(' | ')[0],description,canonical:SITE_URL+path,type,ogImage,keywords:'',priority:path==='/'?'1.0':'0.7',changefreq:'monthly'});
 export const getHomeSeo=()=>entry('/','Calhas e Telhados em Curitiba | Acquatec','Instalação, manutenção e reforma de calhas, rufos e telhados. Consulte avaliação e atendimento com a Acquatec: '+CONTACT.phoneDisplay+'.');
 export const getServiceSeo=s=>entry('/servicos/'+s.id,s.title+' em Curitiba | Acquatec',clamp(s.description[0]+' Consulte avaliação e orçamento.'),'service',s.image);
-export const getCitySeo=c=>entry('/cidades/'+c.slug,'Calhas e Telhados em '+c.name+' | Acquatec','Consulte serviços de calhas e telhados em '+c.name+'. Informações locais, preparação para avaliação e atendimento sob consulta.','city');
-export const getNeighborhoodSeo=n=>entry('/bairros/'+n.slug,'Calhas e Telhados em '+n.name+' | Acquatec',clamp('Guia de '+n.name+': localização, cuidados com a cobertura e informações para consultar atendimento de calhas e telhados.'),'neighborhood');
+export const getCitySeo=c=>entry('/cidades/'+c.slug,'Calhas e Telhados em '+c.name+' | Acquatec',clamp(c.name+': '+localPresentation('cidades',c).description),'city');
+export const getNeighborhoodSeo=n=>entry('/bairros/'+n.slug,'Calhas e Telhados em '+n.name+' | Acquatec',clamp(n.name+': '+localPresentation('bairros',n).description),'neighborhood');
 export const STATIC_PAGES=[entry('/regioes','Bairros e cidades: guia de atendimento | Acquatec','Bairros oficiais, vilas e localidades com fontes públicas e atendimento sob consulta.'),entry('/politica','Privacidade | Acquatec','Como o formulário prepara seu contato com a Acquatec.'),entry('/termos','Condições de uso | Acquatec','Informações sobre conteúdo, avaliação e orçamento dos serviços.')];
 export const getAllPages=()=>[getHomeSeo(),...SERVICES.map(getServiceSeo),...CITIES.map(getCitySeo),...ALL_NEIGHBORHOODS.map(getNeighborhoodSeo),...STATIC_PAGES];
 export const getPageSeo=pathname=>getAllPages().find(p=>p.path===(pathname.replace(/\\/g,'/').replace(/\/$/,'')||'/'));

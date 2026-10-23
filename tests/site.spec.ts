@@ -33,3 +33,13 @@ test('regional guides and searchable inventory',async({page})=>{
  await page.goto('/');await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:'audit/desktop-viewport.png'});
  expect(errors).toEqual([]);
 });
+
+test('local 250px card, contextual contact and centered mobile logos',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await page.goto('/bairros/vila-audi');
+ const card=page.locator('.local-contact img');await card.scrollIntoViewIfNeeded();await expect(card).toHaveJSProperty('complete',true);expect(await card.evaluate((i:HTMLImageElement)=>i.naturalWidth)).toBe(250);const box=await card.boundingBox();expect(box?.width).toBe(250);expect(box?.height).toBe(250);
+ await expect(page.locator('.local-contact a.btn-wa')).toHaveAttribute('href',/Vila%20Audi/);
+ await page.screenshot({path:'audit/local-card-mobile.png'});
+ for(const selector of ['.site-logo','.footer-logo']){const b=await page.locator(selector).boundingBox();expect(Math.abs((b!.x+b!.width/2)-195)).toBeLessThan(2);}
+ for(let i=0;i<4;i++)await page.getByRole('button',{name:'Aumentar texto'}).click();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+});

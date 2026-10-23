@@ -1,2 +1,2 @@
-import React from 'react';import {CONTACT} from '../site-config.js';
-export default function FloatingButtons(){return <a href={CONTACT.whatsappUrl} className="btn btn-wa fixed bottom-3 right-3 z-30 shadow-lg" aria-label="Conversar com a Acquatec no WhatsApp">WhatsApp</a>}
+import React,{useState,useEffect} from 'react';import {CONTACT} from '../site-config.js';
+export default function FloatingButtons(){const [showTop,setShowTop]=useState(false);useEffect(()=>{const update=()=>setShowTop(window.scrollY>300);update();window.addEventListener('scroll',update,{passive:true});return()=>window.removeEventListener('scroll',update);},[]);return <nav className="floating-actions" aria-label="Ações rápidas">{showTop&&<a href="#topo" className="btn btn-light">↑ Voltar ao topo</a>}<a href={CONTACT.whatsappUrl} className="btn btn-wa" aria-label="Conversar com a Acquatec no WhatsApp">WhatsApp</a></nav>}
