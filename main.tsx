@@ -5,6 +5,9 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import FloatingButtons from './components/FloatingButtons'
 import WeatherAlert from './components/WeatherAlert'
+import {ARTICLES} from './knowledge-data.js'
+import KnowledgePage from './pages/KnowledgePage'
+import DirectoryPage from './pages/DirectoryPage'
 import HomePage from './pages/HomePage'
 import CityPage from './pages/CityPage'
 import NeighborhoodPage from './pages/NeighborhoodPage'
@@ -27,6 +30,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
 )
 
 const routes = [
+  {path:'/servicos',element:<Layout><DirectoryPage kind="services" /></Layout>},
+  {path:'/guias',element:<Layout><DirectoryPage kind="articles" /></Layout>},
+  ...ARTICLES.map(a=>({path:'/guias/'+a.slug,element:<Layout><KnowledgePage articleSlug={a.slug}/></Layout>})),
   { path: '/404', element: <Layout><NotFoundPage /></Layout> },
   { path: '/regioes', element: <Layout><RegionsPage /></Layout> },
   { path: '/politica', element: <Layout><InfoPage kind="politica" /></Layout> },

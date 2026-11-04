@@ -582,6 +582,14 @@ export const ALL_NEIGHBORHOODS = [
 export const TOP_NEIGHBORHOODS = ALL_NEIGHBORHOODS.filter(n=>['agua-verde','batel','centro','santa-felicidade','portao','boqueirao','bigorrilho','cajuru','cic','pinheirinho'].includes(n.slug));
 export const SERVICES = [
   {
+    id: 'manta-termica',
+    title: 'Instalação de Manta Térmica',
+    description: ['A Acquatec realiza instalação de manta térmica em telhados, com avaliação da cobertura e especificação do sistema adequado ao imóvel.', 'A manta refletiva atua sobre a transferência de calor por radiação. O desempenho depende do produto, da montagem e do espaço de ar previsto pelo fabricante.', 'Antes de instalar, é necessário verificar telhas, acesso, ventilação, presença de umidade e compatibilidade dos materiais. Manta térmica não é sinônimo de impermeabilização.'],
+    price: 'Orçamento após avaliação',
+    image: '/acquatec-telhados-condominios-reformas-preco-barato-manutencao-517x357.jpg',
+    cta: 'Consultar serviço'
+  },
+  {
     "id": "calhas",
     "title": "Instalação de Calhas",
     "description": [

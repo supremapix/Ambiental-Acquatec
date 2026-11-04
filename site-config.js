@@ -29,7 +29,7 @@ export const BUSINESS = {
   name: 'Acquatec Calhas e Telhados',
   alternateName: 'Acquatec',
   slogan: 'Calhas e telhados em Curitiba: avaliação e soluções para sua cobertura',
-  description: 'Instalação, manutenção e reforma de calhas, telhados e rufos. Consulte atendimento, avaliação e orçamento com a Acquatec.',
+  description: 'Instalação de manta térmica, calhas e rufos, manutenção e reforma de telhados. Consulte atendimento, avaliação e orçamento com a Acquatec.',
   foundingDate: '2000',
   logo: `${SITE_URL}/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png`,
   defaultImage: '/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png',

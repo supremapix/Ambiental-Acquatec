@@ -12,7 +12,9 @@
     "test": "playwright test",
     "test:static": "node scripts/verify-static.mjs",
     "cards": "node scripts/generate-local-cards.mjs",
-    "test:cards": "node scripts/verify-local-cards.mjs"
+    "test:cards": "node scripts/verify-local-cards.mjs",
+    "test:knowledge": "node scripts/verify-knowledge.mjs",
+    "test:metro": "node scripts/verify-metro.mjs"
   },
   "dependencies": {
     "lucide-react": "0.344.0",
