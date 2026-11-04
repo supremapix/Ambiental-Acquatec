@@ -298,3 +298,4 @@ body { background:var(--paper); }
 .reading .note li{margin:.5rem 0}
 @media(max-width:700px){.knowledge-grid{grid-template-columns:1fr}.knowledge-card{padding:1.2rem}}
 .locality-entry{scroll-margin-top:8rem}.locality-entry h3{font-size:1.4rem}.locality-city{padding:2rem 0;border-bottom:1px solid #d5ddd5}.locality-city small{font-size:.8rem;font-weight:400;margin-top:.4rem}.locality-city .link-grid a{overflow-wrap:anywhere}
+.section>.wrap>h1,.section>.wrap.reading>h1{font-size:clamp(2rem,4vw,3.4rem);font-weight:750;line-height:1.15;letter-spacing:-.025em;margin:1rem 0 1.5rem;overflow-wrap:break-word}
