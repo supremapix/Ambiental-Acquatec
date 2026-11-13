@@ -497,6 +497,14 @@ export const ARTICLES = [
         "text": "Pintar uma mancha ou aplicar um produto no ponto visível pode melhorar a aparência sem resolver o problema. Peça que a avaliação indique as hipóteses consideradas, os pontos inspecionados e a intervenção proposta. Se houver mais de uma causa, vale separar as etapas e como cada uma será acompanhada."
       },
       {
+        "title": "Mancha no gesso: o que relatar na avaliação",
+        "text": "Informe se o forro apenas mudou de cor, se há pingos ou se algum trecho se deformou. Não fure nem desmonte o gesso para procurar a origem. A inspeção precisa distinguir o dano visível da entrada de água e considerar cobertura, calhas, rufos e outras possíveis fontes. Se houver partes soltas ou deformadas, mantenha as pessoas afastadas e solicite avaliação profissional. Não toque em luminárias ou equipamentos molhados."
+      },
+      {
+        "title": "Como organizar a vistoria em lojas, escritórios e salas de atendimento",
+        "text": "Além do endereço e dos sinais observados, informe horários de funcionamento, salas afetadas e restrições de acesso. Combine com a equipe quais áreas poderão precisar de isolamento e como proteger mobiliário e equipamentos. O orçamento deve separar a investigação e o reparo na cobertura da recuperação de gesso ou pintura, sem presumir que todos esses serviços estejam incluídos. Solicite o escopo por escrito e confirme as etapas antes de agendar a execução."
+      },
+      {
         "title": "Isolamento e ventilação exigem compatibilização",
         "text": "Alterar a cobertura pode modificar o comportamento da umidade. Antes de instalar uma manta ou abrir um ponto de exaustão, discuta as condições de ventilação, o uso interno e a possibilidade de secagem do sistema. Uma receita única não substitui a análise da composição existente."
       },
@@ -513,6 +521,10 @@ export const ARTICLES = [
       {
         "question": "Instalar exaustor resolve toda umidade?",
         "answer": "Não. A solução depende da origem da água e do conjunto da edificação."
+      },
+      {
+        "question": "Devo refazer o gesso antes de reparar a infiltração?",
+        "answer": "Não trate apenas a aparência sem investigar a origem. Combine primeiro a avaliação e as correções necessárias; a recuperação do forro e da pintura deve ter escopo e responsável definidos, após a confirmação das condições adequadas."
       }
     ],
     "sources": [
