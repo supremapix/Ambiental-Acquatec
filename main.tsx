@@ -3,6 +3,7 @@ import './styles.css'
 import { ViteReactSSG } from 'vite-react-ssg'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import EngeumCoverage from './components/EngeumCoverage'
 import FloatingButtons from './components/FloatingButtons'
 import WeatherAlert from './components/WeatherAlert'
 import {ARTICLES} from './knowledge-data.js'
@@ -23,6 +24,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
     <Header />
     <main id="conteudo" className="flex-grow" tabIndex={-1}>
       {children}
+      <EngeumCoverage />
     </main>
     <Footer />
     <FloatingButtons />
