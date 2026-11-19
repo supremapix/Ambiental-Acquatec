@@ -16,6 +16,8 @@ import ServicePage from './pages/ServicePage'
 import NotFoundPage from './pages/NotFoundPage'
 import RegionsPage from './pages/RegionsPage'
 import InfoPage from './pages/InfoPage'
+import MetroRoofPage from './pages/MetroRoofPage'
+import {METRO_ROOF_GUIDES} from './metro-roof-guides.js'
 import { ALL_NEIGHBORHOODS, CITIES, SERVICES } from './constants'
 
 const roofCases: Record<string, { title: string; text: string; guide: string; label: string }> = {
@@ -132,6 +134,7 @@ const routes = [
     path: `/bairros/${neighborhood.slug}`,
     element: <Layout localKey={"bairros/" + neighborhood.slug}><NeighborhoodPage neighborhoodSlug={neighborhood.slug} neighborhoodName={neighborhood.name} /></Layout>,
   })),
+  ...METRO_ROOF_GUIDES.map(guide => ({path: guide.path, element: <Layout><MetroRoofPage guide={guide} /></Layout>})),
   ...SERVICES.map(service => ({
     path: `/servicos/${service.id}`,
     element: <Layout><ServicePage serviceId={service.id} /></Layout>,

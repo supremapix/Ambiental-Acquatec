@@ -1,3 +1,4 @@
+import {METRO_ROOF_GUIDES} from './metro-roof-guides.js';
 import {CITIES,ALL_NEIGHBORHOODS} from './site-data.js';
 import {CITY_RESEARCH,POPULAR,OFFICIAL_CURITIBA,slugify} from './local-data.js';
 import {METRO_UPDATES,EXTRA_LOCALITIES} from './metro-expansion.js';
@@ -14,5 +15,5 @@ export const LOCALITIES=CITIES.flatMap(city=>{
  for(const extra of EXTRA_LOCALITIES.filter(x=>x.citySlug===city.slug))additions.push({...extra,cityName:city.name,anchor:'localidade-'+slugify(extra.name)});
  return [...names,...additions.filter(x=>!names.some(n=>n.name===x.name))];
 });
-export function localityHref(item){if(item.citySlug==='curitiba'){const n=ALL_NEIGHBORHOODS.find(n=>n.name===item.name);if(n)return '/bairros/'+n.slug;}if(item.citySlug==='colombo'&&item.name==='Vila Zumbi')return '/bairros/vila-zumbi';return '/cidades/'+item.citySlug+'#'+item.anchor;}
+export function localityHref(item){const guide=METRO_ROOF_GUIDES.find(g=>g.citySlug===item.citySlug&&g.name===item.name);if(guide)return guide.path;if(item.citySlug==='curitiba'){const n=ALL_NEIGHBORHOODS.find(n=>n.name===item.name);if(n)return '/bairros/'+n.slug;}if(item.citySlug==='colombo'&&item.name==='Vila Zumbi')return '/bairros/vila-zumbi';return '/cidades/'+item.citySlug+'#'+item.anchor;}
 export const normalizeLocal=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
