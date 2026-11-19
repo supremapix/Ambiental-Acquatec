@@ -57,7 +57,25 @@ const roofCases: Record<string, { title: string; text: string; guide: string; la
   },
   "cidades/campo-largo": {"title":"Cobertura nova em Campo Largo: organize a entrega de materiais","text":"Se a obra fica em terreno com acesso estreito, em rampa ou nos fundos de outro imóvel, informe por onde as peças podem chegar e onde podem ser guardadas sem bloquear a circulação. Envie medidas aproximadas da área a cobrir e descreva o uso previsto. Peça que a proposta separe estrutura, telhas, arremates e drenagem, além do que precisa ser conferido no endereço.","guide":"planejar-construcao-telhado","label":"Planeje a cobertura e o acesso da obra"},
   "cidades/piraquara": {"title":"Troca de telhado em Piraquara: registre quando a umidade aparece","text":"Antes de decidir pela troca, anote se a mancha aparece durante chuva com vento, depois de chuva prolongada ou também em dias secos. Envie fotos feitas de um local seguro e mostre se o sinal fica perto de parede, janela ou passagem de tubulação. Essas informações ajudam a orientar a vistoria, mas não confirmam de onde a água entra.","guide":"troca-de-telhado-reparo-ou-substituicao","label":"Veja quando avaliar reparo ou substituição"},
-  "bairros/agua-verde": {"title":"Obra no telhado de condomínio no Água Verde: combine como receber a entrega","text":"Na comparação de propostas, peça que cada uma diga quais trechos serão revisados e como a conclusão será documentada. Registre os pontos que motivaram a obra e combine com a administração quem acompanha a entrega, recebe as orientações de manutenção e guarda fotos e documentos. Não é necessário que um morador suba ao telhado para verificar o serviço.","guide":"telhados-para-condominios","label":"Organize o escopo com o guia do síndico"}
+  "bairros/agua-verde": {"title":"Obra no telhado de condomínio no Água Verde: combine como receber a entrega","text":"Na comparação de propostas, peça que cada uma diga quais trechos serão revisados e como a conclusão será documentada. Registre os pontos que motivaram a obra e combine com a administração quem acompanha a entrega, recebe as orientações de manutenção e guarda fotos e documentos. Não é necessário que um morador suba ao telhado para verificar o serviço.","guide":"telhados-para-condominios","label":"Organize o escopo com o guia do síndico"},
+  "cidades/campina-grande-do-sul": {
+    "title": "Cobertura nova em Campina Grande do Sul: combine a saída da água",
+    "text": "Ao planejar o telhado de uma garagem ou de um anexo, indique onde a água pode ser conduzida sem cair na entrada de pedestres ou no terreno vizinho. Se a cobertura nova encontra uma parede existente, mostre esse ponto nas fotos feitas do chão. Peça que a proposta identifique telhas, arremates, calhas e condutores, e que separe o que depende de vistoria no endereço.",
+    "guide": "planejar-construcao-telhado",
+    "label": "Veja o que definir antes de construir a cobertura"
+  },
+  "bairros/portao": {
+    "title": "Troca de telhado no Portão: compare o que será reaproveitado",
+    "text": "Se uma loja ou residência já teve reparos em pontos diferentes do telhado, reúna as datas e marque no croqui onde a água reapareceu. Para comparar orçamentos, peça que cada proposta diga o que será retirado, o que poderá ser reaproveitado após avaliação e como a área será protegida entre as etapas. Inclua a necessidade de manter entradas livres e informe onde há equipamentos ou mercadorias.",
+    "guide": "troca-de-telhado-reparo-ou-substituicao",
+    "label": "Confira o que pesar na escolha entre reparo e troca"
+  },
+  "bairros/santa-felicidade": {
+    "title": "Telhados de condomínio em Santa Felicidade: delimite áreas comuns e privativas",
+    "text": "Em um condomínio com casas ou blocos, faça uma lista dos pontos afetados e indique se cada um cobre uma área comum, uma unidade ou uma passagem compartilhada. Antes de pedir orçamento, confirme com a administração quem pode autorizar acesso e quem responde por cada trecho. Na proposta, peça que a equipe discrimine as áreas, as interferências de circulação e como orientará a manutenção após a entrega.",
+    "guide": "telhados-para-condominios",
+    "label": "Use o guia de coberturas para organizar a próxima vistoria"
+  }
 }
 
 const Layout = ({ children, localKey }: { children: React.ReactNode; localKey?: string }) => {
