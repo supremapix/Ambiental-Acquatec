@@ -24,6 +24,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
     <Header />
     <main id="conteudo" className="flex-grow" tabIndex={-1}>
       {children}
+      <section className="section" aria-labelledby="acquatec-grandes-coberturas">
+        <div className="wrap">
+          <h2 id="acquatec-grandes-coberturas">Vai instalar ou trocar um telhado?</h2>
+          <p>Guia da Acquatec para organizar sua obra em Curitiba e região metropolitana, da cobertura nova à renovação de condomínios.</p>
+          <nav className="link-grid" aria-label="Guias de instalação, troca de telhados e condomínios">
+            <a href="/guias/planejar-construcao-telhado">Planejar a instalação de um telhado</a>
+            <a href="/guias/troca-de-telhado-reparo-ou-substituicao">Comparar reparo e troca de telhado</a>
+            <a href="/guias/telhados-para-condominios">Organizar uma obra de telhado no condomínio</a>
+          </nav>
+        </div>
+      </section>
       <EngeumCoverage />
     </main>
     <Footer />
