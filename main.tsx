@@ -54,7 +54,10 @@ const roofCases: Record<string, { title: string; text: string; guide: string; la
     "text": "Para avaliar substituição em galpão ou oficina, indique as áreas com goteira, onde há estoque ou máquinas e os horários em que a circulação pode ser reorganizada. Peça que o orçamento diferencie a vedação de pontos isolados da substituição de trechos completos e detalhe a proteção durante a abertura.",
     "guide": "troca-de-telhado-reparo-ou-substituicao",
     "label": "Compare reparo e troca de cobertura"
-  }
+  },
+  "cidades/campo-largo": {"title":"Cobertura nova em Campo Largo: organize a entrega de materiais","text":"Se a obra fica em terreno com acesso estreito, em rampa ou nos fundos de outro imóvel, informe por onde as peças podem chegar e onde podem ser guardadas sem bloquear a circulação. Envie medidas aproximadas da área a cobrir e descreva o uso previsto. Peça que a proposta separe estrutura, telhas, arremates e drenagem, além do que precisa ser conferido no endereço.","guide":"planejar-construcao-telhado","label":"Planeje a cobertura e o acesso da obra"},
+  "cidades/piraquara": {"title":"Troca de telhado em Piraquara: registre quando a umidade aparece","text":"Antes de decidir pela troca, anote se a mancha aparece durante chuva com vento, depois de chuva prolongada ou também em dias secos. Envie fotos feitas de um local seguro e mostre se o sinal fica perto de parede, janela ou passagem de tubulação. Essas informações ajudam a orientar a vistoria, mas não confirmam de onde a água entra.","guide":"troca-de-telhado-reparo-ou-substituicao","label":"Veja quando avaliar reparo ou substituição"},
+  "bairros/agua-verde": {"title":"Obra no telhado de condomínio no Água Verde: combine como receber a entrega","text":"Na comparação de propostas, peça que cada uma diga quais trechos serão revisados e como a conclusão será documentada. Registre os pontos que motivaram a obra e combine com a administração quem acompanha a entrega, recebe as orientações de manutenção e guarda fotos e documentos. Não é necessário que um morador suba ao telhado para verificar o serviço.","guide":"telhados-para-condominios","label":"Organize o escopo com o guia do síndico"}
 }
 
 const Layout = ({ children, localKey }: { children: React.ReactNode; localKey?: string }) => {
