@@ -18,7 +18,48 @@ import RegionsPage from './pages/RegionsPage'
 import InfoPage from './pages/InfoPage'
 import { ALL_NEIGHBORHOODS, CITIES, SERVICES } from './constants'
 
-const Layout = ({ children }: { children: React.ReactNode }) => (
+const roofCases: Record<string, { title: string; text: string; guide: string; label: string }> = {
+  "cidades/colombo": {
+    "title": "Cobertura nova em Colombo: o que incluir no pedido",
+    "text": "Se o telhado vai proteger uma área nova, explique o uso previsto, as medidas aproximadas e se a cobertura se conecta a outra construção. Informe onde pretende direcionar a água e se há entrada de veículos ou circulação sob a beirada. Peça que a proposta separe telhas, apoios, calhas e arremates, sem presumir que os apoios atuais possam ser reaproveitados.",
+    "guide": "planejar-construcao-telhado",
+    "label": "Ver o guia de instalação de telhado"
+  },
+  "cidades/pinhais": {
+    "title": "Troca de telhado em Pinhais: compare o escopo, não só a metragem",
+    "text": "Se duas propostas cobrem a mesma área, confira se ambas incluem retirada das peças antigas, proteção provisória e revisão dos pontos de drenagem. Diga se o espaço continuará em uso durante o serviço e se há mercadorias ou equipamentos sob a cobertura. Informe bairro e CEP ao consultar condições para o endereço.",
+    "guide": "troca-de-telhado-reparo-ou-substituicao",
+    "label": "Saiba como comparar reparo e substituição"
+  },
+  "cidades/araucaria": {
+    "title": "Telhado sobre área de trabalho em Araucária: organize a avaliação",
+    "text": "Se a cobertura fica sobre uma área de produção, estoque ou doca, descreva os horários de circulação e onde é possível receber materiais sem bloquear a operação. No orçamento, peça que sejam distinguidos os trabalhos de cobertura e os pontos que exigem avaliação específica dos apoios. Não presuma que o local pode continuar em funcionamento em todas as etapas.",
+    "guide": "planejar-construcao-telhado",
+    "label": "Veja o que conferir antes de instalar"
+  },
+  "cidades/sao-jose-dos-pinhais": {
+    "title": "Obra em condomínio em São José dos Pinhais: organize chamados por bloco",
+    "text": "Separe os relatos por bloco, data e ponto em que a umidade apareceu. Na consulta, informe a portaria responsável, se a pista interna é compartilhada e quais horários exigem menor interferência. Peça que a proposta explique como a execução será organizada para cada área, sem tratar todos os blocos como um único diagnóstico.",
+    "guide": "telhados-para-condominios",
+    "label": "Abra o guia de telhados para síndicos"
+  },
+  "bairros/batel": {
+    "title": "Cobertura de condomínio no Batel: alinhe acessos com a administração",
+    "text": "Se o pedido envolve um prédio ocupado, informe como a equipe pode chegar às áreas comuns e quem autoriza chaves, elevadores e entrada de materiais. Separe a circulação de moradores da prevista para a obra e combine quem comunica mudanças de rotina. Não é necessário que o síndico suba à cobertura para iniciar a conversa.",
+    "guide": "telhados-para-condominios",
+    "label": "Confira o checklist do condomínio"
+  },
+  "bairros/cic": {
+    "title": "Troca de cobertura na Cidade Industrial: proteja a operação",
+    "text": "Para avaliar substituição em galpão ou oficina, indique as áreas com goteira, onde há estoque ou máquinas e os horários em que a circulação pode ser reorganizada. Peça que o orçamento diferencie a vedação de pontos isolados da substituição de trechos completos e detalhe a proteção durante a abertura.",
+    "guide": "troca-de-telhado-reparo-ou-substituicao",
+    "label": "Compare reparo e troca de cobertura"
+  }
+}
+
+const Layout = ({ children, localKey }: { children: React.ReactNode; localKey?: string }) => {
+  const roofCase = localKey ? roofCases[localKey] : undefined;
+  return (
   <div className="font-sans antialiased text-gray-800 bg-white min-h-screen flex flex-col">
 
     <Header />
@@ -35,12 +76,20 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
           </nav>
         </div>
       </section>
+      {roofCase && <section className="section soft" aria-labelledby="acquatec-avaliacao-local">
+        <div className="wrap reading">
+          <h2 id="acquatec-avaliacao-local">{roofCase.title}</h2>
+          <p>{roofCase.text}</p>
+          <p><a href={'/guias/' + roofCase.guide}>{roofCase.label}</a></p>
+        </div>
+      </section>}
       <EngeumCoverage />
     </main>
     <Footer />
     <FloatingButtons />
   </div>
-)
+  )
+}
 
 const routes = [
   {path:'/servicos',element:<Layout><DirectoryPage kind="services" /></Layout>},
@@ -56,11 +105,11 @@ const routes = [
   },
   ...CITIES.map(city => ({
     path: `/cidades/${city.slug}`,
-    element: <Layout><CityPage citySlug={city.slug} cityName={city.name} /></Layout>,
+    element: <Layout localKey={"cidades/" + city.slug}><CityPage citySlug={city.slug} cityName={city.name} /></Layout>,
   })),
   ...ALL_NEIGHBORHOODS.map(neighborhood => ({
     path: `/bairros/${neighborhood.slug}`,
-    element: <Layout><NeighborhoodPage neighborhoodSlug={neighborhood.slug} neighborhoodName={neighborhood.name} /></Layout>,
+    element: <Layout localKey={"bairros/" + neighborhood.slug}><NeighborhoodPage neighborhoodSlug={neighborhood.slug} neighborhoodName={neighborhood.name} /></Layout>,
   })),
   ...SERVICES.map(service => ({
     path: `/servicos/${service.id}`,
