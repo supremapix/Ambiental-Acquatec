@@ -747,5 +747,113 @@ export const ARTICLES = [
         "url": "https://cloud.mkt.brasilit.com.br/boas-praticas-brasilit"
       }
     ]
+  },
+  {
+    "slug": "planejar-construcao-telhado",
+    "title": "Construção de telhado: como planejar a instalação em Curitiba",
+    "description": "O que definir com a equipe antes de orçar um telhado novo: uso do imóvel, apoio existente, conforto e saída da água.",
+    "serviceIds": [
+      "metalicos",
+      "calhas",
+      "rufos"
+    ],
+    "sections": [
+      {
+        "title": "Comece pelo uso do espaço",
+        "text": "Uma cobertura para casa, loja ou área de circulação precisa responder a prioridades diferentes. Descreva se você quer preservar luz natural, reduzir calor, proteger uma entrada ou organizar o escoamento sem jogar água sobre uma passagem."
+      },
+      {
+        "title": "Defina as interfaces desde o orçamento",
+        "text": "Reúna planta, medidas aproximadas e fotos feitas do chão. Informe se já existem apoios, paredes, forro e pontos destinados a calhas e condutores. A solução depende da avaliação profissional e da compatibilidade dos materiais; não compre as telhas só pela área de piso."
+      },
+      {
+        "title": "Compare propostas pelo mesmo escopo",
+        "text": "Peça que a proposta diga quais materiais, arremates, calhas e etapas estão incluídos. Se a obra exigir projeto ou alteração estrutural, confirme a responsabilidade e contrate o escopo correspondente, em vez de presumir que ele faz parte da instalação."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Posso pedir avaliação sem planta?",
+        "answer": "Sim. Explique o uso, município e bairro e envie medidas aproximadas e fotos de local seguro. A definição final depende da avaliação do imóvel."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministério do Trabalho e Emprego: NR-35, trabalho em altura",
+        "url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadoras/normas-regulamentadoras-vigentes/norma-regulamentadora-no-35-nr-35"
+      }
+    ]
+  },
+  {
+    "slug": "troca-de-telhado-reparo-ou-substituicao",
+    "title": "Troca de telhado em Curitiba: quando reparar ou substituir",
+    "description": "Compare reparo localizado e renovação da cobertura antes de pedir orçamento para um telhado com goteiras ou desgaste.",
+    "serviceIds": [
+      "reformas",
+      "manutencao",
+      "rufos"
+    ],
+    "sections": [
+      {
+        "title": "Anote como o problema aparece",
+        "text": "Registre quais ambientes apresentam manchas e se o problema ocorreu após chuva forte, vento ou manutenção anterior. O ponto em que a água aparece no forro pode estar distante da entrada."
+      },
+      {
+        "title": "Peça uma proposta com alternativas",
+        "text": "Um dano pontual pode exigir correção localizada; ocorrência repetida em vários pontos justifica investigar o conjunto. Compare o que será mantido, removido ou substituído, incluindo arremates e drenagem. A solução depende da vistoria, não apenas do aspecto de uma foto."
+      },
+      {
+        "title": "Planeje o que acontece durante a obra",
+        "text": "Informe se o imóvel permanece ocupado, como receber material e quais áreas precisam permanecer livres. Peça que o escopo indique proteção temporária, descarte e como serão tratadas interrupções em caso de chuva."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Trocar só as telhas sempre resolve?",
+        "answer": "Não. Vazamentos também podem envolver rufos, emendas ou o escoamento. A avaliação deve investigar a origem antes de definir a troca."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministério do Trabalho e Emprego: NR-35, trabalho em altura",
+        "url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadoras/normas-regulamentadoras-vigentes/norma-regulamentadora-no-35-nr-35"
+      }
+    ]
+  },
+  {
+    "slug": "telhados-para-condominios",
+    "title": "Telhados em condomínios: guia para síndicos em Curitiba e região",
+    "description": "Organize chamados, acesso, orçamento e comunicação com moradores antes de contratar reparo ou troca de cobertura.",
+    "serviceIds": [
+      "manutencao",
+      "reformas",
+      "calhas"
+    ],
+    "sections": [
+      {
+        "title": "Transforme chamados em um histórico útil",
+        "text": "Reúna datas, blocos, áreas comuns ou unidades afetadas e fotos feitas de locais seguros. Separe goteira ativa, mancha antiga e transbordamento relatado. Leve propostas e registros de intervenções anteriores, quando disponíveis."
+      },
+      {
+        "title": "Combine acesso e circulação antes da visita",
+        "text": "Informe horários de portaria e as restrições de acesso. Na proposta, peça que sejam definidos pontos de circulação de pessoas e materiais, áreas que podem ser isoladas e quem informa os moradores sobre alterações de rotina."
+      },
+      {
+        "title": "Compare escopo por bloco ou área",
+        "text": "Peça a separação entre inspeção, correções pontuais e eventual substituição de componentes. Antes de decidir por fases, confirme o que precisa ser feito em conjunto para não comprometer a proteção do edifício."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "O síndico precisa subir ao telhado para registrar o problema?",
+        "answer": "Não. Registros de áreas seguras e relatos por bloco ajudam a iniciar a avaliação; o acesso à cobertura é assunto para a equipe responsável."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministério do Trabalho e Emprego: NR-35, trabalho em altura",
+        "url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadoras/normas-regulamentadoras-vigentes/norma-regulamentadora-no-35-nr-35"
+      }
+    ]
   }
 ];
