@@ -199,5 +199,130 @@ export const METRO_ROOF_GUIDES = [
     "guide": "planejar-construcao-telhado",
     "guideLabel": "Planeje a construção do telhado",
     "source": "https://wiki.araucaria.pr.gov.br/books/turismo-araucaria/page/dados-sobre-araucaria"
+  },
+  {
+    "citySlug": "fazenda-rio-grande",
+    "cityName": "Fazenda Rio Grande",
+    "name": "Centro",
+    "path": "/bairros/fazenda-rio-grande/centro",
+    "title": "Reforma da cobertura de loja com calendário de atendimento",
+    "summary": "Em um comércio aberto ao público, a logística da cobertura começa pela entrada. Identifique se a marquise, a vitrine ou a área de carga ficará sob o trecho em obra; a proposta deve explicar como isolar esses pontos ou manter uma rota de acesso segura.",
+    "tips": [
+      "Informe se há equipamentos fixados no telhado, como exaustão ou climatização, e quem é responsável por desligar e religar cada um.",
+      "Peça um cronograma por frente de serviço que separe retirada, fechamento, limpeza, retirada de resíduos e reabertura das áreas."
+    ],
+    "faqs": [
+      {
+        "question": "É possível preservar a entrada principal durante a reforma?",
+        "answer": "Depende da posição dos serviços e da proteção disponível. Se não houver separação segura, combine um acesso alternativo ou horários sem atendimento ao público."
+      },
+      {
+        "question": "O que pode ficar de fora de um orçamento de telhas para comércio?",
+        "answer": "Remoção e reinstalação de equipamentos, arremates da marquise e proteção da vitrine podem ser escopos separados. Peça que o orçamento mostre o que está incluso e quem responde pelos itens restantes."
+      }
+    ],
+    "guide": "troca-de-telhado-reparo-ou-substituicao",
+    "guideLabel": "Compare os escopos de reforma e troca",
+    "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+  },
+  {
+    "citySlug": "fazenda-rio-grande",
+    "cityName": "Fazenda Rio Grande",
+    "name": "Eucaliptos",
+    "path": "/bairros/fazenda-rio-grande/eucaliptos",
+    "title": "Cobertura de garagem: espaço livre e proteção da entrada",
+    "summary": "O desenho de uma garagem coberta precisa considerar o portão aberto, a manobra do veículo e o caminho até a porta. A cobertura pode proteger o carro e ainda deixar o acesso descoberto se a posição da borda não for combinada.",
+    "tips": [
+      "Mostre a abertura do portão, a posição das luminárias e a altura do veículo que costuma usar a garagem. Tire fotos do piso, sem subir para medir.",
+      "Defina se a prioridade é manter luz natural, reduzir calor ou proteger o percurso de pedestres. Peça alternativas com suas necessidades de limpeza e manutenção."
+    ],
+    "faqs": [
+      {
+        "question": "Dá para construir sem colocar um pilar no meio da garagem?",
+        "answer": "A viabilidade depende do vão, dos apoios existentes e do dimensionamento da estrutura. Solicite opções com a posição dos apoios indicada no desenho antes de escolher."
+      },
+      {
+        "question": "A calha deve aparecer na proposta da garagem?",
+        "answer": "Sim, quando fizer parte da solução. Confira também o condutor e o ponto previsto para descarregar a água, para não concentrá-la sobre a rampa ou junto à passagem."
+      }
+    ],
+    "guide": "planejar-construcao-telhado",
+    "guideLabel": "Veja o checklist para cobertura nova",
+    "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+  },
+  {
+    "citySlug": "fazenda-rio-grande",
+    "cityName": "Fazenda Rio Grande",
+    "name": "Gralha Azul",
+    "path": "/bairros/fazenda-rio-grande/gralha-azul",
+    "title": "Obra de telhado em condomínio: vistoria e decisões registradas",
+    "summary": "Ao comparar propostas para um condomínio, faça com que todas descrevam os mesmos pontos: blocos e áreas comuns, trechos a vistoriar, acessos e documentação de entrega. Isso evita apresentar para a administração preços que cobrem trabalhos diferentes.",
+    "tips": [
+      "Reúna plantas disponíveis, registros de manutenção e fotos internas identificadas por bloco e unidade. Separe o problema observado da hipótese sobre sua origem.",
+      "Solicite uma descrição do isolamento de passagens, da comunicação com moradores e das verificações ao final de cada etapa."
+    ],
+    "faqs": [
+      {
+        "question": "Como preparar um orçamento para discussão do condomínio?",
+        "answer": "Defina com a administração se a primeira etapa é só diagnóstico ou também execução. Peça a separação entre os itens confirmados e os que dependem do que for encontrado na abertura."
+      },
+      {
+        "question": "O que deve ser conferido antes de liberar uma área comum?",
+        "answer": "Combine com o responsável pela obra os critérios de entrega do trecho, a retirada das proteções e dos resíduos e o registro das orientações de manutenção."
+      }
+    ],
+    "guide": "telhados-para-condominios",
+    "guideLabel": "Consulte o guia para síndicos",
+    "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+  },
+  {
+    "citySlug": "fazenda-rio-grande",
+    "cityName": "Fazenda Rio Grande",
+    "name": "Nações",
+    "path": "/bairros/fazenda-rio-grande/nacoes",
+    "title": "Troca de telhado com revisão do encontro com a parede",
+    "summary": "Quando a umidade aparece perto da junção entre o telhado e uma parede, a troca das telhas pode não resolver sozinha. Explique se o sinal ocorre com vento de uma direção ou demora a surgir, e peça que a avaliação inclua os arremates existentes.",
+    "tips": [
+      "Reúna fotos da mancha no interior e do encontro com a parede, se visível de um local protegido. Anote também se houve pintura ou reforma recente nesse trecho.",
+      "Peça que a proposta diferencie revisão de rufos, substituição de peças e eventuais serviços no revestimento, incluindo quem executará cada etapa."
+    ],
+    "faqs": [
+      {
+        "question": "Toda infiltração ao lado da parede é falha no rufo?",
+        "answer": "Não. A água pode entrar pela parede, por um encontro da cobertura ou por outro ponto e aparecer longe da entrada. A vistoria deve confrontar o padrão da mancha com a condição dos componentes."
+      },
+      {
+        "question": "Posso cotar só a troca de um trecho?",
+        "answer": "Sim, mas peça que a avaliação verifique a compatibilidade da peça de reposição, o estado do entorno e como ficará o encontro com as partes mantidas."
+      }
+    ],
+    "guide": "troca-de-telhado-reparo-ou-substituicao",
+    "guideLabel": "Saiba quando faz sentido trocar só um trecho",
+    "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+  },
+  {
+    "citySlug": "fazenda-rio-grande",
+    "cityName": "Fazenda Rio Grande",
+    "name": "Industrial I",
+    "path": "/bairros/fazenda-rio-grande/industrial-i",
+    "title": "Cobertura de galpão: escopo por área e interferências na operação",
+    "summary": "Projetos para galpão devem separar a área de produção, a doca e a armazenagem. Se algum setor não puder receber gotejamento, poeira ou circulação de pessoas durante a obra, essa restrição deve entrar na avaliação antes de fechar o prazo.",
+    "tips": [
+      "Liste equipamentos, trajetos de empilhadeiras e janelas de parada admitidas pela operação. Identifique os pontos de ventilação e iluminação existentes que precisam ser mantidos.",
+      "Peça que a proposta indique como proteger os setores e como tratar calhas, condutores e encontros. Compare o fechamento da cobertura além do preço das telhas."
+    ],
+    "faqs": [
+      {
+        "question": "O que muda ao pedir uma troca para um galpão em funcionamento?",
+        "answer": "O isolamento de áreas, os horários e a sequência de retirada precisam ser compatíveis com a operação. O responsável pela obra precisa avaliar o acesso e os riscos para definir se a divisão por etapas é viável."
+      },
+      {
+        "question": "É preciso trocar equipamentos que atravessam a cobertura?",
+        "answer": "Nem sempre. Primeiro, identifique cada passagem e seu responsável. Peça que a proposta descreva como será feita a transição para o novo sistema e quais equipamentos podem precisar de intervenção."
+      }
+    ],
+    "guide": "planejar-construcao-telhado",
+    "guideLabel": "Confira como comparar o escopo da cobertura",
+    "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
   }
 ];
