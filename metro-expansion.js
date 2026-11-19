@@ -2095,22 +2095,50 @@ export const METRO_UPDATES = [
     "citySlug": "fazenda-rio-grande",
     "category": "Referências adicionais em comunicação municipal",
     "names": [
+      "Centro",
+      "Eucaliptos",
       "Gralha Azul",
+      "Nações",
+      "Industrial I",
       "Jardim Veneza",
       "Santarém",
       "São Sebastião",
       "Colonial"
     ],
     "source": "https://fazendariogrande.pr.gov.br/noticias/municipio/servico-de-melhoria-afeta-abastecimento-em-bairros-de-fazenda-rio-grande",
-    "note": "A comunicação municipal utiliza Gralha Azul, Jardim Veneza, Santarém, São Sebastião e Colonial como referências do sistema de abastecimento. Esses nomes complementam as divisões operacionais do cadastro já apresentadas.",
-    "gap": "Complemento parcial: a notícia não delimita bairros nem esgota loteamentos e nomes populares. Os setores I e II do cadastro anterior permanecem identificados como referências operacionais, não como novos bairros oficiais.",
-    "verifiedAt": "2026-11-03",
+    "note": "O mapa municipal identifica os bairros com guias próprios abaixo. Outras referências aparecem na comunicação municipal sobre abastecimento, e o cadastro utiliza divisões I e II para alguns setores.",
+    "gap": "Recorte editorial inicial; não é lista exaustiva nem garantia de atendimento. As divisões operacionais e localidades de apoio continuam identificadas separadamente.",
+    "verifiedAt": "2026-11-19",
     "entries": [
       {
+        "name": "Centro",
+        "classification": "Bairro identificado no mapa municipal",
+        "context": "Guia para planejar a reforma de cobertura comercial sem confundir entrada, estoque e área de carga.",
+        "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+      },
+      {
+        "name": "Eucaliptos",
+        "classification": "Bairro identificado no mapa municipal",
+        "context": "Bairro do mapa municipal, distinto das divisões operacionais I e II do cadastro. Guia de cobertura para garagem.",
+        "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+      },
+      {
         "name": "Gralha Azul",
-        "classification": "Nome de bairro ou localidade em comunicação municipal",
-        "context": "",
-        "source": "https://fazendariogrande.pr.gov.br/noticias/municipio/servico-de-melhoria-afeta-abastecimento-em-bairros-de-fazenda-rio-grande"
+        "classification": "Bairro identificado no mapa municipal",
+        "context": "Bairro do mapa municipal. Guia para organizar vistoria e orçamento de cobertura em condomínio.",
+        "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+      },
+      {
+        "name": "Nações",
+        "classification": "Bairro identificado no mapa municipal",
+        "context": "Bairro do mapa municipal, distinto das divisões operacionais I e II do cadastro. Guia sobre troca e arremates.",
+        "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+      },
+      {
+        "name": "Industrial I",
+        "classification": "Bairro identificado no mapa municipal",
+        "context": "Vizinhança identificada no mapa municipal como Industrial I, diferente de Industrial II. Guia de cobertura de galpão.",
+        "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
       },
       {
         "name": "Jardim Veneza",
