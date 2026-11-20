@@ -324,5 +324,80 @@ export const METRO_ROOF_GUIDES = [
     "guide": "planejar-construcao-telhado",
     "guideLabel": "Confira como comparar o escopo da cobertura",
     "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+  },
+  {
+    "citySlug": "fazenda-rio-grande",
+    "cityName": "Fazenda Rio Grande",
+    "name": "Pioneiros",
+    "path": "/bairros/fazenda-rio-grande/pioneiros",
+    "title": "Troca de cobertura com forro e ambientes preservados",
+    "summary": "Se a troca for feita sobre cômodos ocupados, o orçamento precisa esclarecer quais áreas devem ficar livres e o que será protegido abaixo da cobertura. Forros, luminárias e móveis podem exigir cuidados diferentes conforme o trecho em obra.",
+    "tips": [
+      "Marque no croqui a posição de forros, luminárias e móveis que não podem ser retirados. Informe se existe acesso interno seguro para inspeção.",
+      "Combine por escrito quem retira e reinstala itens que interfiram no trabalho e como cada ambiente será entregue antes de voltar a ser usado."
+    ],
+    "faqs": [
+      {
+        "question": "É preciso substituir o forro quando se troca o telhado?",
+        "answer": "Não necessariamente. A avaliação deve verificar umidade, acesso e pontos de ligação. Peça para separar o que pode ser mantido do que precisa ser removido ou reparado."
+      },
+      {
+        "question": "Posso reformar um cômodo enquanto o trecho de cima está em obra?",
+        "answer": "Combine a sequência com o responsável pela obra. Pode ser melhor adiar acabamentos e manter o cômodo livre até a cobertura estar fechada e o local ser liberado."
+      }
+    ],
+    "guide": "troca-de-telhado-reparo-ou-substituicao",
+    "guideLabel": "Compare a troca do telhado com o reparo localizado",
+    "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+  },
+  {
+    "citySlug": "fazenda-rio-grande",
+    "cityName": "Fazenda Rio Grande",
+    "name": "Estados",
+    "path": "/bairros/fazenda-rio-grande/estados",
+    "title": "Calhas novas: do telhado até o destino da água",
+    "summary": "Antes de escolher a calha, identifique para onde a chuva vai depois que sai da cobertura. Água concentrada na saída de um condutor pode atingir a entrada, uma área de circulação ou a divisa. A proposta deve indicar o percurso completo, não só a peça fixada no beiral.",
+    "tips": [
+      "Fotografe do chão onde os condutores descarregam hoje. Aponte no croqui ralos, rampas e áreas que empoçam em chuva mais longa.",
+      "Peça a identificação dos trechos, condutores, saída final prevista e pontos que precisarão ficar acessíveis para limpeza."
+    ],
+    "faqs": [
+      {
+        "question": "Aumentar só a largura da calha resolve o transbordamento?",
+        "answer": "Nem sempre. Caimento, quantidade e posição das saídas, obstruções e destino final também podem limitar o escoamento. A avaliação verifica o conjunto."
+      },
+      {
+        "question": "O que fazer se não estiver claro onde a tubulação descarrega?",
+        "answer": "Informe se é visível algum ralo, caixa ou ponto de saída. Antes de ligar a cobertura nova ao sistema existente, confirme a rota e a capacidade com o responsável técnico."
+      }
+    ],
+    "guide": "planejar-construcao-telhado",
+    "guideLabel": "Veja o que prever no projeto de cobertura e drenagem",
+    "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+  },
+  {
+    "citySlug": "fazenda-rio-grande",
+    "cityName": "Fazenda Rio Grande",
+    "name": "Santa Terezinha",
+    "path": "/bairros/fazenda-rio-grande/santa-terezinha",
+    "title": "Condomínio: ordem de prioridade quando vários blocos têm goteiras",
+    "summary": "Se o condomínio recebeu registros de infiltração em vários blocos, peça uma priorização por condição e consequência: por exemplo, pontos perto de instalações ou em trajetos de moradores merecem atenção diferente de uma mancha antiga já seca. A prioridade deve ser confirmada com inspeção, não apenas pela ordem das reclamações.",
+    "tips": [
+      "Monte uma lista com bloco, unidade, data, chuva ou vento observado e indicação de água ativa. Use fotos internas e encaminhe os relatos à administração.",
+      "Peça um orçamento que diferencie medidas temporárias, vistoria dos demais trechos e solução definitiva, com responsáveis e critérios para liberar cada etapa."
+    ],
+    "faqs": [
+      {
+        "question": "Como decidir qual bloco deve ser vistoriado primeiro?",
+        "answer": "A administração e o profissional devem considerar se há água ativa, risco a instalações ou circulação e possibilidade de dano em outras áreas. Não é preciso subir no telhado para reunir os primeiros registros."
+      },
+      {
+        "question": "Pode contratar um reparo temporário e decidir depois sobre a reforma?",
+        "answer": "Pode ser uma opção após avaliação. Deixe o prazo e a finalidade do serviço temporário documentados e combine quando o trecho deve ser reavaliado."
+      }
+    ],
+    "guide": "telhados-para-condominios",
+    "guideLabel": "Consulte o roteiro de manutenção para síndicos",
+    "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
   }
 ];
