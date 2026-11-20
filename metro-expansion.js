@@ -2100,6 +2100,9 @@ export const METRO_UPDATES = [
       "Gralha Azul",
       "Nações",
       "Industrial I",
+      "Pioneiros",
+      "Estados",
+      "Santa Terezinha",
       "Jardim Veneza",
       "Santarém",
       "São Sebastião",
@@ -2108,7 +2111,7 @@ export const METRO_UPDATES = [
     "source": "https://fazendariogrande.pr.gov.br/noticias/municipio/servico-de-melhoria-afeta-abastecimento-em-bairros-de-fazenda-rio-grande",
     "note": "O mapa municipal identifica os bairros com guias próprios abaixo. Outras referências aparecem na comunicação municipal sobre abastecimento, e o cadastro utiliza divisões I e II para alguns setores.",
     "gap": "Recorte editorial inicial; não é lista exaustiva nem garantia de atendimento. As divisões operacionais e localidades de apoio continuam identificadas separadamente.",
-    "verifiedAt": "2026-11-19",
+    "verifiedAt": "2026-11-20",
     "entries": [
       {
         "name": "Centro",
@@ -2138,6 +2141,24 @@ export const METRO_UPDATES = [
         "name": "Industrial I",
         "classification": "Bairro identificado no mapa municipal",
         "context": "Vizinhança identificada no mapa municipal como Industrial I, diferente de Industrial II. Guia de cobertura de galpão.",
+        "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+      },
+      {
+        "name": "Pioneiros",
+        "classification": "Bairro identificado no mapa municipal",
+        "context": "Guia para preparar a troca de telhado sem deixar de considerar forros e ambientes internos.",
+        "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+      },
+      {
+        "name": "Estados",
+        "classification": "Bairro identificado no mapa municipal",
+        "context": "Bairro do mapa municipal, distinto das divisões operacionais I e II do cadastro. Guia de calhas, condutores e escoamento.",
+        "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
+      },
+      {
+        "name": "Santa Terezinha",
+        "classification": "Bairro identificado no mapa municipal",
+        "context": "Guia para organizar vistoria e prioridades entre blocos de um condomínio.",
         "source": "https://www.fazendariogrande.pr.gov.br/wp-content/uploads/2014/10/Arruamento%20e%20Bairros.pdf"
       },
       {
