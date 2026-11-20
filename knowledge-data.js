@@ -423,6 +423,62 @@ export const SERVICE_GUIDES = {
 
 export const ARTICLES = [
   {
+    "slug": "vai-fazer-uma-cobertura-caminho-da-agua",
+    "title": "Vai fazer uma cobertura? Planeje o caminho da água",
+    "description": "Antes de comprar a telha, confira onde a água vai cair, o encontro com a parede e o que pedir no orçamento de calhas e rufos em Curitiba e região.",
+    "serviceIds": [
+      "calhas",
+      "rufos",
+      "reformas"
+    ],
+    "sections": [
+      {
+        "title": "Desenhe o percurso da chuva antes de pedir o preço",
+        "text": "Em uma garagem nova ou na ampliação de uma área de serviço, a cobertura muda onde a chuva cai. Faça um croqui simples: marque as paredes, portas, portão e passeio; indique onde a água cai hoje e onde poderia ser coletada depois da obra. Esse desenho ajuda a separar telha e estrutura da captação e da condução da água. Se houver calha antiga, informe de que outros trechos ela já recebe água."
+      },
+      {
+        "title": "Encontro com a parede: o acabamento precisa entrar no escopo",
+        "text": "Uma cobertura encostada na parede não termina na última telha. Peça que o orçamento identifique onde entram rufos e arremates, como será tratado o encontro com o revestimento e quem vai recompor o acabamento se precisar mexer nele. Mancha no lado de dentro ou umidade no muro merece avaliação: o ponto em que a água aparece nem sempre é o ponto onde entrou."
+      },
+      {
+        "title": "Calhas e condutores: confirme a saída antes da compra",
+        "text": "O profissional precisa conhecer a área que contribui para cada calha, os pontos de descida e o destino permitido para a água. Uma cobertura sobre loja, garagem ou passagem de condomínio não deve deixar a saída da água como decisão de última hora. Se um condutor passa perto de ares-condicionados, instalações ou circulação de pessoas, leve isso para a visita antes de fechar a proposta."
+      },
+      {
+        "title": "A aparência da telha não responde se ela serve para o seu caso",
+        "text": "Chapas metálicas perfiladas podem parecer semelhantes e ter fichas técnicas diferentes. Peça a identificação do modelo, os requisitos de instalação do fabricante e verificação da compatibilidade com o projeto. Se a prioridade for conforto, explique se o problema é calor, ruído de chuva ou condensação. Não defina inclinação, apoios ou fixações só pela foto ou pelo preço da chapa."
+      },
+      {
+        "title": "No orçamento, separe itens que você consegue conferir",
+        "text": "Peça que a proposta discrimine telhas e arremates, calhas, condutores, ponto de entrega da água e o que será reaproveitado ou substituído. Confirme também quem avalia os apoios e quem desmonta e descarta as peças antigas, se houver troca. Para comparar duas propostas, use o mesmo croqui e pergunte o que ficou de fora de cada uma."
+      },
+      {
+        "title": "O que mandar na primeira conversa com a Acquatec",
+        "text": "Informe município e bairro, o uso da área, as medidas aproximadas e se a cobertura é nova ou uma substituição. Mande fotos feitas do chão, incluindo o encontro com a parede e o local onde gostaria de conduzir a água. Se houver transbordamento, diga onde ele foi observado e se acontece durante a chuva toda ou apenas nas pancadas mais fortes. Peça avaliação das condições no endereço e não suba no telhado para tirar fotos."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Posso ligar a cobertura nova na calha que já existe?",
+        "answer": "A calha só deve ser reaproveitada se a avaliação confirmar que ela comporta a contribuição das duas áreas e que a saída e o ponto de descarte permanecem adequados."
+      },
+      {
+        "question": "Rufo e calha fazem a mesma coisa?",
+        "answer": "Não. A calha coleta e conduz água da cobertura. O rufo protege um encontro entre superfícies, como o trecho em que a cobertura encosta na parede."
+      },
+      {
+        "question": "Dá para escolher telha metálica pela foto?",
+        "answer": "Não. A foto ajuda a comunicar a aparência desejada. Para escolher o produto e verificar a instalação, confirme a ficha do fabricante e a compatibilidade com o projeto."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ministério do Trabalho e Emprego: NR-35 e orientações para trabalho em altura",
+        "url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/norma-regulamentadora-no-35-nr-35"
+      }
+    ]
+  },
+  {
     "slug": "manta-termica-ou-manta-asfaltica",
     "title": "Manta térmica ou manta asfáltica: qual é a diferença?",
     "description": "Entenda por que controle de calor e impermeabilização são objetivos diferentes antes de pedir uma manta para o telhado.",
