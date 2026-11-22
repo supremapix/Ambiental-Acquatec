@@ -1,0 +1,11 @@
+.rain-history-hero{margin:1.5rem 0 2rem}
+.rain-history-hero img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:1rem;background:#dce8f5}
+.rain-history-hero figcaption{margin:.55rem 0 0;font-size:.9rem;color:#38536c}
+.rain-history-flow{margin:1.75rem 0;padding:1.2rem;background:#eaf4ff;border:1px solid #a9c7e4;border-radius:1rem;color:#163857}
+.rain-history-flow ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;margin:.6rem 0 0;padding:0;list-style:none}
+.rain-history-flow li{display:flex;align-items:flex-start;gap:.65rem;border:1px solid #b8d0e6;border-radius:.85rem;padding:.8rem;background:#fff;line-height:1.45}
+.rain-history-flow svg{flex:none;padding:5px;border-radius:10px;background:#dcecff;color:#003d82}
+.rain-history-flow li:hover svg{transform:translateY(-3px) rotate(-3deg)}
+@media(prefers-reduced-motion:no-preference){.rain-history-flow svg{transition:transform .2s ease-out}}
+@media(prefers-reduced-motion:reduce){.rain-history-flow li:hover svg{transform:none}}
+@media(max-width:650px){.rain-history-flow ol{grid-template-columns:minmax(0,1fr)}}

@@ -423,6 +423,80 @@ export const SERVICE_GUIDES = {
 
 export const ARTICLES = [
   {
+    "slug": "historia-calhas-telhados",
+    "title": "A história das calhas: como os telhados aprenderam a conduzir a chuva",
+    "description": "Do bico de leão da Antiguidade aos galpões, veja como telhas, beirais e calhas conduzem a chuva e o que observar no seu imóvel em Curitiba.",
+    "serviceIds": [
+      "calhas",
+      "rufos",
+      "manutencao",
+      "reformas",
+      "metalicos"
+    ],
+    "sections": [
+      {
+        "title": "425–400 a.C.: um leão que cuspia chuva",
+        "text": "Um fragmento de terracota guardado pelo Getty Museum mostra uma cabeça de leão na borda de um telhado grego do sul da Itália. O bico não servia só de enfeite: a boca dava saída à água. É um exemplo de drenagem arquitetônica antiga, não a prova de que um povo inventou a calha. O detalhe resolve uma pergunta que continua atual: em que ponto a água deixa a cobertura?"
+      },
+      {
+        "title": "Séculos I e II: a junta da telha romana",
+        "text": "Peças arqueológicas do London Museum ajudam a entender a montagem de um telhado romano. As tegulae, telhas de barro com laterais elevadas, ficavam lado a lado. As imbrices, curvas, cobriam as junções. A sobreposição ajudava a evitar que a chuva entrasse pela emenda. Uma dessas telhas tem marcas de pata, provavelmente de cachorro: o rastro ficou no barro antes da queima."
+      },
+      {
+        "title": "Do beiral colonial à arquitetura de madeira do Paraná",
+        "text": "O Iphan documenta telhas cerâmicas do tipo capa e canal e diferentes tipos de beiral na arquitetura luso-brasileira. A telha de baixo recebe a água; a de cima cobre o encontro. O beiral projeta a borda para além da fachada e ajuda a afastar a queda d’água da base da parede. Em Curitiba, a Casa Domingos, sede estadual do Iphan, é um exemplo da arquitetura paranaense de madeira: o telhado elevado abre espaço para o sótão e os lambrequins ornamentam os beirais. Nesse caso, enfeite e escoamento não são a mesma coisa: vale reparar de onde a água sairia, sem confundir decoração com calha."
+      },
+      {
+        "title": "Hoje: a água passa por mais de uma peça",
+        "text": "A telha e seus arremates ajudam a manter a água por fora; a calha coleta o escoamento; o condutor leva a água à saída prevista. O rufo protege encontros entre superfícies, como o ponto em que a cobertura encosta em uma parede. Uma fachada com platibanda pode ocultar a calha, mas a drenagem ainda precisa ter saída e acesso profissional para manutenção. Transbordamento, mancha ou goteira é um sinal a investigar, não um diagnóstico."
+      },
+      {
+        "title": "Condomínios e galpões: quando o telhado é grande, a saída ganha peso",
+        "text": "Em coberturas grandes, não basta olhar de que material é a telha. O projeto precisa considerar a área que envia água a cada trecho, a chuva de referência, os pontos de descida, a destinação e a manutenção. Em condomínio, indique blocos, entradas de pedestres e áreas comuns. Em galpão, marque docas, estoque e máquinas sob o trecho afetado. Se for construir ou trocar a cobertura, peça que a proposta separe telhas, apoios a avaliar, calhas, condutores e arremates, além da proteção e da circulação durante a obra."
+      },
+      {
+        "title": "O que observar do chão depois de chover",
+        "text": "De um lugar seco e protegido, anote onde a água cai, se a calha transborda sempre no mesmo ponto e se aparece uma faixa molhada na fachada. Registre quando a mancha apareceu: durante pancada forte com vento, após chuva longa ou também em dia seco. Em casa, conte qual cômodo fica abaixo; no condomínio ou galpão, identifique bloco ou setor. Tire fotos só de local seguro. Não use escada, não acesse o telhado nem fique sob partes soltas ou perto de instalações elétricas molhadas. Para mexer na cobertura, chame equipe capacitada."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Quando as calhas foram inventadas?",
+        "answer": "Não há uma única data que resuma todas as soluções. Peças de telhado da Antiguidade já documentam maneiras de impedir entrada pelas juntas e de conduzir água para fora pela borda."
+      },
+      {
+        "question": "Beiral, calha e rufo são a mesma coisa?",
+        "answer": "Não. O beiral é a projeção da cobertura além da parede. A calha coleta e conduz água; o rufo protege encontros entre superfícies."
+      },
+      {
+        "question": "Calha que transborda precisa ser trocada?",
+        "answer": "Não necessariamente. Obstrução, capacidade da calha e dos condutores, estado das peças e destino da água precisam ser avaliados. Uma foto do chão ajuda a localizar o sinal, mas não substitui a vistoria."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Getty Museum: borda de telhado com bico em forma de cabeça de leão",
+        "url": "https://www.getty.edu/art/collection/object/103STZ"
+      },
+      {
+        "label": "London Museum: telha romana com marcas de pata",
+        "url": "https://www.londonmuseum.org.uk/collections/v/object-1024964/roof-tile/"
+      },
+      {
+        "label": "Iphan: conservação preventiva de imóveis antigos",
+        "url": "https://portal.iphan.gov.br/uploads/publicacao/conservacao_preventiva_imoveis_antigos_nucleos_historicos.pdf"
+      },
+      {
+        "label": "Iphan Paraná: Casa Domingos e arquitetura em madeira de Curitiba",
+        "url": "https://www.gov.br/iphan/pt-br/assuntos/noticias/historica-sede-do-iphan-no-parana-e-tema-de-oficinas-de-fotografia-abertas-ao-publico"
+      },
+      {
+        "label": "Ministério do Trabalho e Emprego: NR-35, trabalho em altura",
+        "url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadoras/normas-regulamentadoras-vigentes/norma-regulamentadora-no-35-nr-35"
+      }
+    ]
+  },
+  {
     "slug": "vai-fazer-uma-cobertura-caminho-da-agua",
     "title": "Vai fazer uma cobertura? Planeje o caminho da água",
     "description": "Antes de comprar a telha, confira onde a água vai cair, o encontro com a parede e o que pedir no orçamento de calhas e rufos em Curitiba e região.",
