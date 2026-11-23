@@ -1,6 +1,6 @@
 import React from 'react';
 import { Head } from 'vite-react-ssg';
-import { BUSINESS, SITE_URL } from '../site-config.js';
+import { BUSINESS, CONTACT, SITE_URL } from '../site-config.js';
 
 interface EnhancedSEOProps {
   title: string;
@@ -56,7 +56,9 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullOgImage} />
-      <meta property="og:image:alt" content={title} />
+      <meta property="og:image:alt" content={ogImage === BUSINESS.defaultImage ? 'Acquatec Calhas e Telhados: ligação e WhatsApp ' + CONTACT.phoneDisplay : title} />
+      {ogImage === BUSINESS.defaultImage && <meta property="og:image:width" content="1200" />}
+      {ogImage === BUSINESS.defaultImage && <meta property="og:image:height" content="630" />}
       <meta property="og:site_name" content={BUSINESS.name} />
       <meta property="og:locale" content="pt_BR" />
       {modifiedTime && <meta property="og:updated_time" content={modifiedTime} />}

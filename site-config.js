@@ -32,7 +32,7 @@ export const BUSINESS = {
   description: 'Instalação de manta térmica, calhas e rufos, manutenção e reforma de telhados. Consulte atendimento, avaliação e orçamento com a Acquatec.',
   foundingDate: '2000',
   logo: `${SITE_URL}/marca/acquatec-logo-2026.png`,
-  defaultImage: '/marca/acquatec-compartilhar-2026.jpg',
+  defaultImage: '/marca/acquatec-og-2026.jpg',
   images: [
     `${SITE_URL}/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-1-2000x900.jpeg`,
     `${SITE_URL}/acquatec-calhas-e-telhados-em-curitiba-reformas-condominios-517x357.jpg`,
