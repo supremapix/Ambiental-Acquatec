@@ -12,7 +12,7 @@
  */
 const VERSION = '__SW_VERSION__';
 const CACHE_NAME = `acquatec-${VERSION}`;
-const PRECACHE = ['/logo-header-rodape-calhas-e-telhados-m2-ctba-pr-brasil.png'];
+const PRECACHE = ['/marca/acquatec-logo-2026.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
