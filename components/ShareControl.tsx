@@ -62,7 +62,7 @@ export default function ShareControl({ atFooter }: { atFooter: boolean }) {
         <button ref={closeControl} type="button" className="acq-share-close" aria-label="Fechar compartilhamento" onClick={close}><X size={21} aria-hidden="true" /></button>
       </div>
       {open && <><figure className="acq-share-preview">
-        <img src={share.image} alt="" loading="lazy" decoding="async" />
+        <img src={share.previewImage} alt="" loading="lazy" decoding="async" />
         <figcaption>{share.title}</figcaption>
       </figure>
       <div className="acq-share-links" aria-label="Redes sociais">
