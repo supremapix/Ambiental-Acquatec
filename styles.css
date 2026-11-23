@@ -389,12 +389,14 @@ body { background:var(--paper); }
 @media(max-width:600px) { .home-classic .home-archive-grid { grid-template-columns:minmax(0,1fr); } }
 
 /* Suprema sharing control: separate from the contact dock, with safe room on mobile. */
-.acq-share { position:fixed;z-index:41;inset:auto auto 1rem max(.75rem,env(safe-area-inset-left,0px));max-width:calc(100vw - 1.5rem); }
-.acq-share-at-footer:not(:focus-within) { visibility:hidden;pointer-events:none; }
+.acq-share { position:fixed;z-index:41;inset:auto max(.75rem,env(safe-area-inset-right,0px)) 1rem max(.75rem,env(safe-area-inset-left,0px));width:auto;max-width:22rem;pointer-events:none; }
+.acq-share-toggle,.acq-share-panel { pointer-events:auto; }
+.acq-share-at-footer:not(:focus-within) { visibility:hidden; }
+.acq-share-at-footer:not(:focus-within) .acq-share-toggle { pointer-events:none; }
 .acq-share-toggle { min-height:48px;max-width:100%;padding:.55rem .8rem;border:2px solid #8cafce;border-radius:.55rem;background:#fff;color:#003d82;box-shadow:0 3px 14px #172d4230;font-size:.95rem; }
 .acq-share-toggle svg,.acq-share-copy svg { flex:none; }
 .acq-share-panel[hidden] { display:none; }
-.acq-share-panel { position:absolute;inset:auto auto calc(100% + .5rem) 0;width:min(22rem,calc(100vw - 1.5rem));max-height:min(38rem,calc(100dvh - 5.5rem));overflow:auto;overscroll-behavior:contain;padding:.75rem;border:1px solid #a9c3da;border-radius:.65rem;background:#fafdff;color:#172d42;box-shadow:0 5px 30px #172d4260; }
+.acq-share-panel { position:absolute;inset:auto 0 calc(100% + .5rem);width:auto;max-height:min(38rem,calc(100dvh - 5.5rem));overflow:auto;overscroll-behavior:contain;padding:.75rem;border:1px solid #a9c3da;border-radius:.65rem;background:#fafdff;color:#172d42;box-shadow:0 5px 30px #172d4260; }
 .acq-share-header { display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.4rem; }
 .acq-share-header h2 { font-size:1.05rem;line-height:1.35;font-weight:800; }
 .acq-share-close { flex:none;display:grid;place-items:center;min-width:44px;min-height:44px;border-radius:.4rem;color:#003d82;background:#eaf4ff; }
