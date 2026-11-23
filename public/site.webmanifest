@@ -8,7 +8,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",
-  "theme_color": "#003D82",
+  "theme_color": "#0755A5",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

@@ -69,7 +69,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 
       <meta name="format-detection" content="telephone=yes" />
       <meta name="apple-mobile-web-app-title" content={BUSINESS.alternateName} />
-      <meta name="theme-color" content="#003D82" />
+      <meta name="theme-color" content="#0755A5" />
 
       {graph && (
         <script type="application/ld+json">{JSON.stringify(graph)}</script>
