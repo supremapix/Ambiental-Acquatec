@@ -15,3 +15,4 @@
 .journey-intro{margin-inline:0;max-width:48rem}
 .journey-intro h1{font-size:clamp(2rem,4vw,3.4rem);font-weight:750;line-height:1.15;margin:.65rem 0 1rem;overflow-wrap:break-word}
 .journey-intro .btn{min-height:44px;text-decoration:none}
+.journey-intro .btn-wa{color:#fff}.journey-intro .btn-light{color:#003d82}

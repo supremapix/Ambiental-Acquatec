@@ -25,7 +25,7 @@ export default function CustomerJourneyPage() {
           <h1>{JOURNEY_TITLE}</h1>
           <p className="knowledge-lead">{JOURNEY_DESCRIPTION}</p>
           <div className="action-row">
-            <Link className="btn btn-light" to="/#orcamento">Preparar meu pedido</Link>
+            <a className="btn btn-light" href="/#orcamento">Preparar meu pedido</a>
             <a className="btn btn-wa" href={CONTACT.whatsappUrl}>Falar no WhatsApp</a>
           </div>
         </header>
