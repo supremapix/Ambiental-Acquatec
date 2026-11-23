@@ -1,0 +1,17 @@
+.journey-page{--journey-blue:#1745a6;--journey-navy:#10284b;--journey-light:#edf4ff;color:var(--journey-navy)}
+.journey-intro{margin-inline:auto 0}
+.journey-figure{margin:2rem 0 2.25rem}
+.journey-figure img{display:block;width:100%;height:auto;border-radius:1rem;background:var(--journey-light)}
+.journey-figure figcaption{margin-top:.65rem;color:#344766;font-size:.92rem}
+.journey-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;padding:0;margin:1.25rem 0 2.25rem;list-style:none}
+.journey-steps li{display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:1rem;padding:1rem;border-radius:1rem;background:var(--journey-light);border:1px solid #c6d8f4}
+.journey-steps h3,.journey-steps p{margin:0}
+.journey-steps p{margin-top:.4rem}
+.journey-badge{display:grid;gap:.1rem;place-items:center;align-self:start;background:var(--journey-navy);color:white;border-radius:.7rem;padding:.5rem .35rem}
+.journey-badge span{font-size:.8rem;font-weight:750}
+.journey-next a{display:inline-flex;align-items:center;min-height:44px;color:#154398;font-weight:700;text-decoration:underline;text-underline-offset:.15em}
+.journey-page a:focus-visible{outline:3px solid var(--journey-blue);outline-offset:4px}
+@media(max-width:720px){.journey-steps{grid-template-columns:1fr}.journey-intro .action-row{align-items:stretch}}
+.journey-intro{margin-inline:0;max-width:48rem}
+.journey-intro h1{font-size:clamp(2rem,4vw,3.4rem);font-weight:750;line-height:1.15;margin:.65rem 0 1rem;overflow-wrap:break-word}
+.journey-intro .btn{min-height:44px;text-decoration:none}

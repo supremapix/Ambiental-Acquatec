@@ -435,6 +435,10 @@ export const ARTICLES = [
     ],
     "sections": [
       {
+        "title": "O que é uma calha de telhado?",
+        "text": "A calha recolhe a água que chega à borda do telhado e a encaminha ao condutor. O condutor leva essa água à saída planejada; o rufo protege encontros com paredes e outras superfícies. Essa divisão de funções ajuda a entender os exemplos históricos e por que nem toda goteira começa na calha."
+      },
+      {
         "title": "425–400 a.C.: um leão que cuspia chuva",
         "text": "Um fragmento de terracota guardado pelo Getty Museum mostra uma cabeça de leão na borda de um telhado grego do sul da Itália. O bico não servia só de enfeite: a boca dava saída à água. É um exemplo de drenagem arquitetônica antiga, não a prova de que um povo inventou a calha. O detalhe resolve uma pergunta que continua atual: em que ponto a água deixa a cobertura?"
       },
@@ -445,6 +449,14 @@ export const ARTICLES = [
       {
         "title": "Do beiral colonial à arquitetura de madeira do Paraná",
         "text": "O Iphan documenta telhas cerâmicas do tipo capa e canal e diferentes tipos de beiral na arquitetura luso-brasileira. A telha de baixo recebe a água; a de cima cobre o encontro. O beiral projeta a borda para além da fachada e ajuda a afastar a queda d’água da base da parede. Em Curitiba, a Casa Domingos, sede estadual do Iphan, é um exemplo da arquitetura paranaense de madeira: o telhado elevado abre espaço para o sótão e os lambrequins ornamentam os beirais. Nesse caso, enfeite e escoamento não são a mesma coisa: vale reparar de onde a água sairia, sem confundir decoração com calha."
+      },
+      {
+        "title": "1750: a data ficou gravada na saída da chuva",
+        "text": "Em Nottingham, na Inglaterra, um relatório do Historic England usa um coletor de água pluvial de chumbo com a inscrição “A M 1750” para datar a Morley House, hoje conhecida como People’s Hall. Além de conduzir a água para o tubo de descida, a peça preservou uma pista sobre a época do edifício. É um exemplo histórico, não uma recomendação do material."
+      },
+      {
+        "title": "2003 e 2020: o caminho da chuva entra no debate urbano de Curitiba",
+        "text": "Em 2003, Curitiba criou o Programa de Conservação e Uso Racional da Água nas Edificações (PURAE). Um decreto municipal de 2020 detalhou medidas do programa para projetos de novas edificações. São marcos históricos de uma mudança de escala: olhar não só a calha, mas também o que acontece com a chuva depois que ela sai do telhado. Esta retrospectiva não determina regras aplicáveis a um imóvel específico."
       },
       {
         "title": "Hoje: a água passa por mais de uma peça",
@@ -493,6 +505,18 @@ export const ARTICLES = [
       {
         "label": "Ministério do Trabalho e Emprego: NR-35, trabalho em altura",
         "url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadoras/normas-regulamentadoras-vigentes/norma-regulamentadora-no-35-nr-35"
+      },
+      {
+        "label": "Historic England: Morley House e as casas urbanas de Nottingham",
+        "url": "https://historicengland.org.uk/research/results/reports/6808/SherwinHouseandtheTownhousesofNottinghaminthe17thand18thCenturies"
+      },
+      {
+        "label": "Prefeitura de Curitiba: texto histórico da Lei Municipal nº 10.785/2003, que instituiu o PURAE",
+        "url": "https://mid.curitiba.pr.gov.br/2010/00086319.pdf"
+      },
+      {
+        "label": "Prefeitura de Curitiba: decreto municipal de 2020 sobre o PURAE",
+        "url": "https://legisladocexterno.curitiba.pr.gov.br/VisualizarHTML.aspx?id=310964"
       }
     ]
   },
@@ -987,3 +1011,4 @@ export const ARTICLES = [
     ]
   }
 ];
+

@@ -7,6 +7,8 @@ import FloatingButtons from './components/FloatingButtons'
 import WeatherAlert from './components/WeatherAlert'
 import {ARTICLES} from './knowledge-data.js'
 import KnowledgePage from './pages/KnowledgePage'
+import CustomerJourneyPage from './pages/CustomerJourneyPage'
+import {JOURNEY_PATH} from './customer-journey.js'
 import DirectoryPage from './pages/DirectoryPage'
 import HomePage from './pages/HomePage'
 import CityPage from './pages/CityPage'
@@ -113,6 +115,7 @@ const Layout = ({ children, localKey }: { children: React.ReactNode; localKey?: 
 }
 
 const routes = [
+  {path:JOURNEY_PATH, element:<Layout><CustomerJourneyPage /></Layout>},
   {path:'/servicos',element:<Layout><DirectoryPage kind="services" /></Layout>},
   {path:'/guias',element:<Layout><DirectoryPage kind="articles" /></Layout>},
   ...ARTICLES.map(a=>({path:'/guias/'+a.slug,element:<Layout><KnowledgePage articleSlug={a.slug}/></Layout>})),
@@ -170,3 +173,4 @@ export const createRoot = ViteReactSSG(
     }
   }
 )
+

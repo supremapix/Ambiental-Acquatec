@@ -5,6 +5,7 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import { getHomeSeo } from '../seo-meta.js';
 import { buildGraph, createWebPageSchema, createFAQSchema } from '../utils/seo-schemas';
 import { CONTACT } from '../site-config.js';
+import { JOURNEY_PATH } from '../customer-journey.js';
 import { FAQS, SERVICES } from '../constants';
 import ServicesSection from '../components/ServicesSection';
 import RainDiagram from '../components/RainDiagram';
@@ -25,7 +26,7 @@ export default function HomePage() {
         <div className="classic-hero-copy">
           <span className="eyebrow">Acquatec / Curitiba e região</span>
           <h1 id="inicio-acquatec">Calhas e telhados.<br /><span>Cuidado com o que protege seu imóvel.</span></h1>
-          <p>Instalação, manutenção e reforma de coberturas para residências, condomínios e empresas. Conte o que seu imóvel precisa e consulte as opções de atendimento.</p>
+          <p>Instalação de calhas em Curitiba, avaliação de vazamentos e manutenção e reforma de coberturas para casas, condomínios e empresas.</p>
           <div className="action-row">
             <a className="btn classic-primary" href="#orcamento">Solicitar orçamento <span aria-hidden="true">↗</span></a>
             <a className="btn btn-wa" href={CONTACT.whatsappUrl}>Conversar sobre meu imóvel <span aria-hidden="true">↗</span></a>
@@ -48,7 +49,7 @@ export default function HomePage() {
       <div className="wrap classic-steps">
         <div><span>01 / ENTENDER</span><h2>Conte o que acontece.</h2><p>Localização, tipo de imóvel e sinais do problema.</p></div>
         <div><span>02 / AVALIAR</span><h2>Consulte a avaliação.</h2><p>Necessidade de visita e acesso seguro à cobertura.</p></div>
-        <div><span>03 / DEFINIR</span><h2>Combine os próximos passos.</h2><p>Escopo e condições descritos na proposta.</p></div>
+        <div><span>03 / DEFINIR</span><h2>Combine os próximos passos.</h2><p>Escopo e condições descritos na proposta.</p><Link className="classic-hero-link" to={JOURNEY_PATH}>Veja como funciona o atendimento <span aria-hidden="true">→</span></Link></div>
       </div>
     </section>
     <ServicesSection />
@@ -69,3 +70,4 @@ export default function HomePage() {
     <ContactForm />
   </div>;
 }
+
