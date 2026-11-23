@@ -11,19 +11,13 @@ import RainDiagram from '../components/RainDiagram';
 import ContactForm from '../components/ContactForm';
 import GallerySection from '../components/GallerySection';
 
-const archivePhotos = [
-  ['/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-1-2000x900.jpeg', 'Fachada com cobertura e elementos de acabamento.'],
-  ['/acquatec-telhados-manutencao-condominios-insdustriais-residencias-curitiba-4-1889x850.jpeg', 'Detalhe de acabamento junto à borda da cobertura.'],
-  ['/acquatec-telhados-condominios-reformas-preco-barato-manutencao-517x357.jpg', 'Vista superior de cobertura com telhas claras.'],
-  ['/aplicacao_de_manta_em_calha.webp', 'Encontro entre telhas, calha e parede lateral.'],
-  ['/acquatec-calhas-e-telhados-em-curitiba-reformas-condominios-517x357.jpg', 'Vista de cobertura com telhas e encontros junto às paredes.'],
-] as const;
+import { HOME_HERO, HOME_ABOUT } from '../home-photos.js';
 
 export default function HomePage() {
   const seo = getHomeSeo();
   const [photo, setPhoto] = useState(0);
-  const [photoSrc, photoDescription] = archivePhotos[photo];
-  const movePhoto = (offset: number) => setPhoto(active => (active + offset + archivePhotos.length) % archivePhotos.length);
+  const { src: photoSrc, caption: photoDescription, focus } = HOME_HERO[photo];
+  const movePhoto = (offset: number) => setPhoto(active => (active + offset + HOME_HERO.length) % HOME_HERO.length);
   return <div className="home-classic">
     <EnhancedSEO {...seo} graph={buildGraph([createWebPageSchema(seo), createFAQSchema(seo.canonical, FAQS)])} />
     <section className="classic-hero section" aria-labelledby="inicio-acquatec">
@@ -41,14 +35,14 @@ export default function HomePage() {
         </div>
         <figure className="classic-slideshow" aria-label="Fotografias do acervo original do site Acquatec">
           <div className="classic-photo-frame">
-            <img src={photoSrc} alt={photoDescription} width="1000" height="900" />
+            <img src={photoSrc} alt={photoDescription} style={{ objectPosition: focus }} width="1000" height="900" />
             <button type="button" className="classic-photo-prev" aria-label="Foto anterior" onClick={() => movePhoto(-1)}><ChevronLeft aria-hidden="true" /></button>
             <button type="button" className="classic-photo-next" aria-label="Próxima foto" onClick={() => movePhoto(1)}><ChevronRight aria-hidden="true" /></button>
             <div className="classic-photo-steps" role="group" aria-label="Selecionar foto">
-              {archivePhotos.map((item, index) => <button key={item[0]} type="button" aria-label={`Foto ${index + 1} de ${archivePhotos.length}`} aria-pressed={index === photo} onClick={() => setPhoto(index)}><span aria-hidden="true" /></button>)}
+              {HOME_HERO.map((item, index) => <button key={item.src} type="button" aria-label={`Foto ${index + 1} de ${HOME_HERO.length}`} aria-pressed={index === photo} onClick={() => setPhoto(index)}><span aria-hidden="true" /></button>)}
             </div>
           </div>
-          <figcaption aria-live="polite" aria-atomic="true">{photo + 1} de {archivePhotos.length} · {photoDescription} Fotografia do acervo original do site Acquatec.</figcaption>
+          <figcaption aria-live="polite" aria-atomic="true">{photo + 1} de {HOME_HERO.length} · {photoDescription} Fotografia do acervo original do site Acquatec.</figcaption>
         </figure>
       </div>
       <div className="wrap classic-steps">
@@ -65,7 +59,7 @@ export default function HomePage() {
         <div className="note">Atendimento no endereço, agenda e condições de visita sob consulta. As páginas de bairros e cidades são guias de localização; não indicam filiais ou disponibilidade imediata.</div>
         <Link className="btn btn-light" to="/regioes">Consultar bairros e cidades <span aria-hidden="true">↗</span></Link>
       </div>
-      <figure><div className="classic-about-photos"><img src="/acquatec-calhas-e-telhados-em-curitiba-reformas-condominios-517x357.jpg" alt="Cobertura com telhas e encontros junto às paredes, do acervo Acquatec" width="517" height="357" loading="lazy" /><img src="/calhas-preco-400x402.jpg" alt="Vista interna de uma calha junto ao telhado" width="400" height="402" loading="lazy" /></div><figcaption>Detalhes de cobertura no acervo original. Local da obra não confirmado.</figcaption></figure>
+      <figure><div className="classic-about-photos">{HOME_ABOUT.map(item => <img key={item.src} src={item.src} alt={item.caption} width="517" height="646" style={{ objectPosition: item.focus }} loading="lazy" decoding="async" />)}</div><figcaption>Detalhes de cobertura no acervo original. Local da obra não confirmado.</figcaption></figure>
     </div></section>
     <RainDiagram />
     <section className="section soft"><div className="wrap reading"><span className="eyebrow">Guias para decidir</span><h2>Entenda antes de reformar.</h2><p>Manta térmica, condensação, drenagem e manutenção: consulte explicações, perguntas frequentes e critérios para conversar sobre seu imóvel.</p><Link className="btn btn-light" to="/guias">Explorar guias de telhados</Link></div></section>

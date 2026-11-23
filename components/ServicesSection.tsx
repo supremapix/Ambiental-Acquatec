@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { SERVICES } from '../constants';
-import { GALLERY } from '../gallery-data.js';
+import { getHomeServicePhoto } from '../home-photos.js';
 
 export default function ServicesSection() {
   return <section id="servicos" className="section soft classic-services">
@@ -13,10 +13,12 @@ export default function ServicesSection() {
         <p>Conheça todo o catálogo. Materiais e solução são definidos após avaliar o imóvel.</p>
       </div>
       <div className="cards service-cards classic-service-grid">
-        {SERVICES.map((s, index) => <article className="card" key={s.id}>
+        {SERVICES.map((s, index) => {
+          const photo = getHomeServicePhoto(s);
+          return <article className="card" key={s.id}>
           <figure>
-            <img src={s.image} alt={s.id === 'manta-termica' ? 'Cobertura do acervo Acquatec, sem demonstração de manta térmica' : s.title + ' — imagem do acervo do site'} loading="lazy" width="600" height="450" />
-            <figcaption>{GALLERY.find(i => i.src === s.image)?.caption || 'Imagem preservada do acervo do site.'}</figcaption>
+            <img src={photo.src} alt={photo.alt} style={{ objectPosition: photo.focus }} loading="lazy" decoding="async" width="600" height="450" />
+            <figcaption>{photo.illustrative && <strong>Imagem ilustrativa gerada por IA · </strong>}{photo.caption}</figcaption>
           </figure>
           <div className="card-body">
             <span className="service-number">{String(index + 1).padStart(2, '0')} / SERVIÇO</span>
@@ -26,7 +28,8 @@ export default function ServicesSection() {
               <a className="btn classic-primary" href="#orcamento">Orçamento<span className="sr-only"> para {s.title.toLowerCase()}</span></a>
             </div>
           </div>
-        </article>)}
+        </article>;
+        })}
       </div>
     </div>
   </section>;

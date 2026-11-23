@@ -369,3 +369,14 @@ body { background:var(--paper); }
 /* Exact submitted wordmark, kept on a white/light surface. */
 .site-logo { aspect-ratio:635/204; }
 .footer-logo { background:#fff; }
+
+/* Home photo crops keep the file proportions and fill every visual frame. */
+.home-classic .home-archive-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.home-classic .home-archive-grid .card { border-radius:.8rem;box-shadow:0 8px 24px #182c471a; }
+.home-archive-image { display:block;overflow:hidden; }
+.home-classic .home-archive-grid img { width:100%;height:auto;aspect-ratio:4/3;object-fit:cover; }
+.home-archive-index { max-width:64rem;margin-top:1.4rem;padding:0 .85rem;border:1px solid #c6d9eb;border-radius:.65rem;background:#f4f8fc; }
+.home-archive-index summary { min-height:48px;padding:.75rem .35rem;color:#003d82;font-weight:700; }
+.home-archive-index ul { padding:0 .4rem .75rem 1.4rem;list-style:disc; }
+.home-archive-index li a { display:inline-flex;align-items:center;min-height:48px;color:#003d82;text-decoration:underline;text-underline-offset:.17em; }
+@media(max-width:600px) { .home-classic .home-archive-grid { grid-template-columns:minmax(0,1fr); } }
