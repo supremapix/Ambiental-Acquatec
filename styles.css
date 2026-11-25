@@ -413,3 +413,18 @@ body { background:var(--paper); }
  .acq-share-panel { max-height:calc(100dvh - var(--contact-dock-height,56px) - 5.5rem); }
 }
 @media(max-width:350px) { .acq-share-toggle { padding-inline:.55rem; } }
+
+/* Acquatec: keep the phone link stationary while the notice scrolls. */
+.site-top .wrap{align-items:center}
+.site-top .top-ticker{display:flex;flex:1 1 18rem;min-width:0;align-items:center;gap:.6rem}
+.top-ticker-clip{min-width:0;flex:1;overflow:hidden}
+.top-ticker-track>span{display:block}
+.top-ticker-track .top-ticker-copy,.top-ticker-toggle{display:none}
+.top-ticker-ready .top-ticker-track{display:flex;width:max-content;animation:acquatec-top-scroll 19s linear infinite}
+.top-ticker-ready .top-ticker-track>span{display:block;flex:none;white-space:nowrap;padding-inline-end:3rem}
+.top-ticker-ready .top-ticker-toggle{display:inline-flex;align-items:center;min-height:32px;padding:.12rem .48rem;border:1px solid currentColor;border-radius:.35rem;background:transparent;color:inherit;font:inherit;font-size:.78rem;cursor:pointer}
+.top-ticker-toggle:focus-visible{outline:2px solid white;outline-offset:2px}
+.top-ticker-paused .top-ticker-track,.top-ticker-clip:hover .top-ticker-track{animation-play-state:paused}
+@keyframes acquatec-top-scroll{from{transform:translateX(0)}to{transform:translateX(-25%)}}
+@media(max-width:620px){.site-top .top-ticker{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){.top-ticker-ready .top-ticker-track{display:block;width:auto;animation:none}.top-ticker-ready .top-ticker-track>span{white-space:normal;padding:0}.top-ticker-ready .top-ticker-track .top-ticker-copy,.top-ticker-ready .top-ticker-toggle{display:none}}
