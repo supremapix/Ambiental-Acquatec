@@ -423,6 +423,133 @@ export const SERVICE_GUIDES = {
 
 export const ARTICLES = [
   {
+    "slug": "qual-telha-usar-curitiba",
+    "title": "Qual telha usar? Cerâmica, fibrocimento, metal ou concreto",
+    "description": "Compare tipos de telha para Curitiba e região: peso, inclinação, calor, barulho de chuva, manutenção e preço instalado.",
+    "publishedDate": "2026-11-26",
+    "serviceIds": [
+      "metalicos",
+      "calhas",
+      "rufos",
+      "reformas",
+      "manutencao"
+    ],
+    "sections": [
+      {
+        "title": "Qual telha escolher? Comece pelo uso e pela estrutura",
+        "text": "Para telhado aparente, compare cerâmica e concreto se a estrutura e o caimento forem compatíveis. Para uma cobertura simples, cote fibrocimento e metal de chapa simples. Se a área é ocupada e calor ou barulho incomodam, inclua telha metálica com isolamento na comparação. Não há uma vencedora universal: confira o modelo exato, as condições do imóvel e o custo de toda a cobertura."
+      },
+      {
+        "title": "Comparação: peso, inclinação, conforto, manutenção e preço",
+        "text": "Compare o peso por metro quadrado coberto, e não por peça. Para saber se a estrutura existente comporta a troca, o profissional deve considerar também apoios, acessórios, forro e demais cargas. Em qualquer material, a inclinação deve seguir a documentação do produto e o projeto; o nome do material não determina um caimento único."
+      },
+      {
+        "title": "Curitiba e região: três situações para levar ao orçamento",
+        "text": "Casa com telhado aparente em Curitiba: se quiser manter o desenho da fachada, compare cerâmica e concreto, verificando antes a estrutura existente. Garagem em Pinhais: compare fibrocimento e chapa metálica simples, incluindo o ruído percebido nas janelas próximas e a saída da água junto à parede. Galpão ocupado em Araucária ou São José dos Pinhais: coloque na mesma cotação chapa simples com solução de conforto separada e painel metálico com núcleo isolante. Peça que a comparação considere condensação e o impacto da troca na operação. São exemplos de avaliação, não prescrições para esses endereços."
+      },
+      {
+        "title": "Como comparar o preço instalado de verdade",
+        "text": "Peça o mesmo escopo para todas as propostas: modelo, área efetivamente coberta, frete, descarga, retirada e descarte, apoios a avaliar, mão de obra, isolamento ou forro, arremates, calhas e condutores. Verifique quais itens estão excluídos e quem responde por eles. Telha barata na loja pode sair mais cara no conjunto se exigir mudanças de estrutura ou se isolamento e drenagem estiverem fora do primeiro orçamento."
+      },
+      {
+        "title": "Chuva, vento e condensação: a telha não trabalha sozinha",
+        "text": "Anote se as manchas aparecem com chuva de vento, depois de chuva longa ou também em dias secos. Informe se há platibanda, encontro com parede ou água caindo na passagem. Esses detalhes ajudam a diferenciar problemas de arremate, drenagem e condensação. A causa não se confirma só pela foto. Registre os sinais de local seguro e deixe a vistoria em altura com a equipe especializada."
+      }
+    ],
+    "comparison": {
+      "sectionIndex": 1,
+      "caption": "Tipos de telha: o que muda no projeto e na proposta",
+      "headers": [
+        "Material",
+        "Peso e inclinação",
+        "Calor e som da chuva",
+        "Custo instalado e manutenção"
+      ],
+      "rows": [
+        [
+          "Cerâmica",
+          "Peças pequenas; a carga por área varia com o perfil e o rendimento. Confira o caimento do modelo.",
+          "Material e cor influenciam a resposta ao sol; forro e ventilação também fazem diferença.",
+          "Compare peças especiais, tempo de montagem e eventuais ajustes nos apoios. Revise peças quebradas e arremates."
+        ],
+        [
+          "Fibrocimento",
+          "Chapas onduladas; peso e condições de uso variam com a espessura e o modelo.",
+          "Chapa sem isolamento não resolve sozinha o conforto. Compare o conjunto com forro, ventilação e isolamento.",
+          "Pode ser econômico em cobertura simples. Inclua fixações, arremates e revisões de trincas ou vedação."
+        ],
+        [
+          "Metal de chapa simples",
+          "Em geral, tem baixo peso por área entre as opções listadas. Consulte o perfil escolhido.",
+          "Sem tratamento complementar, pode transmitir calor e destacar o som de impactos de chuva.",
+          "Compare não só a chapa, mas o revestimento, as vedações e os acabamentos. Preveja inspeção de fixações e sinais de corrosão."
+        ],
+        [
+          "Metal com núcleo isolante",
+          "Peso, espessura e inclinação variam conforme o painel e sua composição.",
+          "Ajuda a reduzir a passagem de calor. O efeito no ruído depende do conjunto e dos dados do produto.",
+          "O painel pode custar mais na compra. Compare com o custo da chapa simples mais isolamento e forro separados. Revise juntas, fixações e revestimento."
+        ],
+        [
+          "Concreto",
+          "Pode impor carga elevada por área. Confirme peso e caimento na ficha do produto e no projeto.",
+          "A massa muda como o calor é armazenado e liberado, mas não garante um ambiente mais fresco.",
+          "Inclua frete, manuseio e apoios a avaliar. Inspecione peças deslocadas ou quebradas e arremates."
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Qual telha fica mais barata instalada?",
+        "answer": "Não há resposta única. Fibrocimento e chapa metálica simples valem cotação para coberturas básicas. Compare o total com retirada, apoios, arremates, drenagem, mão de obra e conforto equivalentes."
+      },
+      {
+        "question": "Qual telha é mais fresca ou silenciosa?",
+        "answer": "Não basta olhar o material. Cor, exposição ao sol, forro, ventilação, núcleo isolante e montagem alteram o resultado. Para calor, compare o desempenho térmico do sistema; para chuva, peça dados acústicos aplicáveis à composição ofertada."
+      },
+      {
+        "question": "Posso trocar fibrocimento por cerâmica ou concreto sem reforçar a estrutura?",
+        "answer": "Não presuma. A troca pode mudar a carga na cobertura e exigir outra geometria. Um profissional habilitado deve avaliar a estrutura e a compatibilidade do novo modelo antes da compra."
+      },
+      {
+        "question": "Uma telha metálica com isolamento resolve qualquer goteira?",
+        "answer": "Não. A água pode entrar por arremates, fixações ou emendas; também pode haver transbordamento ou condensação. Antes de trocar as telhas, investigue a origem com avaliação profissional."
+      }
+    ],
+    "relatedGuides": [
+      {
+        "slug": "planejar-construcao-telhado",
+        "label": "Como planejar uma cobertura nova"
+      },
+      {
+        "slug": "troca-de-telhado-reparo-ou-substituicao",
+        "label": "Quando reparar ou trocar o telhado"
+      },
+      {
+        "slug": "condensacao-ou-infiltracao-no-telhado",
+        "label": "Como distinguir condensação e infiltração"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Cejatel — catálogo técnico de telhas cerâmicas",
+        "url": "https://cejateltelhas.com.br/wp-content/uploads/2025/08/Catalogo-Cejatel-2025.pdf"
+      },
+      {
+        "label": "Eternit — regras práticas para telhas onduladas de fibrocimento",
+        "url": "https://www.eternit.com.br/portal/Principal/arquivos/listas/63/ETE03122_Regras%20Praticas%20-%20Telhas%20Fibrocimento_Ondulada_B.pdf"
+      },
+      {
+        "label": "Kingspan Isoeste — manuais de telhas e sistemas de coberturas",
+        "url": "https://kingspan-isoeste.com.br/tudo-para-voce/biblioteca/manuais/telhas-e-sistemas-de-coberturas/"
+      },
+      {
+        "label": "Tégula — catálogo técnico de telhas de concreto",
+        "url": "https://tegula.com.br/wp-content/uploads/2023/10/TEG00321_Novo-Catalogo-de-produtos-Tegula_F-1-1-1.pdf"
+      }
+    ]
+  },
+  {
     "slug": "historia-calhas-telhados",
     "title": "A história das calhas: como os telhados aprenderam a conduzir a chuva",
     "description": "Do bico de leão da Antiguidade aos galpões, veja como telhas, beirais e calhas conduzem a chuva e o que observar no seu imóvel em Curitiba.",
